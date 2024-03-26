@@ -1,0 +1,159 @@
+.content-outer {
+    width: 100%
+}
+
+.content {
+    margin: 5px;
+    padding: 0 50px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-box{
+    width: 700px;
+    position: relative;
+}
+
+.shop-title__row{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.back-button{
+    background: white;
+    margin: auto 20px;
+    border: solid 1px gainsboro;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gainsboro;
+    padding: auto 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.shop-name{
+    margin: 5px;
+    padding: auto 5px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.shop-img{
+    width: 650px;
+    height: 400px;
+}
+
+.area-genre__row{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.area-genre__row div{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.shop-detail{
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.reservation-box{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    background-color: #305DFF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px gray;
+    margin-right: 50px;
+    width: 650px;
+    color: white;
+    text-align: left;
+}
+
+.reservation-title{
+    margin: 30px auto 10px 40px;
+    width: 100%;
+    font-size: 30px;
+}
+
+.date{
+    margin-top: 10px;
+    margin-left: 40px;
+    border: 0;
+    border-radius: 5px;
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.time{
+    margin-top: 10px;
+    margin-left: 40px;
+    border: 0;
+    border-radius: 5px;
+    width: 550px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.people{
+    margin-top: 10px;
+    margin-left: 40px;
+    border: 0;
+    border-radius: 5px;
+    width: 550px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.confirm-outer{
+    width: 100%;
+}
+
+.confirm-table{
+    background: cornflowerblue;
+    border-radius: 7px;
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 530px;
+    height: 200px;
+}
+
+th{
+    padding: 0 0 0 30px;
+    width: 120px;
+    height: 20px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+td{
+    width: 300px;
+    height: 20px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.reservation-button{
+    background-color: blue;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+    margin-top: 285px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 60px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
