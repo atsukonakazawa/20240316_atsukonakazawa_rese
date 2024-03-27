@@ -11,7 +11,8 @@
 }
 
 .detail-box{
-    width: 700px;
+    width: 750px;
+    margin-left: 30px;
     position: relative;
 }
 
@@ -69,7 +70,7 @@
 .reservation-box{
     position: absolute;
     top: 5%;
-    left: 50%;
+    left: 55%;
     background-color: #305DFF;
     border-radius: 10px;
     box-shadow: 3px 3px 3px gray;

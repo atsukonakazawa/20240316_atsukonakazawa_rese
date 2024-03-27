@@ -31,7 +31,7 @@
         </div>
         <div class="search-keyword" >
             <form id="keyword-form" action="/index/keyword" method="get">
-            <input class="search-keyword__inner" type="text" name="keyword" onchange="this.form.submit()" placeholder="🔍Search..." value="">
+            <input class="search-keyword__inner" type="text" name="keyword" onchange="this.form.submit()" placeholder="🔍Search with Shop name..." value="">
         </div>
     </div>
 </div>
@@ -41,8 +41,7 @@
 <!--店舗一覧-->
 <div class="content-outer">
     <div class="shops-content">
-
-        <!--1店舗-->
+        <!--各店舗-->
         @foreach($shops as $shop)
         <div class="shop-box">
             <div class="shop-img">
@@ -90,7 +89,7 @@
                     <!--ここまでモーダルウィンドウ-->
 
                     <button class="like-button open-modal">
-                        <img class="heart-icon" src="icon/heart-white.png" alt="heart">
+                        <img class="heart-icon" src="{{ asset('icon/heart-white.png') }}" alt="heart">
                     </button>
                 </div>
             </div>

@@ -32,7 +32,7 @@
         <div class="search-keyword" >
             <form id="keyword-form" action="/home/keyword" method="get">
             @csrf
-                <input class="search-keyword__inner" type="text" name="keyword" placeholder="Search..." value="{{ old('keyword') }}">
+                <input class="search-keyword__inner" type="text" name="keyword" placeholder="🔍Search with Shop name..." value="{{ old('keyword') }}">
             </form>
         </div>
     </div>
@@ -43,7 +43,9 @@
 <!--店舗一覧-->
 <div class="content-outer">
     <div class="shops-content">
-
+        <p class="message">
+            ログイン済みです
+        </p>
         <!--1店舗-->
         @foreach($shops as $shop)
         <div class="shop-box">
@@ -76,7 +78,7 @@
                         $isFavorite = auth()->user()->favorites()->where('shop_id', $shop->id)->exists();
                     @endphp
                     <button class="like-button" onclick="toggleLike(this, {{ $shop->id }})">
-                        <img class="heart-icon" src="{{ $isFavorite ? 'icon/heart-red.jpeg' : 'icon/heart-white.png' }}" alt="heart">
+                        <img class="heart-icon" src="{{ $isFavorite ? asset('icon/heart-red.jpeg') : asset('icon/heart-white.png') }}" alt="heart">
                     </button>
                     @if (Auth::check())
                     <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">

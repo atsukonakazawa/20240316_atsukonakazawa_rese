@@ -4,7 +4,7 @@
 
 .content {
     margin: 5px;
-    padding: 0 50px;
+    padding: 0px 50px;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -193,7 +193,7 @@
 .like-button img {
     background-color: white;
     border: 0;
-    width: 50px;
+    width: 45px;
     height: 45px;
 }
 

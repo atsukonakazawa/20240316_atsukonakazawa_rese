@@ -8,6 +8,13 @@
 <div class="content-outer">
     <div class="content">
         <div class="reservation-list__box">
+            <div class="message-outer">
+                <p class="message" id="flash-message">
+                    @if(session('message'))
+                        {{ session('message')}}
+                    @endif
+                </p>
+            </div>
             <h2 class="reservation-list__title">
                 予約状況
             </h2>
@@ -105,7 +112,7 @@
                                 $isFavorite = auth()->user()->favorites()->where('shop_id', $favorite->shop_id)->exists();
                             @endphp
                             <button class="like-button" onclick="toggleLike(this, {{ $favorite->shop_id }})">
-                                <img class="heart-icon" src="{{ $isFavorite ? 'icon/heart-red.jpeg' : 'icon/heart-white.png' }}" alt="heart">
+                                <img class="heart-icon" src="{{ $isFavorite ? asset('icon/heart-red.jpeg') : asset('icon/heart-white.png') }}" alt="heart">
                             </button>
                             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                             <input type="hidden" name="shop_id" value="{{ $favorite->shop_id }}">
