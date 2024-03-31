@@ -30,7 +30,7 @@
     margin: 30px auto;
     padding: 30px;
     width: 550px;
-    height: 350px;
+    height: 400px;
     color: white;
 }
 
@@ -39,22 +39,29 @@
     height: 50px;
     margin: 10px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
 }
 
 .each-reservation__title-row img{
+    margin: auto 30px;
     width: 50px;
     height: 40px;
 }
 
 .each-title{
+    margin-top: 10px;
     width: 150px;
+    font-size: 20px;
+    text-align: left;
+    font-weight: lighter;
 }
 
 .close{
     background-color: #305DFF;
     border-radius: 50px;
     border: solid 3px white;
+    margin-top: 10px;
+    margin-left: 150px;
     width: 35px;
     height: 35px;
     color: white;
@@ -84,6 +91,22 @@
 .each-reservation__table td{
     margin: 5px auto;
     width: 250px;
+}
+
+.to-change__button-outer{
+    padding-right: 30px;
+    width: 100%;
+    text-align: right;
+}
+
+.to-change__button{
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+    padding: 5px 20px;
+    color: #305DFF;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 .favorites-box{

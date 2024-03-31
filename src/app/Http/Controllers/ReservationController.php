@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Favorite;
+use App\Http\Requests\ReservationRequest;
 
 
 class ReservationController extends Controller
 {
-    public function done(Request $request){
+    public function done(ReservationRequest $request){
 
         $userId = $request->user_id;
         $shopId = $request->shop_id;
@@ -40,5 +41,31 @@ class ReservationController extends Controller
                     ->get();
 
         return view('mypage',compact('reservations','favorites'));
+    }
+
+    public function change(Request $request){
+
+        $rese_id = $request->reseId;
+        $reservations = Reservation::where('id',$rese_id)
+                ->get();
+
+        return view('change',compact('reservations'));
+    }
+
+    public function changed(ReservationRequest $request){
+
+        $changedDate = $request->date;
+        $changedTime = $request->time;
+        $changedPeople = $request->people;
+        $result = [
+            'rese_date' => $changedDate,
+            'rese_time' => $changedTime,
+            'rese_people' => $changedPeople,
+        ];
+
+        Reservation::where('id',$request->rese_id)
+                    ->update($result);
+
+        return view('changed');
     }
 }

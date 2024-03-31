@@ -1,45 +1,22 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/detail.css') }}">
+<link rel="stylesheet" href="{{ asset('css/change.css') }}">
 @endsection
 
 @section('main')
 <div class="content-outer">
     <div class="content">
-        <div class="detail-box">
-        @foreach($shops as $shop)
-            <div class="shop-title__row">
-                <a class="back-button" href="/home">
-                    <
-                </a>
-                <h2 class="shop-name">
-                    {{ $shop->shop_name }}
-                </h2>
-            </div>
-            <img class="shop-img" src="{{ $shop->shop_img }}" alt="shop_img">
-            <div class="area-genre__row">
-                <div>
-                    #{{ $shop->area->area_name }}
-                </div>
-                <div>
-                    #{{ $shop->genre->genre_name }}
-                </div>
-            </div>
-            <p class="shop-detail">
-                {{ $shop->shop_detail }}
-            </p>
-        @endforeach
-        </div>
-        <div class="reservation-box">
-        <form action="/done" method="get">
+        <div class="change-box">
+        <form action="/changed" method="get">
         @csrf
-            <h2 class="reservation-title">
-                予約
+        @foreach($reservations as $reservation)
+            <h2 class="change-title">
+                予約変更画面
             </h2>
             <input class="date" name="date" type="date" id="date"><br>
             <select class="time" name="time" id="time"><br>
-                <option disabled selected value="">時間を選択してください</option>
+                <option disabled selected value="">変更後の時間を選択してください</option>
                 <option value="11:00">11:00</option>
                 <option value="12:00">12:00</option>
                 <option value="13:00">13:00</option>
@@ -53,7 +30,7 @@
                 <option value="21:00">21:00</option>
             </select>
             <select class="people" name="people" id="people"><br>
-                <option disabled selected value="">人数を選択してください</option>
+                <option disabled selected value="">変更後の人数を選択してください</option>
                 <option value="1">1人</option>
                 <option value="2">2人</option>
                 <option value="3">3人</option>
@@ -68,6 +45,7 @@
                     それ以上の場合はお電話にてお問い合わせください
                 </option>
             </select>
+        @endforeach
             <div class="confirm-outer" id="confirmationSection">
                 <table class="confirm-table">
                     <tr class="confirm-shop__name-row">
@@ -75,8 +53,8 @@
                             Shop
                         </th>
                         <td>
-                        @foreach($shops as $shop)
-                            {{ $shop->shop_name }}
+                        @foreach($reservations as $reservation)
+                            {{ $reservation->shop->shop_name }}
                         @endforeach
                         </td>
                     </tr>
@@ -105,13 +83,6 @@
                         </td>
                     </tr>
                 </table>
-                @foreach($shops as $shop)
-                    <input type="hidden" name="shop_name" value="$shop->id">
-                @endforeach
-                    @if (Auth::check())
-                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                    @endif
-                    <input type="hidden" name="shop_id" value="{{ $shop->id }}">
                 <div class="error-messages">
                     @if (count($errors) > 0)
                     <ul>
@@ -121,8 +92,11 @@
                     </ul>
                     @endif
                 </div>
-                <button class="reservation-button" type="submit">
-                    予約する
+                @foreach($reservations as $reservation)
+                    <input type="hidden" name="rese_id" value="{{ $reservation->id }}">
+                @endforeach
+                <button class="change-button" type="submit">
+                    変更する
                 </button>
             </div>
         </form>

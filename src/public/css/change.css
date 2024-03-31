@@ -6,87 +6,26 @@
     margin: 5px;
     padding: 0 50px;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
 }
 
-.detail-box{
-    width: 750px;
-    margin-left: 30px;
-    position: relative;
-}
-
-.shop-title__row{
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: left;
-}
-
-.back-button{
-    background: white;
-    margin: auto 20px;
-    border: solid 1px gainsboro;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px gainsboro;
-    padding: auto 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.shop-name{
-    margin: 5px;
-    padding: auto 5px;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.shop-img{
-    width: 650px;
-    height: 400px;
-}
-
-.area-genre__row{
-    margin-left: 30px;
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: left;
-}
-
-.area-genre__row div{
-    margin: 10px;
-    font-size: 20px;
-}
-
-.shop-detail{
-    margin-left: 30px;
-    margin-top: 10px;
-    font-size: 20px;
-}
-
-.reservation-box{
-    position: absolute;
-    top: 50px;
-    left: 900px;
+.change-box {
     background-color: #305DFF;
     border-radius: 10px;
     box-shadow: 3px 3px 3px gray;
-    margin-right: 50px;
+    margin: 0 auto;
+    padding-top: 30px;
     width: 650px;
     color: white;
     text-align: left;
 }
 
-.reservation-title{
+.change-title {
     margin: 30px auto 10px 40px;
     width: 100%;
     font-size: 30px;
 }
 
-.date{
+.date {
     margin-top: 10px;
     margin-left: 40px;
     border: 0;
@@ -96,7 +35,7 @@
     cursor: pointer;
 }
 
-.time{
+.time {
     margin-top: 10px;
     margin-left: 40px;
     border: 0;
@@ -106,7 +45,7 @@
     cursor: pointer;
 }
 
-.people{
+.people {
     margin-top: 10px;
     margin-left: 40px;
     border: 0;
@@ -116,11 +55,11 @@
     cursor: pointer;
 }
 
-.confirm-outer{
+.confirm-outer {
     width: 100%;
 }
 
-.confirm-table{
+.confirm-table {
     background: cornflowerblue;
     border-radius: 7px;
     margin-top: 30px;
@@ -129,7 +68,7 @@
     height: 200px;
 }
 
-th{
+th {
     padding: 0 0 0 30px;
     width: 120px;
     height: 20px;
@@ -137,25 +76,25 @@ th{
     font-weight: lighter;
 }
 
-td{
+td {
     width: 300px;
     height: 20px;
     font-size: 20px;
     font-weight: lighter;
 }
 
-.error-messages{
+.error-messages {
     margin: 0;
     padding-top: 170px;
     padding-left: 30px;
     height: 300px;
 }
 
-.error-messages li{
+.error-messages li {
     margin-bottom: 10px;
 }
 
-.reservation-button{
+.change-button {
     background-color: blue;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;

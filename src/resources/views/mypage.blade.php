@@ -2,7 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/mypage.css') }}">
-@endsection 
+@endsection
 
 @section('main')
 <div class="content-outer">
@@ -18,12 +18,12 @@
             <h2 class="reservation-list__title">
                 予約状況
             </h2>
-            @foreach($reservations as $reservation)
+            @foreach($reservations as $key => $reservation)
             <div class="each-reservation__box">
                 <div class="each-reservation__title-row">
-                    <img src="icon/Rese clock icon.png" alt="clock">
+                    <img src="{{ asset('icon/Rese clock icon.png') }}" alt="clock">
                     <h3 class="each-title">
-
+                        予約{{ $key + 1 }} <!-- 予約番号を表示 -->
                     </h3>
                     <form action="/delete" method="get">
                     @csrf
@@ -35,6 +35,8 @@
                     </form>
                 </div>
                 <table class="each-reservation__table">
+                <form action="/change" method="get">
+                @csrf
                     <tr class="shop-row">
                         <th>
                             Shop
@@ -68,6 +70,13 @@
                         </td>
                     </tr>
                 </table>
+                <div class="to-change__button-outer">
+                    <button class="to-change__button" type="submit">
+                        変更する
+                    </button>
+                    <input type="hidden" name="reseId" value="{{ $reservation->id }}">
+                </div>
+                </form>
             </div>
             @endforeach
         </div>
@@ -106,7 +115,7 @@
                                 詳しく見る
                             </button>
                             </form>
-                            <form action="/like" method="get">
+                            <form action="/like/mypage" method="get">
                             @csrf
                             @php
                                 $isFavorite = auth()->user()->favorites()->where('shop_id', $favorite->shop_id)->exists();

@@ -110,7 +110,10 @@ class ShopController extends Controller
 
         //予約状況を取得
         $userId = $request->user_id;
-        $reservations = Reservation::where('user_id',$userId)->get();
+        $reservations = Reservation::where('user_id',$userId)
+                    ->orderBy('rese_date','asc')
+                    ->orderBy('rese_time','asc')
+                    ->get();
 
         //お気に入り店舗情報を取得
         $favorites = Favorite::where('user_id',$userId)
