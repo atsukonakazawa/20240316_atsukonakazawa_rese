@@ -64,6 +64,7 @@
 
 .form__error{
     padding-left: 80px;
+    height: 30px;
     text-align: left;
     color: red;
 }
@@ -75,6 +76,7 @@
 }
 
 .login-button {
+    border: 0;
     border-radius: 5px;
     background-color: #305DFF;
     color: white;

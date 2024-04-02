@@ -9,6 +9,7 @@ use App\Models\Genre;
 use App\Models\Favorite;
 use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 
 class ShopController extends Controller
@@ -108,9 +109,11 @@ class ShopController extends Controller
 
     public function mypage(Request $request){
 
-        //予約状況を取得
+        //予約状況から今日以降のデータを取得
         $userId = $request->user_id;
+        $today = Carbon::today();
         $reservations = Reservation::where('user_id',$userId)
+                    ->whereDate('rese_date','>=',$today)
                     ->orderBy('rese_date','asc')
                     ->orderBy('rese_time','asc')
                     ->get();

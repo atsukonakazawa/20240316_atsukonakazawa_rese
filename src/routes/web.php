@@ -5,6 +5,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ReviewController;
 
 
 /*
@@ -26,15 +27,21 @@ Route::get('/index/keyword',[ShopController::class,'searchKeyword']);
 Route::get('/register',[AuthController::class,'toRegister']);
 Route::get('/login',[AuthController::class,'toLogin']);
 Route::post('/thanks',[AuthController::class,'thanks']);
-Route::get('/home',[ShopController::class,'home']);
-Route::get('/home/area',[ShopController::class,'searchAreaHome']);
-Route::get('/home/genre',[ShopController::class,'searchGenreHome']);
-Route::get('/home/keyword',[ShopController::class,'searchKeywordHome']);
-Route::get('/detail',[ShopController::class,'detail']);
-Route::get('/like',[FavoriteController::class,'like']);
-Route::get('/like/mypage',[FavoriteController::class,'likeMypage']);
-Route::get('/done',[ReservationController::class,'done']);
-Route::get('mypage',[ShopController::class,'mypage']);
-Route::get('/delete',[ReservationController::class,'delete']);
-Route::get('/change',[ReservationController::class,'change']);
-Route::get('/changed',[ReservationController::class,'changed']);
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/home',[ShopController::class,'home']);
+    Route::get('/home/area',[ShopController::class,'searchAreaHome']);
+    Route::get('/home/genre',[ShopController::class,'searchGenreHome']);
+    Route::get('/home/keyword',[ShopController::class,'searchKeywordHome']);
+    Route::get('/detail',[ShopController::class,'detail']);
+    Route::get('/like',[FavoriteController::class,'like']);
+    Route::get('/like/mypage',[FavoriteController::class,'likeMypage']);
+    Route::get('/done',[ReservationController::class,'done']);
+    Route::get('mypage',[ShopController::class,'mypage']);
+    Route::get('/delete',[ReservationController::class,'delete']);
+    Route::get('/change',[ReservationController::class,'change']);
+    Route::get('/changed',[ReservationController::class,'changed']);
+    Route::get('/review',[ReviewController::class,'review']);
+    Route::get('/reviewed',[ReviewController::class,'reviewed']);
+});

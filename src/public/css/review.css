@@ -1,0 +1,150 @@
+.content-outer {
+    width: 100%
+}
+
+.content {
+    margin: 5px;
+    padding: 0px 50px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.visited-list__box {
+    margin: 30px auto;
+    width: 600px;
+}
+
+.visited-list__title {
+    padding-left: 40px;
+    width: 550px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+}
+
+.each-visited__box {
+    background-color: #305DFF;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px gray;
+    margin: 30px auto;
+    padding: 30px;
+    width: 550px;
+    color: white;
+}
+
+.each-visited__title-row {
+    width: 500px;
+    height: 50px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: left;
+}
+
+.each-visited__title-row img {
+    margin: auto 30px;
+    width: 50px;
+    height: 40px;
+}
+
+.each-title {
+    margin-top: 10px;
+    width: 150px;
+    font-size: 20px;
+    text-align: left;
+    font-weight: lighter;
+}
+
+.close {
+    background-color: #305DFF;
+    border-radius: 50px;
+    border: solid 3px white;
+    margin-top: 10px;
+    margin-left: 150px;
+    width: 35px;
+    height: 35px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.each-visited__table {
+    margin: 5px auto;
+    width: 400px;
+    text-align: left;
+    font-size: 20px;
+    color: white;
+}
+
+.each-visited__table tr {
+    margin: 10px auto;
+    width: 300px;
+    height: 50px;
+}
+
+.each-visited__table th {
+    margin: 5px auto;
+    width: 100px;
+    font-weight: lighter;
+}
+
+.each-visited__table td {
+    margin: 5px auto;
+    width: 250px;
+}
+
+.rating-outer{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.rating-p{
+    padding-left: 40px;
+    font-size: 20px;
+    color: #305DFF;
+}
+
+.stars{
+    border: solid 1px #305DFF;    border-radius: 5px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.comment-outer{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.comment-p {
+    padding-left: 40px;
+    font-size: 20px;
+    color: #305DFF;
+}
+
+.comment{
+    border: solid 1px #305DFF;    margin-left: 40px;
+    font-size: 20px;
+}
+
+.review-button__outer{
+    text-align: right;
+}
+
+.review-button {
+    border: solid 1px #305DFF;
+    border-radius: 5px;
+    background-color: #305DFF;
+    margin: 20px;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+

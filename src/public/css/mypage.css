@@ -109,6 +109,22 @@
     cursor: pointer;
 }
 
+.review-box{
+    margin: 40px 25px 20px auto;
+    text-align: right;
+}
+
+.review-box button{
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px gray;
+    background-color: #305DFF;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
 .favorites-box{
     margin: 0 auto;
     padding: 0;

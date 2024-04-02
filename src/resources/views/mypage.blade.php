@@ -79,6 +79,14 @@
                 </form>
             </div>
             @endforeach
+            <div class="review-box">
+                <form action="/review" method="get">
+                    <button class="review" type="submit" >
+                        レビューを書く
+                    </button>
+                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                </form>
+            </div>
         </div>
         <div class="favorites-box">
             <h2 class="user-name">
