@@ -37,7 +37,7 @@
             <h2 class="reservation-title">
                 予約
             </h2>
-            <input class="date" name="date" type="date" id="date"><br>
+            <input class="date" name="date" type="date" id="date"  min="{{ \Carbon\Carbon::now()->format('Y-m-d') }}"><br>
             <select class="time" name="time" id="time"><br>
                 <option disabled selected value="">時間を選択してください</option>
                 <option value="11:00">11:00</option>

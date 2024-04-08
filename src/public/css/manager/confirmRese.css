@@ -1,0 +1,109 @@
+.content-outer {
+    width: 100%
+}
+
+.content {
+    margin: 5px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.title-outer {
+    width: 100%;
+}
+
+.title {
+    border: double 5px gold;
+    border-radius: 5px;
+    background-color: orangered;
+    margin: 5px 5px 5px auto;
+    padding: 30px;
+    width: 400px;
+    color: white;
+    font-size: 30px;
+}
+
+.subtitle-outer {
+    margin: 50px auto 5px;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.subtitle {
+    border-radius: 5px;
+    margin: 15px auto;
+    width: 600px;
+}
+
+.input-id{
+    border-radius: 5px;
+    border: solid 1px black;
+    margin: 30px auto;
+    padding: 20px;
+    width: 300px;
+    font-size: 20px;
+}
+
+.id-button{
+    border-radius: 5px;
+    border: 0;
+    margin-left: 50px;
+    padding: 10px 20px;
+    background-color: #305DFF;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.confirm-table__outer{
+    border-radius: 5px;
+    border: solid 1px black;
+    width: 1600px;
+}
+
+.confirm-table{
+    margin: 10px auto;
+    width: 1600px;
+}
+
+.confirm-table tr{
+    height: 80px;
+}
+
+.title-row{
+    border-bottom: solid 1px black;
+    font-size: 25px;
+}
+
+.title-row th{
+    width: 400px;
+}
+
+.rese-row{
+    padding: 20px auto;
+    font-size: 20px;
+}
+
+.rese-row td{
+    width: 400px;
+    font-size: 20px;
+}
+
+.back-link__outer {
+    width: 100%;
+    padding: 50px;
+    text-align: right;
+}
+
+.back-link {
+    border: 0;
+    border-radius: 5px;
+    background-color: gainsboro;
+    margin-right: 70px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}

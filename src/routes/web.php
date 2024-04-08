@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ManagerController;
 
 
 /*
@@ -19,7 +20,7 @@ use App\Http\Controllers\ReviewController;
 |
 */
 
-
+/* 利用者 */
 Route::get('/',[ShopController::class,'index']);
 Route::get('/index/area',[ShopController::class,'searchArea']);
 Route::get('/index/genre',[ShopController::class,'searchGenre']);
@@ -45,3 +46,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/review',[ReviewController::class,'review']);
     Route::get('/reviewed',[ReviewController::class,'reviewed']);
 });
+
+/* 店舗代表者 */
+Route::get('/manager/login',[ManagerController::class,'managerLogin']);
+Route::get('/manager',[ManagerController::class,'manager']);
+Route::get('/manager/new/shop',[ManagerController::class,'newShop']);
+Route::get('/manager/new/shop/created',[ManagerController::class,'newShopCreated']);
+Route::get('/manager/update/shop',[ManagerController::class,'updateShop']);
+Route::get('/manager/updated/shop',[ManagerController::class,'updatedShop']);
+Route::get('/manager/confirm/rese',[ManagerController::class,'confirmRese']);
+
+/* 管理者 */
+Route::get('/admin/admin',[ManagerController::class,'admin']);
+Route::post('/admin/created/manager',[ManagerController::class,'createdManager']);
+
+

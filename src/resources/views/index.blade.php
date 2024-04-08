@@ -14,24 +14,31 @@
                 <select class="search-area__inner" name="area_id" onchange="this.form.submit()">
                     <option disabled selected value="">All area</option>
                     @foreach($areas as $area)
-                    <option value="{{ $area['id'] }}">{{ $area['area_name'] }}</option>
+                    <option value="{{ $area['id'] }}" {{ session('selected_area_id') == $area['id'] ? 'selected' : '' }}>
+                        {{ $area['area_name'] }} 
+                    </option>
                     @endforeach
                 </select>
             </form>
         </div>
         <div class="search-genre" >
             <form id="genre-form" action="/index/genre" method="get">
+                @csrf
                 <select class="search-genre__inner" name="genre_id" onchange="this.form.submit()">
                     <option disabled selected value="">All genre</option>
                     @foreach($genres as $genre)
-                    <option value="{{ $genre['id'] }}">{{ $genre['genre_name'] }}</option>
+                    <option value="{{ $genre['id'] }}" {{ session('selected_genre_id') == $genre['id'] ? 'selected' : '' }}>
+                        {{ $genre['genre_name'] }}
+                    </option>
                     @endforeach
                 </select>
             </form>
         </div>
         <div class="search-keyword" >
             <form id="keyword-form" action="/index/keyword" method="get">
-            <input class="search-keyword__inner" type="text" name="keyword" onchange="this.form.submit()" placeholder="🔍Search with Shop name..." value="">
+            @csrf
+                <input class="search-keyword__inner" type="text" name="keyword" onchange="this.form.submit()" placeholder="🔍Search with Shop name..." value="{{ session('selected_keyword') }}">
+            </form>
         </div>
     </div>
 </div>

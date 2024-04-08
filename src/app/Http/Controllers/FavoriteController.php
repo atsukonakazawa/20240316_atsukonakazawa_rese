@@ -43,7 +43,10 @@ class FavoriteController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
-        return view('home',compact('shops','areas','genres'));
+        $user = Auth::user();
+        $favorites = $user->favorites->pluck('shop_id')->toArray();
+
+        return view('home',compact('shops','areas','genres','favorites'));
 
     }
 

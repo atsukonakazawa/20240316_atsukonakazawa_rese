@@ -20,6 +20,11 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
+        // セッションを削除
+        session()->forget('selected_area_id');
+        session()->forget('selected_genre_id');
+        session()->forget('selected_keyword');
+
         return view('index',compact('shops','areas','genres'));
     }
 
@@ -30,6 +35,14 @@ class ShopController extends Controller
                     ->get();
         $areas = Area::all();
         $genres = Genre::all();
+
+        //選択されたエリアのIDを取得し、セッションに保存
+        $selectedAreaId = $areaId;
+        session(['selected_area_id' => $selectedAreaId]);
+
+        // セッションを削除
+        session()->forget('selected_genre_id');
+        session()->forget('selected_keyword');
 
         return view('index',compact('shops','areas','genres'));
     }
@@ -42,6 +55,15 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
+        //選択されたジャンルのIDを取得し、セッションに保存
+        $selectedGenreId = $genreId;
+        session(['selected_genre_id' => $selectedGenreId]);
+
+        // セッションを削除
+        session()->forget('selected_area_id');
+        session()->forget('selected_keyword');
+
+
         return view('index',compact('shops','areas','genres'));
     }
 
@@ -53,6 +75,14 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
+        //入力されたキーワードを取得し、セッションに保存
+        $selectedKeyword = $keyword;
+        session(['selected_keyword' => $selectedKeyword]);
+
+        // セッションを削除
+        session()->forget('selected_area_id');
+        session()->forget('selected_genre_id');
+
         return view('index',compact('shops','areas','genres'));
     }
 
@@ -62,7 +92,15 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
-        return view('home',compact('shops','areas','genres'));
+        $user = Auth::user();
+        $favorites = $user->favorites->pluck('shop_id')->toArray();
+
+        // セッションを削除
+        session()->forget('selected_area_id');
+        session()->forget('selected_genre_id');
+        session()->forget('selected_keyword');
+
+        return view('home',compact('shops','areas','genres','favorites'));
     }
 
     public function searchAreaHome(Request $request){
@@ -73,7 +111,18 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
-        return view('home',compact('shops','areas','genres'));
+        $user = Auth::user();
+        $favorites = $user->favorites->pluck('shop_id')->toArray();
+
+        //選択されたエリアのIDを取得し、セッションに保存
+        $selectedAreaId = $areaId;
+        session(['selected_area_id' => $selectedAreaId]);
+
+        // セッションを削除
+        session()->forget('selected_genre_id');
+        session()->forget('selected_keyword');
+
+        return view('home',compact('shops','areas','genres','favorites'));
     }
 
     public function searchGenreHome(Request $request){
@@ -84,7 +133,18 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
-        return view('home',compact('shops','areas','genres'));
+        $user = Auth::user();
+        $favorites = $user->favorites->pluck('shop_id')->toArray();
+
+        //選択されたジャンルのIDを取得し、セッションに保存
+        $selectedGenreId = $genreId;
+        session(['selected_genre_id' => $selectedGenreId]);
+
+        // セッションを削除
+        session()->forget('selected_area_id');
+        session()->forget('selected_keyword');
+
+        return view('home',compact('shops','areas','genres','favorites'));
     }
 
     public function searchKeywordHome(Request $request){
@@ -95,7 +155,18 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
-        return view('home',compact('shops','areas','genres'));
+        $user = Auth::user();
+        $favorites = $user->favorites->pluck('shop_id')->toArray();
+
+        //入力されたキーワードを取得し、セッションに保存
+        $selectedKeyword = $keyword;
+        session(['selected_keyword' => $selectedKeyword]);
+
+        // セッションを削除
+        session()->forget('selected_area_id');
+        session()->forget('selected_genre_id');
+
+        return view('home',compact('shops','areas','genres','favorites'));
     }
 
     public function detail(Request $request){
@@ -103,8 +174,9 @@ class ShopController extends Controller
         $shop_id = $request->shop_id;
         $shops = Shop::where('id',$shop_id)
                 ->get();
+        $today = Carbon::today();
 
-        return view('detail',compact('shops'));
+        return view('detail',compact('shops','today'));
     }
 
     public function mypage(Request $request){

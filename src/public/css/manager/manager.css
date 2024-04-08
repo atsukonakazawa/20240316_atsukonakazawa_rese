@@ -1,0 +1,62 @@
+.content-outer {
+    width: 100%
+}
+
+.content {
+    margin: 5px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.title-outer{
+    width: 100%;
+}
+
+.title{
+    border: double 5px gold;
+    border-radius: 5px;
+    background-color: orangered;
+    margin: 5px 5px 5px auto;
+    padding: 30px;
+    width: 400px;
+    color: white;
+    font-size: 30px;
+}
+
+.links-outer{
+    margin: 50px auto;
+    width: 100%;
+}
+
+.links-outer div{
+    border: solid 1px #305DFF;
+    box-shadow: 3px 3px 3px gainsboro;
+    border-radius: 5px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 27px;
+    width: 600px;
+    height: 100px;
+}
+
+.links-outer div a{
+    text-decoration: none;
+    color: #305DFF;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.logout-outer{
+    margin: 50px auto;
+    width: 100%;
+}
+
+.logout-button{
+    border: 0;
+    border-radius: 5px;
+    background-color: gainsboro;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+}

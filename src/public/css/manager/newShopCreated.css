@@ -1,0 +1,56 @@
+.content-outer {
+    width: 100%
+}
+
+.content {
+    margin: 5px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.done-box {
+    border: double 5px #305DFF;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 100px 30px;
+    width: 800px;
+}
+
+.done-message {
+    width: 100%;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 40px;
+}
+
+.shop-id__announce{
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.shop-id__span{
+    font-size: 50px;
+}
+
+.shop-id__keep{
+    margin: 5px auto 50px;
+    font-size: 20px;
+    color: red;
+}
+
+.link-outer {
+    width: 100%;
+    height: 80px;
+    padding: 25px;
+}
+
+.back-link {
+    border-radius: 5px;
+    background-color: #305DFF;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
