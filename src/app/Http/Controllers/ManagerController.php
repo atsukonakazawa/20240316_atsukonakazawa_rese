@@ -6,14 +6,42 @@ use Illuminate\Http\Request;
 use App\Models\Area;
 use App\Models\Genre;
 use App\Models\Shop;
+use App\Models\User;
 use App\Models\Reservation;
 use App\Http\Requests\ShopRequest;
+use Illuminate\Support\Facades\Auth;
 
 class ManagerController extends Controller
 {
-    public function manager(){
+    public function manager(Request $request){
+
+        $userId = $request->user_id;
+        $getRole = User::where('id',$userId)
+                    ->where('role','manager')
+                    ->first();
+
+        if($getRole !== null){
 
         return view('manager.manager');
+
+        }else{
+
+        $shops = Shop::with('area')->with('genre')->get();
+            $areas = Area::all();
+            $genres = Genre::all();
+
+            $user = Auth::user();
+            $favorites = $user->favorites->pluck('shop_id')->toArray();
+
+            // セッションを削除
+            session()->forget('selected_area_id');
+            session()->forget('selected_genre_id');
+            session()->forget('selected_keyword');
+            session()->flash('message','店舗代表者のみがアクセスできます');
+
+            return view('home',compact('shops','areas','genres','favorites'));
+        }
+
     }
 
     public function newShop(){
@@ -134,25 +162,4 @@ class ManagerController extends Controller
 
         return view('manager.confirmRese',compact('reservations'));
     }
-
-    public function admin(){
-
-        return view('admin.admin');
-    }
-
-    public function createdManager(Request $request){
-
-        $newManager = $request->all();
-
-        $result = [
-            'name' => $newManager->name,
-            'role' => 'manager',
-            'eamail' => $newManager->email,
-            'password' => $newManager->passowrd,
-        ];
-        $manager = User::create($result);
-
-        return view('admin.createdManager');
-    }
-
 }

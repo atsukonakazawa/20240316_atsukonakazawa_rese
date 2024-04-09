@@ -132,6 +132,8 @@
     padding-left: 30px;
     width: 100%;
     height: 20px;
+    font-size: 25px;
+    font-weight: bold;
     color: #305DFF;
 }
 
@@ -218,4 +220,41 @@
     border: 0;
     width: 45px;
     height: 45px;
+}
+
+.manager-admin{
+    padding-right: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.toManager-outer{
+    margin: 10px 20px;
+}
+
+.toManager{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.toAdmin-outer{
+    margin: 10px 20px;
+}
+
+.toAdmin{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.second-message__outer {
+    width: 100%;
+    padding-right: 70px;
+    height: 30px;
+    text-align: right;
+}
+
+.second-message{
+    font-size: 20px;
+    color: red;
 }

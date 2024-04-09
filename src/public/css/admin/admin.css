@@ -40,18 +40,40 @@
     border: solid 1px black;
     border-radius: 5px;
     margin: 5px auto 50px;
+    padding-top: 30px;
     padding-left: 30px;
     width: 1200px;
     text-align: left;
 }
 
-.inputs-group div {
-    margin: 30px auto;
+.name-outer {
+    margin: 30px auto 0;
+}
+
+.email-outer {
+    margin: 30px auto 0;
+}
+
+.password-outer {
+    margin: 30px auto 0;
 }
 
 .inputs-group div input {
     font-size: 25px;
-    width: 500px;
+    width: 700px;
+}
+
+.error-outer{
+    margin: 0;
+    height: 25px;
+    padding: 0 auto 0 auto;
+}
+
+.error-p {
+    margin-top: 0;
+    padding-left: 30px;
+    font-size: 20px;
+    font-style: italic;
 }
 
 .button-outer {
@@ -70,9 +92,10 @@
     border-radius: 5px;
     background-color: #305DFF;
     margin-right: 50px;
+    margin-bottom: 30px;
     padding: 10px 20px;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
 }
 

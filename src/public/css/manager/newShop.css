@@ -45,15 +45,35 @@
     text-align: left;
 }
 
-.error-p {
+.error-outer {
     margin: 0;
-    padding-left: 30px;
-    height: 20px;
-    font-size: 25px;
-    font-style: italic;
+    height: 25px;
+    padding: 0 auto 0 auto;
 }
 
-.inputs-group div{
+.error-p {
+    margin-top: 0;
+    padding-left: 30px;
+    font-size: 20px;
+    font-style: italic;
+}
+.area-outer{
+    margin: 30px auto;
+}
+
+.genre-outer {
+    margin: 30px auto;
+}
+
+.name-outer {
+    margin: 30px auto;
+}
+
+.detail-outer {
+    margin: 30px auto;
+}
+
+.img-outer {
     margin: 30px auto;
 }
 
@@ -75,6 +95,7 @@
 }
 
 .button-outer{
+    margin-bottom: 20px;
     width: 100%;
     display: flex;
     justify-content: right;

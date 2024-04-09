@@ -47,10 +47,39 @@
 @section('main')
 <!--店舗一覧-->
 <div class="content-outer">
+    <div class="manager-admin">
+        <div class="toManager-outer">
+            <form action="/manager" method="get">
+            @csrf
+                <button class="toManager" type="submit">
+                    店舗代表者さまはこちら
+                </button>
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+            </form>
+        </div>
+        <div class="toAdmin-outer">
+            <form action="/admin/admin" method="get">
+            @csrf
+                <button class="toAdmin" type="submit">
+                    管理者さまはこちら
+                </button>
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+            </form>
+        </div>
+    </div>
+    <div class="second-message__outer">
+        <p class="second-message">
+        @if(session('message'))
+            {{ session('message')}}
+        @endif
+        </p>
+    </div>
+
     <div class="shops-content">
         <p class="message">
-            ログイン済みです
+        {{ Auth::user()->name }}さま、ようこそ！
         </p>
+
         <!--1店舗-->
         @foreach($shops as $shop)
         <div class="shop-box">

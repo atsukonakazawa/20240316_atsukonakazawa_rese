@@ -12,7 +12,7 @@
                 店舗代表者情報を作成しました
             </h2>
             <div class="link-outer">
-                <a class="back-link" href="/adimn" method="get">
+                <a class="back-link" href="/admin/admin" method="get">
                     戻る
                 </a>
             </div>

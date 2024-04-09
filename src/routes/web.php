@@ -7,6 +7,7 @@ use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ManagerController;
+use App\Http\Controllers\AdminController;
 
 
 /*
@@ -21,7 +22,7 @@ use App\Http\Controllers\ManagerController;
 */
 
 /* 利用者 */
-Route::get('/',[ShopController::class,'index']);
+Route::get('/',[ShopController::class,'index'])->name("index");
 Route::get('/index/area',[ShopController::class,'searchArea']);
 Route::get('/index/genre',[ShopController::class,'searchGenre']);
 Route::get('/index/keyword',[ShopController::class,'searchKeyword']);
@@ -48,16 +49,14 @@ Route::middleware('auth')->group(function () {
 });
 
 /* 店舗代表者 */
-Route::get('/manager/login',[ManagerController::class,'managerLogin']);
-Route::get('/manager',[ManagerController::class,'manager']);
-Route::get('/manager/new/shop',[ManagerController::class,'newShop']);
-Route::get('/manager/new/shop/created',[ManagerController::class,'newShopCreated']);
-Route::get('/manager/update/shop',[ManagerController::class,'updateShop']);
-Route::get('/manager/updated/shop',[ManagerController::class,'updatedShop']);
-Route::get('/manager/confirm/rese',[ManagerController::class,'confirmRese']);
+    Route::get('/manager',[ManagerController::class,'manager']);
+    Route::get('/manager/new/shop',[ManagerController::class,'newShop']);
+    Route::get('/manager/new/shop/created',[ManagerController::class,'newShopCreated']);
+    Route::get('/manager/update/shop',[ManagerController::class,'updateShop']);
+    Route::get('/manager/updated/shop',[ManagerController::class,'updatedShop']);
+    Route::get('/manager/confirm/rese',[ManagerController::class,'confirmRese']);
 
 /* 管理者 */
-Route::get('/admin/admin',[ManagerController::class,'admin']);
-Route::post('/admin/created/manager',[ManagerController::class,'createdManager']);
-
+    Route::get('/admin/admin',[AdminController::class,'admin']);
+    Route::post('/admin/create/manager',[AdminController::class,'createManager']);
 

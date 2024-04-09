@@ -33,11 +33,11 @@ class UserRequest extends FormRequest
     public function messages()
     {
         return[
-            'name.required' => 'Usernameは必須です',
-            'email.required' => 'Emailは必須です',
-            'email.email' => 'emailはメール方式で入力してください',
-            'password.required' => 'Passwordは必須です',
-            'password.min' => 'Passwordは8文字以上で入力してください'
+            'name.required' => '名前は必須です',
+            'email.required' => 'メールアドレスは必須です',
+            'email.email' => 'メールアドレスはメール方式で入力してください',
+            'password.required' => 'パスワードは必須です',
+            'password.min' => 'パスワードは8文字以上で入力してください'
         ];
     }
 }

@@ -21,13 +21,34 @@
         @csrf
             <div class="inputs-group">
                 <div class="name-outer">
-                    <input type="text" name="name" placeholder="店舗代表者の名前を入力してください">
+                    <input type="text" name="name" placeholder="店舗代表者の名前を入力してください" value="{{ old('name') }}">
+                </div>
+                <div class="error-outer">
+                    @error('name')
+                    <p class="error-p" style="color: red">
+                        {{$errors->first('name')}}　
+                    </p>
+                    @enderror
                 </div>
                 <div class="email-outer">
-                    <input type="text" name="email" placeholder="店舗代表者のメールアドレスを入力してください">
+                    <input type="text" name="email" placeholder="店舗代表者のメールアドレスを入力してください" value="{{ old('email') }}">
+                </div>
+                <div class="error-outer">
+                    @error('email')
+                    <p class="error-p" style="color: red">
+                        {{$errors->first('email')}}　
+                    </p>
+                    @enderror
                 </div>
                 <div class="password-outer">
                     <input type="password" name="password" placeholder="店舗代表者のパスワードを入力してください">
+                </div>
+                <div class="error-outer">
+                    @error('password')
+                    <p class="error-p" style="color: red">
+                        {{$errors->first('password')}}　
+                    </p>
+                    @enderror
                 </div>
                 <div class="button-outer">
                     <button class="button" type="submit">
