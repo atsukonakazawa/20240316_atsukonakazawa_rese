@@ -44,20 +44,21 @@
    <img width="1368" alt="Rese　テーブル設計" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/0448b0a9-7938-459a-b8fb-b43dfa34f29a">  
     
     ##ER図  
-      <img width="1710" alt="Rese ER図" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/a79d3bdb-c1d0-4dec-97e2-56c5b40d9120">　　　
-      　
-    ##ローカル環境構築
-Dockerビルド
-1.git clone git@github.com:coachtech-material/laravel-docker-template.git
-2.docker compose up -d --build
-※MySQLは、OSによっては起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集してください。
-Laravel環境構築
-1.docker compose exec php bash
-2.composer install
-3..env.exampleファイルから.envを作成し、環境変数を変更
-4.php artisan key:generate
-5.php artisan migrate  
+      <img width="1710" alt="Rese ER図" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/a79d3bdb-c1d0-4dec-97e2-56c5b40d9120">  
 
+       
+    ##ローカル環境構築  
+Dockerビルド  
+1.git clone git@github.com:coachtech-material/laravel-docker-template.git  
+2.docker compose up -d --build  
+※MySQLは、OSによっては起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集してください。  
+Laravel環境構築  
+1.docker compose exec php bash  
+2.composer install  
+3..env.exampleファイルから.envを作成し、環境変数を変更  
+4.php artisan key:generate  
+5.php artisan migrate  
+ 
  ##その他  
  ⚫︎利用者アカウント  
  名前:a  
