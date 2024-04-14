@@ -44,10 +44,9 @@
    <img width="1368" alt="Rese　テーブル設計" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/0448b0a9-7938-459a-b8fb-b43dfa34f29a">  
     
     ##ER図  
-      <img width="703" alt="Rese drawio" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/5dd92497-bb83-4ef9-a671-8dc141c1c9a4">  
-
-       
-     ##ローカル環境構築
+      <img width="1710" alt="Rese ER図" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/a79d3bdb-c1d0-4dec-97e2-56c5b40d9120">　　　
+      　
+    ##ローカル環境構築
 Dockerビルド
 1.git clone git@github.com:coachtech-material/laravel-docker-template.git
 2.docker compose up -d --build
