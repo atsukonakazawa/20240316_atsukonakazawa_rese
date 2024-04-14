@@ -43,10 +43,10 @@
    ##テーブル設計  
    <img width="1368" alt="Rese　テーブル設計" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/0448b0a9-7938-459a-b8fb-b43dfa34f29a">　　
 
-    ##ER図  
+   ##ER図  
     <img width="1710" alt="Rese ER図" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/6e7831b2-9d2b-471c-b750-43eccb5fab65">　　
 
-     ##ローカル環境構築　　
+   ##ローカル環境構築　　
      Dockerビルド　　
      1.git clone git@github.com:coachtech-material/laravel-docker-template.git　　
      2.docker compose up -d --build　　
@@ -58,7 +58,7 @@
      4.php artisan key:generate　　
      5.php artisan migrate　　
      　
-      ##その他  
+    ##その他  
  ⚫︎利用者アカウント  
  名前:a  
  メールアドレス:a@docomo.com  
