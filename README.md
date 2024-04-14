@@ -58,7 +58,7 @@
      4.php artisan key:generate  
      5.php artisan migrate  
       
-    ##その他  
+   ##その他  
  ⚫︎利用者アカウント  
  名前:a  
  メールアドレス:a@docomo.com  
