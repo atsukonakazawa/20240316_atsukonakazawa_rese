@@ -44,7 +44,8 @@
    <img width="1368" alt="Rese　テーブル設計" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/0448b0a9-7938-459a-b8fb-b43dfa34f29a">　　
 
    ##ER図  
-    <img width="1710" alt="Rese ER図" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/6e7831b2-9d2b-471c-b750-43eccb5fab65">　　
+    <img width="703" alt="Rese drawio" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/3c0f4f19-f613-482a-b534-2d37e04fde6a">
+
 
    ##ローカル環境構築  
      Dockerビルド  
