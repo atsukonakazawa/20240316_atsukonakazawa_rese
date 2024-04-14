@@ -17,7 +17,7 @@
                 店舗情報　新規作成画面
             </h2>
         </div>
-        <form action="/manager/new/shop/created" method="get" enctype="multipart/form-data">
+        <form action="/manager/new/shop/created" method="post" enctype="multipart/form-data">
         @csrf
             <div class="inputs-group">
                 <div class="area-outer">
@@ -76,7 +76,8 @@
                 </div>
                 <div class="img-outer">
                     <p class="shop-img__title">店舗画像を選択してください</p>
-                    <input class="img-select" type="file" name="shop_img" >
+                    <input class="img-select" type="file" name="shop_img" accept="image/png, image/jpeg">
+                    {{session('img_path')}}
                     <div class="error-outer">
                         @error('shop_img')
                         <p class="error-p" style="color: red">

@@ -9,7 +9,8 @@
     <div class="content">
         <div class="changed-box">
             <h2 class="changed-message">
-                レビューを送信しました
+                レビューを送信しました<br>
+                ありがとうございました！
             </h2>
             <div class="button-outer">
                 <button class="back-button open-modal">

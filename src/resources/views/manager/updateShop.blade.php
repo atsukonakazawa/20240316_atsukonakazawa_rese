@@ -17,9 +17,16 @@
                 店舗情報　更新画面
             </h2>
         </div>
+        <div class="message-outer">
+            <p class="message">
+            @if(session('message'))
+                {{ session('message')}}
+            @endif
+            </p>
+        </div>
         <form action="/manager/updated/shop" method="get" enctype="multipart/form-data">
         @csrf
-            <div class="inputs-group">
+            <div class="required">
                 <div class="id-outer">
                     <span class="id-span">
                         ※必須（数字・半角）
@@ -42,6 +49,8 @@
                     </p>
                     @enderror
                 </div>
+            </div>
+            <div class="inputs-group">
                 <p class="inputs-group__p">
                     ※以下は、更新したい項目のみ入力し更新ボタンを押してください。
                 </p>
@@ -75,14 +84,14 @@
                     <p class="shop-img__title">店舗画像を選択してください</p>
                     <input class="img-select" type="file" name="newShop_img">
                 </div>
-                <div class="button-outer">
-                    <button class="button" type="submit">
-                        更新
-                    </button>
-                    <a class="back-link" href="/manager">
-                        戻る
-                    </a>
-                </div>
+            </div>
+            <div class="button-outer">
+                <button class="button" type="submit">
+                    更新
+                </button>
+                <a class="back-link" href="/manager">
+                    戻る
+                </a>
             </div>
         </form>
     </div>

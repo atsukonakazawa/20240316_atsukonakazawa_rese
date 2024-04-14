@@ -57,6 +57,14 @@
                 </div>
             </div>
         </form>
+        <div class="logout-outer">
+            <form action="/logout" method="post">
+            @csrf
+                <button class="logout-button">
+                    ログアウト
+                </button>
+            </form>
+        </div>
     </div>
 </div>
 @endsection

@@ -7,6 +7,9 @@
 @section('main')
 <div class="content-outer">
     <div class="content">
+        <h2 class="user-name">
+            {{ Auth::user()->name }}さん マイページ
+        </h2>
         <div class="reservation-list__box">
             <div class="message-outer">
                 <p class="message" id="flash-message">
@@ -89,9 +92,6 @@
             </div>
         </div>
         <div class="favorites-box">
-            <h2 class="user-name">
-                {{ Auth::user()->name }}さん
-            </h2>
             <h3 class="favorites-title">
                 お気に入り店舗
             </h3>

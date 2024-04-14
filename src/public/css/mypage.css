@@ -2,6 +2,12 @@
     width: 100%
 }
 
+@media screen and (max-width:768px) {
+    .content-outer {
+        width: 768px;
+    }
+}
+
 .content {
     margin: 5px;
     padding: 0px 50px;
@@ -10,9 +16,41 @@
     justify-content: space-between;
 }
 
+@media screen and (max-width:768px) {
+    .content {
+        margin: 5px;
+        padding: 0 25px;
+        display: block;
+    }
+}
+
+.user-name {
+    margin: 0;
+    font-size: 30px;
+    text-align: left;
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+    .user-name {
+        margin-top: 50px;
+        padding-left: 30px;
+        font-size: 24px;
+        text-align: left;
+        font-weight: bold;
+    }
+}
+
 .reservation-list__box{
     margin: 30px auto;
     width: 600px;
+}
+
+@media screen and (max-width:768px) {
+    .reservation-list__box {
+        margin: 30px auto;
+        width: 600px;
+    }
 }
 
 .reservation-list__title{
@@ -21,6 +59,17 @@
     font-weight: bold;
     font-size: 30px;
     text-align: left;
+}
+
+@media screen and (max-width:768px) {
+    .reservation-list__title {
+        margin: 0 auto;
+        padding-left: 32px;
+        width: 440px;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: left;
+    }
 }
 
 .each-reservation__box{
@@ -34,6 +83,19 @@
     color: white;
 }
 
+@media screen and (max-width:768px) {
+    .each-reservation__box {
+        background-color: #305DFF;
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px gainsboro;
+        margin: 24px auto;
+        padding: 24px;
+        width: 500px;
+        height: 300px;
+        color: white;
+    }
+}
+
 .each-reservation__title-row{
     width: 500px;
     height: 50px;
@@ -42,10 +104,28 @@
     justify-content: left;
 }
 
+@media screen and (max-width:768px) {
+    .each-reservation__title-row {
+        width: 400px;
+        height: 40px;
+        margin: 8px auto;
+        display: flex;
+        justify-content: left;
+    }
+}
+
 .each-reservation__title-row img{
     margin: auto 30px;
     width: 50px;
     height: 40px;
+}
+
+@media screen and (max-width:768px) {
+    .each-reservation__title-row img {
+        margin: auto 24px;
+        width: 40px;
+        height: 32px;
+    }
 }
 
 .each-title{
@@ -54,6 +134,16 @@
     font-size: 20px;
     text-align: left;
     font-weight: lighter;
+}
+
+@media screen and (max-width:768px) {
+    .each-title {
+        margin-top: 8px;
+        width: 120px;
+        font-size: 16px;
+        text-align: left;
+        font-weight: lighter;
+    }
 }
 
 .close{
@@ -69,11 +159,35 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .close {
+        background-color: #305DFF;
+        border-radius: 50px;
+        border: solid 2px white;
+        margin-top: 8px;
+        margin-left: 150px;
+        width: 30px;
+        height: 30px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
 .each-reservation__table{
     margin: 5px auto;
     width: 400px;
     text-align: left;
     font-size: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .each-reservation__table {
+        margin: 4px auto;
+        width: 320px;
+        text-align: left;
+        font-size: 16px;
+    }
 }
 
 .each-reservation__table tr{
@@ -82,10 +196,26 @@
     height: 50px;
 }
 
+@media screen and (max-width:768px) {
+    .each-reservation__table tr {
+        margin: 8px auto;
+        width: 240px;
+        height: 40px;
+    }
+}
+
 .each-reservation__table th{
     margin: 5px auto;
     width: 100px;
     font-weight: lighter;
+}
+
+@media screen and (max-width:768px) {
+    .each-reservation__table th {
+        margin: 4px auto;
+        width: 8opx;
+        font-weight: lighter;
+    }
 }
 
 .each-reservation__table td{
@@ -93,10 +223,25 @@
     width: 250px;
 }
 
+@media screen and (max-width:768px) {
+    .each-reservation__table td {
+        margin: 4px auto;
+        width: 200px;
+    }
+}
+
 .to-change__button-outer{
     padding-right: 30px;
     width: 100%;
     text-align: right;
+}
+
+@media screen and (max-width:768px) {
+    .to-change__button-outer {
+        padding-right: 50px;
+        width: 500px;
+        text-align: right;
+    }
 }
 
 .to-change__button{
@@ -109,9 +254,28 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .to-change__button {
+        border-radius: 4px;
+        border: 0;
+        background-color: white;
+        padding: 4px 16px;
+        color: #305DFF;
+        font-size: 12px;
+        cursor: pointer;
+    }
+}
+
 .review-box{
     margin: 40px 25px 20px auto;
     text-align: right;
+}
+
+@media screen and (max-width:768px) {
+    .review-box {
+        margin: 40px 20px 16px auto;
+        text-align: right;
+    }
 }
 
 .review-box button{
@@ -125,23 +289,45 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .review-box button {
+        border: 0;
+        border-radius: 3px;
+        box-shadow: 3px 3px 5px gray;
+        background-color: #305DFF;
+        padding: 12px;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
 .favorites-box{
     margin: 0 auto;
     padding: 0;
     width: 800px;
 }
 
-.user-name{
-    margin: 0;
-    font-size: 30px;
-    text-align: left;
-    font-weight: bold;
+@media screen and (max-width:768px) {
+    .favorites-box {
+        margin: 0 auto;
+        padding: 0;
+        width: 650px;
+    }
 }
 
 .favorites-title{
     font-size: 25px;
     text-align: left;
     font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+    .favorites-title {
+        font-size: 20px;
+        text-align: left;
+        font-weight: bold;
+    }
 }
 
 .favorites-content{
@@ -151,17 +337,45 @@
     flex-wrap: wrap;
 }
 
+@media screen and (max-width:768px) {
+    .favorites-content {
+        width: 650px;
+        margin: 8px auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 .each-favorite__box {
     border-radius: 5px;
+    border: solid 1px gainsboro;
     margin: 15px;
     width: 350px;
     height: 350px;
-    box-shadow: 3px 3px 5px gray;
+    box-shadow: 3px 3px 5px gainsboro;
+}
+
+@media screen and (max-width:768px) {
+    .each-favorite__box {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        margin: 12px;
+        width: 300px;
+        height: 300px;
+        box-shadow: 3px 3px 5px gainsboro;
+    }
 }
 
 .shop-img {
     width: 350px;
     height: 200px;
+}
+
+@media screen and (max-width:768px) {
+    .shop-img {
+        width: 300px;
+        height: 180px;
+    }
 }
 
 .shop-img img {
@@ -171,14 +385,37 @@
     border-top-right-radius: 5px;
 }
 
+@media screen and (max-width:768px) {
+    .shop-img img {
+        width: 300px;
+        height: 180px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}
+
 .shop-content {
     width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .shop-content {
+        width: 300px;
+    }
 }
 
 .shop-name {
     margin: 10px auto;
     width: 300px;
     font-size: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .shop-name {
+        margin: 8px auto;
+        width: 240px;
+        font-size: 16px;
+    }
 }
 
 .area-genre__row {
@@ -188,11 +425,29 @@
     justify-content: left;
 }
 
+@media screen and (max-width:768px) {
+    .area-genre__row {
+        margin: 4px auto;
+        width: 240px;
+        display: flex;
+        justify-content: left;
+    }
+}
+
 .shop-area {
     font-size: 15px;
     font-family: "Zen Old Mincho", serif;
     font-weight: 500;
     font-style: normal;
+}
+
+@media screen and (max-width:768px) {
+    .shop-area {
+        font-size: 12px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 }
 
 .shop-genre {
@@ -202,12 +457,31 @@
     font-style: normal;
 }
 
+@media screen and (max-width:768px) {
+    .shop-genre {
+        font-size: 12px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+
 .button-outer {
     margin: 5px auto;
     width: 300px;
     height: 50px;
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width:768px) {
+    .button-outer {
+        margin: 4px auto;
+        width: 240px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .detail-button {
@@ -222,6 +496,20 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        margin: 4px 4px auto 4px;
+        padding: 0 12px;
+        border-radius: 4px;
+        height: 28px;
+        color: #fefefe;
+        font-size: 11px;
+        cursor: pointer;
+    }
+}
+
 .like-button {
     border: 0;
     background-color: white;
@@ -229,10 +517,28 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .like-button {
+        border: 0;
+        background-color: white;
+        margin: 0 0 0 auto;
+        cursor: pointer;
+    }
+}
+
 .like-button img {
     background-color: white;
     border: 0;
     width: 45px;
     height: 45px;
+}
+
+@media screen and (max-width:768px) {
+    .like-button img {
+        background-color: white;
+        border: 0;
+        width: 40px;
+        height: 40px;
+    }
 }
 

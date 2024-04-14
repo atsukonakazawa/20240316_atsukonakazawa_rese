@@ -1,3 +1,79 @@
+.content-outer {
+    width: 100%
+}
+
+@media screen and (max-width:768px) {
+    .content-outer {
+        width: 768px;
+    }
+}
+
+.content {
+    margin: 5px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.changed-box {
+    box-shadow: 3px 3px 3px gainsboro;
+    border: solid 1px gainsboro;    border-radius: 5px;
+    margin: 50px auto;
+    padding: 100px 30px;
+    width: 500px;
+}
+
+@media screen and (max-width:768px) {
+    .changed-box {
+        box-shadow: 3px 3px 3px gainsboro;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        margin: 50px auto;
+        padding: auto;
+        width: 500px;
+        text-align: center;
+    }
+}
+
+.changed-message {
+    width: 100%;
+    font-weight: lighter;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .changed-message {
+        margin: 40px auto;
+        width: 400px;
+        font-weight: lighter;
+        text-align: center;
+    }
+}
+
+.button-outer {
+    width: 100%;
+    height: 80px;
+    padding: 25px;
+}
+
+@media screen and (max-width:768px) {
+    .button-outer {
+        width: 400px;
+        height: 64px;
+        padding: 10px;
+        margin: 0px auto;
+    }
+}
+
+.back-button {
+    border-radius: 5px;
+    background-color: #305DFF;
+    margin: 0 auto;
+    color: white;
+    padding: 10px 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* モーダルウィンドウ全体 */
 .modal {
     display: none;
@@ -14,6 +90,23 @@
     /* モーダルの背景色 */
 }
 
+@media screen and (max-width:768px) {
+    .modal {
+        display: none;
+        /* 最初は非表示にする */
+        margin: auto;
+        position: fixed;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        width: 768px;
+        height: 100%;
+        overflow: auto;
+        background-color: white;
+        /* モーダルの背景色 */
+    }
+}
+
 /* モーダルコンテンツ */
 .modal-content {
     background-color: white;
@@ -23,11 +116,30 @@
     height: 900px;
 }
 
+@media screen and (max-width:768px) {
+    .modal-content {
+        background-color: white;
+        margin: auto;
+        padding: auto;
+        width: 700px;
+        height: 400px;
+    }
+}
+
 .close-button__outer {
     margin: 10px auto;
     width: 1300px;
     height: 80px;
     text-align: left;
+}
+
+@media screen and (max-width:768px) {
+    .close-button__outer {
+        margin: 10px auto;
+        width: 700px;
+        height: 50px;
+        text-align: left;
+    }
 }
 
 /* 閉じるボタン */
@@ -44,6 +156,21 @@
     box-shadow: 3px 3px 3px gainsboro;
 }
 
+@media screen and (max-width:768px) {
+    .close {
+        background-color: #305DFF;
+        border-radius: 5px;
+        border: 0;
+        padding: 0 auto;
+        width: 40px;
+        height: 40px;
+        color: white;
+        font-weight: 1;
+        font-size: 30px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+}
+
 .choices {
     background-color: white;
     margin: 100px auto;
@@ -51,6 +178,17 @@
     width: 300px;
     height: 500px;
     text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .choices {
+        background-color: white;
+        margin: 50px auto;
+        padding-top: 100px;
+        width: 200px;
+        height: 450px;
+        text-align: center;
+    }
 }
 
 .choices a {
@@ -63,6 +201,16 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .choices a {
+        margin: 50px auto;
+        width: 150px;
+        text-decoration: none;
+        color: #305DFF;
+        font-size: 30px;
+    }
+}
+
 .logout-button {
     margin: 10px auto 0;
     background-color: white;
@@ -70,6 +218,17 @@
     color: #305DFF;
     font-size: 40px;
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .logout-button {
+        margin: 15px auto 0;
+        background-color: white;
+        border: 0;
+        color: #305DFF;
+        font-size: 30px;
+        cursor: pointer;
+    }
 }
 
 .mypage-button {
@@ -82,48 +241,20 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .mypage-button {
+        margin: 0 auto;
+        background-color: white;
+        border: 0;
+        color: #305DFF;
+        font-size: 28px;
+        font-weight: lighter;
+        cursor: pointer;
+    }
+}
+
 .close:hover,
 .close:focus {
     text-decoration: none;
     cursor: pointer;
-}
-
-.content-outer {
-    width: 100%
-}
-
-.content {
-    margin: 5px;
-    padding: 0 50px;
-    text-align: center;
-}
-
-.changed-box {
-    box-shadow: 3px 3px 3px gray;
-    border-radius: 5px;
-    margin: 50px auto;
-    padding: 100px 30px;
-    width: 500px;
-}
-
-.changed-message {
-    width: 100%;
-    font-weight: lighter;
-    text-align: center;
-}
-
-.button-outer {
-    width: 100%;
-    height: 80px;
-    padding: 25px;
-}
-
-.back-button {
-    border-radius: 5px;
-    background-color: #305DFF;
-    margin: auto;
-    color: white;
-    padding: 10px 30px;
-    cursor: pointer;
-    text-decoration: none;
 }

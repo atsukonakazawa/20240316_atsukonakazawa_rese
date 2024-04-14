@@ -1,75 +1,13 @@
-/* モーダルウィンドウ全体 */
-.modal {
-    display: none;
-    /* 最初は非表示にする */
-    margin: auto;
-    position: fixed;
-    z-index: 5;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: white;
-    /* モーダルの背景色 */
-}
-
-/* モーダルコンテンツ */
-.modal-content {
-    margin: auto;
-    padding: auto;
-    width: 1400px;
-    height: 900px;
-    background-color: white;
-}
-
-.close-button__outer {
-    margin: 10px auto;
-    width: 1300px;
-    height: 80px;
-    text-align: left;
-}
-
-/* 閉じるボタン */
-.close {
-    background-color: #305DFF;
-    border-radius: 5px;
-    border: 0;
-    padding: 0 auto;
-    width: 60px;
-    height: 60px;
-    color: white;
-    font-weight: 1;
-    font-size: 45px;
-    box-shadow: 3px 3px 3px gainsboro;
-}
-
-.choices {
-    background-color: white;
-    margin: 100px auto;
-    padding-top: 100px;
-    width: 300px;
-    height: 500px;
-    text-align: center;
-}
-
-.choices a {
-    margin: 100px auto;
-    width: 290px;
-    text-decoration: none;
-    color: #305DFF;
-    font-size: 40px;
-}
-
-.close:hover,
-.close:focus {
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .search-outer {
     margin: auto 30px;
     width: 700px;
+}
+
+@media screen and (max-width:768px) {
+    .search-outer {
+        margin: auto 10px;
+        width: 550px;
+    }
 }
 
 .search-box {
@@ -80,9 +18,26 @@
     justify-content: right;
 }
 
+@media screen and (max-width:768px) {
+    .search-box {
+        margin: 5px;
+        width: 470px;
+        height: 45px;
+        display: flex;
+        justify-content: right;
+    }
+}
+
 .search-area {
     padding: 0 10px;
     width: 150px;
+}
+
+@media screen and (max-width:768px) {
+    .search-area {
+        padding: 0 5px;
+        width: 100px;
+    }
 }
 
 .search-area__inner {
@@ -92,9 +47,25 @@
     font-size: 20px;
 }
 
+@media screen and (max-width:768px) {
+    .search-area__inner {
+        width: 100px;
+        margin: 7px 0;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
 .search-genre {
     padding: 0 10px;
     width: 150px;
+}
+
+@media screen and (max-width:768px) {
+    .search-genre {
+        padding: 0 5px;
+        width: 100px;
+    }
 }
 
 .search-genre__inner {
@@ -104,9 +75,25 @@
     font-size: 20px;
 }
 
+@media screen and (max-width:768px) {
+    .search-genre__inner {
+        width: 100px;
+        margin: 7px 3px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
 .search-keyword {
     padding: 0 10px;
     width: 450px;
+}
+
+@media screen and (max-width:768px) {
+    .search-keyword {
+        padding: 0 11px;
+        width: 200px;
+    }
 }
 
 .search-keyword__inner {
@@ -116,8 +103,23 @@
     font-size: 20px;
 }
 
+@media screen and (max-width:768px) {
+    .search-keyword__inner {
+        width: 200px;
+        margin: 7px 0;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
 .content-outer {
     width: 100%
+}
+
+@media screen and (max-width:768px) {
+    .content-outer {
+        width: 768px;
+    }
 }
 
 .shops-content {
@@ -126,6 +128,16 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width:768px) {
+    .shops-content {
+        margin: 5px;
+        padding: 5px 25px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
 .message{
@@ -137,6 +149,17 @@
     color: #305DFF;
 }
 
+@media screen and (max-width:768px) {
+    .message {
+        padding-left: 30px;
+        width: 768;
+        height: 16px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #305DFF;
+    }
+}
+
 .shop-box {
     border-radius: 5px;
     margin: 15px;
@@ -145,9 +168,26 @@
     box-shadow: 3px 3px 3px gainsboro;
 }
 
+@media screen and (max-width:768px) {
+    .shop-box {
+        border-radius: 5px;
+        margin: 7px;
+        width: 300px;
+        height: 300px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+}
+
 .shop-img {
     width: 350px;
     height: 200px;
+}
+
+@media screen and (max-width:768px) {
+    .shop-img {
+        width: 300px;
+        height: 172px;
+    }
 }
 
 .shop-img img {
@@ -157,14 +197,37 @@
     border-top-right-radius: 5px;
 }
 
+@media screen and (max-width:768px) {
+    .shop-img img {
+        width: 300px;
+        height: 165px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}
+
 .shop-content {
     width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .shop-content {
+        width: 300px;
+    }
 }
 
 .shop-name {
     margin: 10px auto;
     width: 300px;
     font-size: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .shop-name {
+        margin: 10px auto;
+        width: 270px;
+        font-size: 20px;
+    }
 }
 
 .area-genre__row {
@@ -174,11 +237,29 @@
     justify-content: left;
 }
 
+@media screen and (max-width:768px) {
+    .area-genre__row {
+        margin: 2px auto;
+        width: 270px;
+        display: flex;
+        justify-content: left;
+    }
+}
+
 .shop-area {
     font-size: 15px;
     font-family: "Zen Old Mincho", serif;
     font-weight: 500;
     font-style: normal;
+}
+
+@media screen and (max-width:768px) {
+    .shop-area {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 250;
+        font-style: normal;
+    }
 }
 
 .shop-genre {
@@ -188,12 +269,31 @@
     font-style: normal;
 }
 
+@media screen and (max-width:768px) {
+    .shop-genre {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 250;
+        font-style: normal;
+    }
+}
+
 .button-outer {
     margin: 5px auto;
     width: 300px;
     height: 50px;
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width:768px) {
+    .button-outer {
+        margin: 2px auto 2px 20px;
+        width: 270px;
+        height: 35px;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .detail-button {
@@ -208,11 +308,34 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        margin: auto 2px;
+        padding: 0 10px;
+        border-radius: 5px;
+        height: 35px;
+        color: #fefefe;
+        font-size: 12px;
+        cursor: pointer;
+    }
+}
+
 .like-button {
     background-color: white;
     border: 0;
     margin: 0 0 0 auto;
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .like-button {
+        background-color: white;
+        border: 0;
+        margin: 0 10px 0 auto;
+        cursor: pointer;
+    }
 }
 
 .like-button img {
@@ -222,39 +345,109 @@
     height: 45px;
 }
 
+@media screen and (max-width:768px) {
+    .like-button img {
+        background-color: white;
+        border: 0;
+        width: 35px;
+        height: 35px;
+    }
+}
+
 .manager-admin{
-    padding-right: 60px;
-    width: 100%;
+    border-top: solid 1px gainsboro;
+    margin: 50px auto 0;
+    width: 80%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+    .manager-admin {
+        border-top: solid 1px gainsboro;
+        margin: 50px auto 0;
+        width: 700px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .toManager-outer{
     margin: 10px 20px;
 }
 
+@media screen and (max-width:768px) {
+    .toManager-outer {
+        margin: 20px 4px 0px auto;
+    }
+}
+
 .toManager{
+    border-radius: 5px;
+    border: solid 1px gainsboro;
     font-size: 20px;
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .toManager {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 13px;
+        cursor: pointer;
+    }
 }
 
 .toAdmin-outer{
     margin: 10px 20px;
 }
 
+@media screen and (max-width:768px) {
+    .toAdmin-outer {
+        margin: 20px auto 0px 4px;
+    }
+}
+
 .toAdmin{
+    border-radius: 5px;
+    border: solid 1px gainsboro;
     font-size: 20px;
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .toAdmin {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 13px;
+        cursor: pointer;
+    }
+}
+
 .second-message__outer {
+    margin-bottom: 50px;
     width: 100%;
-    padding-right: 70px;
     height: 30px;
-    text-align: right;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .second-message__outer {
+        margin-bottom: 30px;
+        width: 768px;
+        height: 20px;
+        text-align: center;
+    }
 }
 
 .second-message{
     font-size: 20px;
     color: red;
+}
+
+@media screen and (max-width:768px) {
+    .second-message {
+        font-size: 13px;
+        color: red;
+    }
 }

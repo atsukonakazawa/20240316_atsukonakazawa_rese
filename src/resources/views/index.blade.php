@@ -15,7 +15,7 @@
                     <option disabled selected value="">All area</option>
                     @foreach($areas as $area)
                     <option value="{{ $area['id'] }}" {{ session('selected_area_id') == $area['id'] ? 'selected' : '' }}>
-                        {{ $area['area_name'] }} 
+                        {{ $area['area_name'] }}
                     </option>
                     @endforeach
                 </select>

@@ -51,7 +51,7 @@ Route::middleware('auth')->group(function () {
 /* 店舗代表者 */
     Route::get('/manager',[ManagerController::class,'manager']);
     Route::get('/manager/new/shop',[ManagerController::class,'newShop']);
-    Route::get('/manager/new/shop/created',[ManagerController::class,'newShopCreated']);
+    Route::post('/manager/new/shop/created',[ManagerController::class,'store']);
     Route::get('/manager/update/shop',[ManagerController::class,'updateShop']);
     Route::get('/manager/updated/shop',[ManagerController::class,'updatedShop']);
     Route::get('/manager/confirm/rese',[ManagerController::class,'confirmRese']);

@@ -2,14 +2,35 @@
     width: 100%
 }
 
+@media screen and (max-width:768px) {
+    .content-outer {
+        width: 768px;
+    }
+}
+
 .content {
     margin: 5px;
     padding: 0 50px;
     text-align: center;
 }
 
+@media screen and (max-width:768px) {
+    .content {
+        margin: 5px;
+        width: 768px;
+        padding: 0 25px;
+        display: block;
+    }
+}
+
 .title-outer {
     width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .title-outer {
+        width: 750px;
+    }
 }
 
 .title {
@@ -23,6 +44,19 @@
     font-size: 30px;
 }
 
+@media screen and (max-width:768px) {
+    .title {
+        border: double 5px gold;
+        border-radius: 5px;
+        background-color: tomato;
+        margin: 4px 4px 4px auto;
+        padding-top: 24px;
+        width: 320px;
+        color: white;
+        font-size: 24px;
+    }
+}
+
 .subtitle-outer{
     margin: 50px auto 5px;
     width: 100%;
@@ -30,10 +64,27 @@
     text-align: center;
 }
 
+@media screen and (max-width:768px) {
+    .subtitle-outer {
+        margin: 40px auto 4px;
+        width: 700px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
 .subtitle{
     border-radius: 5px;
     margin: 15px auto;
     width: 600px;
+}
+
+@media screen and (max-width:768px) {
+    .subtitle {
+        border-radius: 5px;
+        margin: 12px auto;
+        width: 500px;
+    }
 }
 
 .inputs-group{
@@ -45,10 +96,29 @@
     text-align: left;
 }
 
+@media screen and (max-width:768px) {
+    .inputs-group {
+        border: solid 1px black;
+        border-radius: 5px;
+        margin: 4px auto 40px;
+        padding-left: 24px;
+        width: 700px;
+        text-align: left;
+    }
+}
+
 .error-outer {
     margin: 0;
     height: 25px;
     padding: 0 auto 0 auto;
+}
+
+@media screen and (max-width:768px) {
+    .error-outer {
+        margin: 0;
+        height: 20px;
+        padding: 0 auto 0 auto;
+    }
 }
 
 .error-p {
@@ -57,41 +127,109 @@
     font-size: 20px;
     font-style: italic;
 }
+
+@media screen and (max-width:768px) {
+    .error-p {
+        margin-top: 0;
+        padding-left: 24px;
+        font-size: 16px;
+        font-style: italic;
+    }
+}
+
 .area-outer{
     margin: 30px auto;
+}
+
+@media screen and (max-width:768px) {
+    .area-outer {
+        margin: 24px auto;
+    }
 }
 
 .genre-outer {
     margin: 30px auto;
 }
 
+@media screen and (max-width:768px) {
+    .genre-outer {
+        margin: 24px auto;
+    }
+}
+
 .name-outer {
     margin: 30px auto;
+}
+
+@media screen and (max-width:768px) {
+    .name-outer {
+        margin: 24px auto;
+    }
 }
 
 .detail-outer {
     margin: 30px auto;
 }
 
+@media screen and (max-width:768px) {
+    .detail-outer {
+        margin: 24px auto;
+    }
+}
+
 .img-outer {
     margin: 30px auto;
+}
+
+@media screen and (max-width:768px) {
+    .img-outer {
+        margin: 24px auto;
+    }
 }
 
 .inputs-group div select{
     font-size: 25px;
 }
 
+@media screen and (max-width:768px) {
+    .inputs-group div select {
+        font-size: 20px;
+    }
+}
+
 .inputs-group div input{
+    padding: 10px 20px;
     font-size: 25px;
     width: 500px;
+}
+
+@media screen and (max-width:768px) {
+    .inputs-group div input {
+        padding: 8px 16px;
+        font-size: 20px;
+        width: 400px;
+    }
 }
 
 .inputs-group div textarea{
     font-size: 25px;
 }
 
+@media screen and (max-width:768px) {
+    .inputs-group div textarea {
+        font-size: 20px;
+        font-weight: lighter;
+    }
+}
+
 .shop-img__title{
     font-size: 25px;
+}
+
+@media screen and (max-width:768px) {
+    .shop-img__title {
+        font-size: 20px;
+    }
 }
 
 .button-outer{
@@ -99,6 +237,15 @@
     width: 100%;
     display: flex;
     justify-content: right;
+}
+
+@media screen and (max-width:768px) {
+    .button-outer {
+        margin-bottom: 16px;
+        width: 700px;
+        display: flex;
+        justify-content: right;
+    }
 }
 
 ::placeholder {
@@ -117,6 +264,19 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .button {
+        border: 0;
+        border-radius: 5px;
+        background-color: #305DFF;
+        margin-right: 40px;
+        padding: 8px 16px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
 .back-link {
     border: 0;
     border-radius: 5px;
@@ -127,4 +287,18 @@
     color: black;
     font-size: 25px;
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .back-link {
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        margin-right: 56px;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+    }
 }

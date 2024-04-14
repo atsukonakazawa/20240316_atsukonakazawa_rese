@@ -2,6 +2,12 @@
     width: 100%
 }
 
+@media screen and (max-width:768px) {
+    .content-outer {
+        width: 768px;
+    }
+}
+
 .content {
     margin: 5px;
     padding: 0 50px;
@@ -10,10 +16,25 @@
     justify-content: space-between;
 }
 
+@media screen and (max-width:768px) {
+    .content {
+        margin: 5px;
+        padding: 0 25px;
+    }
+}
+
 .detail-box{
-    width: 750px;
     margin-left: 30px;
+    width: 750px;
     position: relative;
+}
+
+@media screen and (max-width:768px) {
+    .detail-box {
+        position: relative;
+        width: 750px;
+        margin-left: 0 auto;
+    }
 }
 
 .shop-title__row{
@@ -21,6 +42,15 @@
     width: 100%;
     display: flex;
     justify-content: left;
+}
+
+@media screen and (max-width:768px) {
+    .shop-title__row {
+        padding: 10px;
+        width: 700px;
+        display: flex;
+        justify-content: left;
+    }
 }
 
 .back-button{
@@ -36,6 +66,21 @@
     text-decoration: none;
 }
 
+@media screen and (max-width:768px) {
+    .back-button {
+        background: white;
+        margin: auto 16px;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+        padding: auto p4x;
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        text-decoration: none;
+    }
+}
+
 .shop-name{
     margin: 5px;
     padding: auto 5px;
@@ -43,9 +88,25 @@
     font-weight: bold;
 }
 
+@media screen and (max-width:768px) {
+    .shop-name {
+        margin: 5px;
+        padding: auto 5px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
+
 .shop-img{
     width: 650px;
     height: 400px;
+}
+
+@media screen and (max-width:768px) {
+    .shop-img {
+        width: 520px;
+        height: 320px;
+    }
 }
 
 .area-genre__row{
@@ -56,15 +117,40 @@
     justify-content: left;
 }
 
+@media screen and (max-width:768px) {
+    .area-genre__row {
+        margin-left: 65px;
+        margin-top: 8px;
+        width: 600px;
+        display: flex;
+        justify-content: left;
+    }
+}
+
 .area-genre__row div{
     margin: 10px;
     font-size: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .area-genre__row div {
+        margin: 8px;
+        font-size: 16px;
+    }
 }
 
 .shop-detail{
     margin-left: 30px;
     margin-top: 10px;
     font-size: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .shop-detail {
+        margin: 8px auto 8px 65px;
+        width: 600px;
+        font-size: 16px;
+    }
 }
 
 .reservation-box{
@@ -74,16 +160,39 @@
     background-color: #305DFF;
     border-radius: 10px;
     box-shadow: 3px 3px 3px gray;
-    margin-right: 50px;
+    margin-right: 10px auto;
     width: 650px;
     color: white;
     text-align: left;
+}
+
+@media screen and (max-width:768px) {
+    .reservation-box {
+        position: absolute;
+        top: 580px;
+        left: 90px;
+        background-color: #305DFF;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px gainsboro;
+        margin: 50px auto 100px;
+        width: 600px;
+        color: white;
+        text-align: left;
+    }
 }
 
 .reservation-title{
     margin: 30px auto 10px 40px;
     width: 100%;
     font-size: 30px;
+}
+
+@media screen and (max-width:768px) {
+    .reservation-title {
+        margin: 24px auto 8px 32px;
+        width: 600px;
+        font-size: 24px;
+    }
 }
 
 .date{
@@ -96,6 +205,19 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .date {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        margin-left: 32px;
+        border: 0;
+        border-radius: 5px;
+        width: 160px;
+        height: 28px;
+        cursor: pointer;
+    }
+}
+
 .time{
     margin-top: 10px;
     margin-left: 40px;
@@ -104,6 +226,19 @@
     width: 550px;
     height: 35px;
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .time {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        margin-left: 32px;
+        border: 0;
+        border-radius: 5px;
+        width: 440px;
+        height: 28px;
+        cursor: pointer;
+    }
 }
 
 .people{
@@ -116,8 +251,26 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:768px) {
+    .people {
+        margin-top: 8px;
+        margin-left: 32px;
+        border: 0;
+        border-radius: 5px;
+        width: 440px;
+        height: 28px;
+        cursor: pointer;
+    }
+}
+
 .confirm-outer{
     width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .confirm-outer {
+        width: 650px;
+    }
 }
 
 .confirm-table{
@@ -129,12 +282,33 @@
     height: 200px;
 }
 
+@media screen and (max-width:768px) {
+    .confirm-table {
+        background: cornflowerblue;
+        border-radius: 7px;
+        margin-top: 24px;
+        margin-left: 32px;
+        width: 424px;
+        height: 160px;
+    }
+}
+
 th{
     padding: 0 0 0 30px;
     width: 120px;
     height: 20px;
     font-size: 20px;
     font-weight: lighter;
+}
+
+@media screen and (max-width:768px) {
+    th {
+        padding: 0 0 0 24px;
+        width: 96px;
+        height: 16px;
+        font-size: 16px;
+        font-weight: lighter;
+    }
 }
 
 td{
@@ -144,6 +318,15 @@ td{
     font-weight: lighter;
 }
 
+@media screen and (max-width:768px) {
+    td {
+        width: 240px;
+        height: 16px;
+        font-size: 16px;
+        font-weight: lighter;
+    }
+}
+
 .error-messages{
     margin: 0;
     padding-top: 170px;
@@ -151,8 +334,23 @@ td{
     height: 300px;
 }
 
+@media screen and (max-width:768px) {
+    .error-messages {
+        margin: 0;
+        padding-top: 0;
+        padding-left: 24px;
+        height: 120px;
+    }
+}
+
 .error-messages li{
     margin-bottom: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .error-messages li {
+        margin-bottom: 8px;
+    }
 }
 
 .reservation-button{
@@ -167,4 +365,20 @@ td{
     text-align: center;
     font-size: 20px;
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .reservation-button {
+        background-color: blue;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 0;
+        margin-bottom: 0;
+        width: 600px;
+        height: 48px;
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+    }
 }

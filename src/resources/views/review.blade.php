@@ -74,17 +74,17 @@
                         ご感想をお聞かせください
                     </p>
                     <textarea class="comment" name="comment" id="" cols="30" rows="5"></textarea>
-                    <div class="review-button__outer">
-                        <button class="review-button" type="submit">
-                            レビューを送信する
-                        </button>
-                        <input type="hidden" name="shopId" value="{{ $visitation->shop->id }}">
-                        @if (Auth::check())
-                        <input type="hidden" name="userId" value="{{ Auth::user()->id }}">
-                        @endif
-                    </div>
-                </form>
                 </div>
+                <div class="review-button__outer">
+                    <button class="review-button" type="submit">
+                        レビューを送信する
+                    </button>
+                    <input type="hidden" name="shopId" value="{{ $visitation->shop->id }}">
+                    @if (Auth::check())
+                    <input type="hidden" name="userId" value="{{ Auth::user()->id }}">
+                    @endif
+                </div>
+                </form>
             </div>
             @endforeach
         </div>

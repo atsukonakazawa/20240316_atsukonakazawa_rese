@@ -2,10 +2,25 @@
     width: 100%
 }
 
+@media screen and (max-width:768px) {
+    .content-outer {
+        width: 768px;
+    }
+}
+
 .content {
     margin: 5px;
     padding: 0 50px;
     text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .content {
+        margin: 5px;
+        width: 768px;
+        padding: 0 25px;
+        display: block;
+    }
 }
 
 .done-box {
@@ -16,6 +31,16 @@
     width: 800px;
 }
 
+@media screen and (max-width:768px) {
+    .done-box {
+        border: double 4px #305DFF;
+        border-radius: 5px;
+        margin: 40px auto;
+        padding: 70px 24px;
+        width: 600px;
+    }
+}
+
 .done-message {
     width: 100%;
     font-weight: lighter;
@@ -23,10 +48,30 @@
     font-size: 40px;
 }
 
+@media screen and (max-width:768px) {
+    .done-message {
+        margin: 0 auto;
+        padding-top: 20px;
+        width: 550px;
+        font-weight: lighter;
+        text-align: center;
+        font-size: 32px;
+    }
+}
+
 .link-outer {
     width: 100%;
     height: 80px;
     padding: 25px;
+}
+
+@media screen and (max-width:768px) {
+    .link-outer {
+        width: 550px;
+        height: 64px;
+        margin: 30px auto;
+        padding: 20px;
+    }
 }
 
 .back-link {
@@ -38,4 +83,17 @@
     padding: 10px 30px;
     cursor: pointer;
     text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+    .back-link {
+        border-radius: 5px;
+        background-color: #305DFF;
+        margin: 30px auto 0;
+        color: white;
+        text-decoration: none;
+        padding: 8px 24px;
+        cursor: pointer;
+        text-decoration: none;
+    }
 }
