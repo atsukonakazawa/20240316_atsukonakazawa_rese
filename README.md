@@ -37,6 +37,19 @@
  
   ##使用技術  
   Laravel Framework 8.83.27  
+  PHP PHP 8.2.11 (cli)  
+  MySQL Community Server - GPL 8.0.26  
+
+   ##テーブル設計  
+   <img width="1710" alt="Rese　テーブル設計" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/4ec9bc2f-59c6-4e9d-bb5d-dad7073067f5">  
+    
+    ##ER図  
+    <img width="703" alt="Rese drawio" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/07aa2a38-2fd0-435c-b9de-db189d447b0d">  
+
+     ##環境構築
+    
+    
+
   
   
   
