@@ -46,7 +46,33 @@
     ##ER図  
     <img width="703" alt="Rese drawio" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/07aa2a38-2fd0-435c-b9de-db189d447b0d">  
 
-     ##環境構築
+     ##ローカル環境構築
+Dockerビルド
+1.git clone git@github.com:coachtech-material/laravel-docker-template.git
+2.docker compose up -d --build
+※MySQLは、OSによっては起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集してください。
+Laravel環境構築
+1.docker compose exec php bash
+2.composer install
+3..env.exampleファイルから.envを作成し、環境変数を変更
+4.php artisan key:generate
+5.php artisan migrate  
+
+ ##その他  
+ ⚫︎利用者アカウント  
+ 名前:a  
+ メールアドレス:a@docomo.com  
+ パスワード:aaaaaaaa(aが８個)  
+ ⚫︎店舗管理者アカウント  
+ 名前:b-manager  
+ メールアドレス:b@docomo.com  
+ パスワード:bbbbbbbb(bが8個)  
+ ⚫︎管理者アカウント  
+ 名前：c-admin  
+ メールアドレス:c@docomo.com  
+ パスワード:cccccccc(cが8個)  
+ 
+ 
     
     
 
