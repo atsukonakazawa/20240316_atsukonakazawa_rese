@@ -34,6 +34,8 @@
   店舗代表者の管理画面（新規店舗情報の作成、既存店舗情報の更新、予約の確認）  
   管理者の管理画面（店舗代表者の作成）  
   お店の画像をストレージに保存（新規店舗情報の作成時）  
+  メールによって本人確認を行うことができる  
+  店舗代表者の管理画面から利用者にお知らせメールを送信することができる  
  
   ##使用技術  
   Laravel Framework 8.83.27  
@@ -52,6 +54,9 @@
      1.git clone git@github.com:coachtech-material/laravel-docker-template.git  
      2.docker compose up -d --build  
      ※MySQLは、OSによっては起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集してください。  
+     3.メールサーバー(mailhog)立ち上げ後.envと　docker-compose.ymlを編集  
+     4.再度docker compose up -d --build  
+      
      Laravel環境構築  
      1.docker compose exec php bash  
      2.composer install  
