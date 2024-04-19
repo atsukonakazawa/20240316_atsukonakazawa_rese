@@ -2,7 +2,7 @@
 window.onload = function() {
     // モーダル要素を取得
     var modal = document.getElementById('modal');
-    
+
     // モーダルを非表示にする
     modal.style.display = 'none';
 

@@ -16,6 +16,7 @@
 
 .done-box {
     box-shadow: 3px 3px 3px gainsboro;
+    border: solid 1px gainsboro;
     border-radius: 5px;
     margin: 50px auto;
     padding: 100px auto;

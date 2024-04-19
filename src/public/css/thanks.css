@@ -28,8 +28,9 @@
         box-shadow: 3px 3px 3px gainsboro;
         border-radius: 5px;
         margin: 50px auto;
-        padding: 100px 30px;
+        padding: 100px 0;
         width: 400px;
+        text-align: center;
     }
 }
 
@@ -41,7 +42,8 @@
 
 @media screen and (max-width:768px) {
     .thanks-message {
-        width: 400px;
+        margin: 0 auto;
+        width: 350px;
         font-weight: lighter;
         text-align: center;
     }
@@ -55,9 +57,10 @@
 
 @media screen and (max-width:768px) {
     .button-outer {
-        width: 400px;
+        width: 350px;
         height: 64px;
         padding: 25px;
+        margin: 30px auto 0;
     }
 }
 

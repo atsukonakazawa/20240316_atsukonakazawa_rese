@@ -143,6 +143,7 @@
     margin-left: 30px;
     margin-top: 10px;
     font-size: 20px;
+    text-align: left;
 }
 
 @media screen and (max-width:768px) {
@@ -150,6 +151,7 @@
         margin: 8px auto 8px 65px;
         width: 600px;
         font-size: 16px;
+        text-align: left;
     }
 }
 
@@ -293,7 +295,7 @@
     }
 }
 
-th{
+.confirm-table th{
     padding: 0 0 0 30px;
     width: 120px;
     height: 20px;
@@ -302,7 +304,7 @@ th{
 }
 
 @media screen and (max-width:768px) {
-    th {
+    .confirm-table th {
         padding: 0 0 0 24px;
         width: 96px;
         height: 16px;
@@ -311,7 +313,7 @@ th{
     }
 }
 
-td{
+.confirm-table td{
     width: 300px;
     height: 20px;
     font-size: 20px;
@@ -319,7 +321,7 @@ td{
 }
 
 @media screen and (max-width:768px) {
-    td {
+    .confirm-table td {
         width: 240px;
         height: 16px;
         font-size: 16px;

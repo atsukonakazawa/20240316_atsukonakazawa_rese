@@ -63,7 +63,6 @@ class ShopController extends Controller
         session()->forget('selected_area_id');
         session()->forget('selected_keyword');
 
-
         return view('index',compact('shops','areas','genres'));
     }
 
@@ -197,5 +196,4 @@ class ShopController extends Controller
 
         return view('mypage', compact('reservations','favorites'));
     }
-
 }

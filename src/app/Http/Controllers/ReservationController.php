@@ -14,13 +14,13 @@ class ReservationController extends Controller
 
         $userId = $request->user_id;
         $shopId = $request->shop_id;
-            $result = [
-                'user_id' => $userId,
-                'shop_id' => $shopId,
-                'rese_date' => $request->date,
-                'rese_time' => $request->time,
-                'rese_people' => $request->people,
-            ];
+        $result = [
+            'user_id' => $userId,
+            'shop_id' => $shopId,
+            'rese_date' => $request->date,
+            'rese_time' => $request->time,
+            'rese_people' => $request->people,
+        ];
         Reservation::create($result);
 
         return view('done');

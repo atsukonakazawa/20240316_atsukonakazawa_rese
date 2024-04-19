@@ -11,7 +11,6 @@ use App\Models\Reservation;
 use App\Http\Requests\ShopRequest;
 use App\Http\Requests\UpdateRequest;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
 class ManagerController extends Controller
 {
@@ -24,11 +23,11 @@ class ManagerController extends Controller
 
         if($getRole !== null){
 
-        return view('manager.manager');
+            return view('manager.manager');
 
         }else{
 
-        $shops = Shop::with('area')->with('genre')->get();
+            $shops = Shop::with('area')->with('genre')->get();
             $areas = Area::all();
             $genres = Genre::all();
 
@@ -43,19 +42,18 @@ class ManagerController extends Controller
 
             return view('home',compact('shops','areas','genres','favorites'));
         }
-
     }
 
-    public function newShop()
-    {
+    public function newShop(){
+
         $areas = Area::all();
         $genres = Genre::all();
 
         return view('manager.newShop',compact('areas','genres'));
     }
 
-    public function store(ShopRequest $request)
-    {
+    public function store(ShopRequest $request){
+
         $file_name = $request->file('shop_img')->getClientOriginalName();
         $request->file('shop_img')->storeAs('shopImg',$file_name);
 
@@ -122,7 +120,6 @@ class ManagerController extends Controller
             }
         }
 
-
         //ジャンルを更新
         if($match == null){
 
@@ -131,7 +128,9 @@ class ManagerController extends Controller
             return view('manager.updateShop',compact('areas','genres'));
 
         }else{
+
             if($newGenreId !== null && $newGenreId !== 'null'){
+
                 $result2 = [
                     'genre_id' => $newGenreId,
                 ];
@@ -151,6 +150,7 @@ class ManagerController extends Controller
             return view('manager.updateShop',compact('areas','genres'));
 
         }else{
+
             if($newShopName !== null && $newShopName !== 'null'){
                 $result3 = [
                     'shop_name' => $newShopName,
@@ -171,6 +171,7 @@ class ManagerController extends Controller
             return view('manager.updateShop',compact('areas','genres'));
 
         }else{
+
             if($newShopDetail !== null && $newShopDetail !== 'null'){
                 $result4 = [
                     'shop_detail' => $newShopDetail,
@@ -191,6 +192,7 @@ class ManagerController extends Controller
             return view('manager.updateShop',compact('areas','genres'));
 
         }else{
+
             if($newShopImg !== null && $newShopImg !== 'null'){
                 $result5 = [
                     'shop_img' => $newShopImg,
@@ -204,13 +206,12 @@ class ManagerController extends Controller
         }
 
         return view('manager.updatedShop');
-
     }
 
     public function confirmRese(Request $request){
 
         $reservations = Reservation::where('shop_id',$request->shop_id)
-                    ->get();
+                        ->get();
 
         return view('manager.confirmRese',compact('reservations'));
     }

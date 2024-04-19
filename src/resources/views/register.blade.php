@@ -7,7 +7,7 @@
 @section('main')
 <div class="content-outer">
     <div class="content">
-        <form action="/thanks" method="post">
+        <form action="/verify" method="get">
         @csrf
             <div class="register-box">
                 <h2 class="title">
@@ -16,7 +16,7 @@
 
                 <div class="name-row">
                     <img src="icon/Rese username icon.png" alt="username">
-                    <input class="name" name="name" value="{{ old('name') }}" type="text" placeholder="Username">
+                    <input class="name" name="name" value="{{ old('name') }}" type="text" placeholder="Username(ニックネーム可)">
                 </div>
                 <div class="form__error">
                 @error('name')

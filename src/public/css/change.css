@@ -157,7 +157,7 @@
     }
 }
 
-th {
+.confirm-table th {
     padding: 0 0 0 30px;
     width: 120px;
     height: 20px;
@@ -166,7 +166,7 @@ th {
 }
 
 @media screen and (max-width:768px) {
-    th {
+    .confirm-table th {
         padding: 0 0 0 24px;
         width: 96px;
         height: 16px;
@@ -175,7 +175,7 @@ th {
     }
 }
 
-td {
+.confirm-table td {
     width: 300px;
     height: 20px;
     font-size: 20px;
@@ -183,7 +183,7 @@ td {
 }
 
 @media screen and (max-width:768px) {
-    td {
+    .confirm-table td {
         width: 240px;
         height: 16px;
         font-size: 16px;

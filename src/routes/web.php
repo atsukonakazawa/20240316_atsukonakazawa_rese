@@ -8,6 +8,7 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MailSendController;
 
 
 /*
@@ -28,7 +29,6 @@ Route::get('/index/genre',[ShopController::class,'searchGenre']);
 Route::get('/index/keyword',[ShopController::class,'searchKeyword']);
 Route::get('/register',[AuthController::class,'toRegister']);
 Route::get('/login',[AuthController::class,'toLogin']);
-Route::post('/thanks',[AuthController::class,'thanks']);
 
 
 Route::middleware('auth')->group(function () {
@@ -59,4 +59,11 @@ Route::middleware('auth')->group(function () {
 /* 管理者 */
     Route::get('/admin/admin',[AdminController::class,'admin']);
     Route::post('/admin/create/manager',[AdminController::class,'createManager']);
+
+/* メール送信関係 */
+Route::get('/verify',[MailSendController::class,'verify']);
+Route::get('/thanks', [MailSendController::class, 'thanks']);
+Route::get('/manager/notify/email/create', [MailSendController::class, 'notifyEmail']);
+Route::get('/manager/notify/email/confirm', [MailSendController::class, 'notifyEmailConfirm']);
+Route::post('/manager/notify/email/send', [MailSendController::class, 'notifyEmailSend']);
 

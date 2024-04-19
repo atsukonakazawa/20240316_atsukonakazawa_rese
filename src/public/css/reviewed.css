@@ -16,6 +16,7 @@
 
 .changed-box {
     box-shadow: 3px 3px 3px gray;
+    border: solid 1px gainsboro;
     border-radius: 5px;
     margin: 50px auto;
     padding: 100px 30px;

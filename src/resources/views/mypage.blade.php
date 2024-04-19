@@ -6,10 +6,10 @@
 
 @section('main')
 <div class="content-outer">
+    <h2 class="user-name">
+        {{ Auth::user()->name }}さん マイページ
+    </h2>
     <div class="content">
-        <h2 class="user-name">
-            {{ Auth::user()->name }}さん マイページ
-        </h2>
         <div class="reservation-list__box">
             <div class="message-outer">
                 <p class="message" id="flash-message">

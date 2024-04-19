@@ -28,6 +28,11 @@
                     予約情報を確認する
                 </a>
             </div>
+            <div class="notify-email__link-outer">
+                <a href="/manager/notify/email/create">
+                    利用者にメールを送る
+                </a>
+            </div>
         </div>
         <div class="logout-outer">
             <form action="/logout" method="post">
