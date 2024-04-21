@@ -27,8 +27,8 @@
     <body>
         <h1 class="h1" >ご本人さま確認</h1>
         <p>以下のボタンを押して認証をお願いいたします。</p>
-        <p class="button" id="button">
+        <div class="button" id="button">
             <a href="{{ url('/thanks') }}" method="get">認証</a>
-        </p>
+        </div>
     </body>
 </html>

@@ -7,7 +7,7 @@
 @section('main')
 <div class="content-outer">
     <div class="content">
-        <form action="/verify" method="get">
+        <form action="/verify" method="post">
         @csrf
             <div class="register-box">
                 <h2 class="title">

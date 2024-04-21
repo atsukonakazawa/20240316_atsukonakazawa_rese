@@ -61,9 +61,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/create/manager',[AdminController::class,'createManager']);
 
 /* メール送信関係 */
-Route::get('/verify',[MailSendController::class,'verify']);
+Route::post('/verify',[MailSendController::class,'verify']);
 Route::get('/thanks', [MailSendController::class, 'thanks']);
 Route::get('/manager/notify/email/create', [MailSendController::class, 'notifyEmail']);
-Route::get('/manager/notify/email/confirm', [MailSendController::class, 'notifyEmailConfirm']);
+Route::post('/manager/notify/email/confirm', [MailSendController::class, 'notifyEmailConfirm']);
 Route::post('/manager/notify/email/send', [MailSendController::class, 'notifyEmailSend']);
 

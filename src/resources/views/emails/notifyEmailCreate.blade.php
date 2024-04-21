@@ -17,7 +17,7 @@
                 お知らせメール作成画面
             </h2>
         </div>
-        <form action="/manager/notify/email/confirm" method="get">
+        <form action="/manager/notify/email/confirm" method="post">
         @csrf
             <div class="message-outer">
                 <p class="message">
