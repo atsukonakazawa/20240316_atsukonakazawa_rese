@@ -16,7 +16,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
-        $schedule->command('reminder:send')->dailyAt('9:00');
+        $schedule->command('sendreminders')->dailyAt('00:10')->appendOutputTo(storage_path('logs/sendreminders.log'));
     }
 
     /**
@@ -30,4 +30,8 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
+
+    //protected $commands = [
+    //    Commands\SendReminders::Class,
+    //];
 }
