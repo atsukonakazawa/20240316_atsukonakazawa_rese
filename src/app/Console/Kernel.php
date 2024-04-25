@@ -16,7 +16,14 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
-        $schedule->command('sendreminders')->dailyAt('00:24')->appendOutputTo(storage_path('logs/sendreminders.log'));
+        $schedule
+        ->command('send:reminders')
+        ->dailyAt('14:20')
+        ->withoutOverlapping()
+        ->appendOutputTo(storage_path('logs/sendreminders.log'));
+        //withoutOverlapping()はメールの送信自体は制御できないが、
+        //競合するプロセスを回避するために役立つ。
+        //appendOutputToでメール送信についてlog出力をして情報を目視できるようにする。
     }
 
     /**

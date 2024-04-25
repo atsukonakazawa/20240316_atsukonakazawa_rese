@@ -16,7 +16,7 @@ class SendReminders extends Command
      *
      * @var string
      */
-    protected $signature = 'sendreminders';
+    protected $signature = 'send:reminders';
 
     /**
      * The console command description.
@@ -42,46 +42,66 @@ class SendReminders extends Command
      */
     public function handle()
     {
-        // 今日の日付を取得
-        $today = Carbon::today();
+        //メールが２通ずつ送られてしまい原因不明のため
+		//ファイルロックを使用し、同じプロセスが重複して行われるのを防ぐ
 
-        // 今日の日付に該当する予約レコードを取得
-        $reservations = Reservation::whereDate('rese_date', $today)->get();
+        // ロックファイルのパス
+        $lockFilePath = storage_path('logs/sendreminders.lock');
 
-        // 予約が存在するかチェック
-        if ($reservations->isEmpty()) {
-            $this->info('There is no reservation today.');
+        // ロックファイルの存在をチェック
+        if (file_exists($lockFilePath)) {
+            $this->info('Another instance of the command is already running.');
             return;
         }
 
-        foreach ($reservations as $reservation) {
-            // 予約者のユーザー情報を取得
-            $user = User::find($reservation->user_id);
-            $shop = Shop::find($reservation->shop_id);
+        // ロックファイルを作成
+        file_put_contents($lockFilePath, '');
 
-            // 予約内容を含めたリマインダーメールを送信
-            $messageBody = $user->name . "さま <br>";
-            $messageBody .= " <br>";
-            $messageBody .= "ご予約日となりましたのでお知らせいたします。 </br>";
-            $messageBody .= " <br>";
-            $messageBody .= "【ご予約内容】 <br>";
-            $messageBody .= " 店舗名: " . $shop->shop_name . "<br>";
-            $messageBody .= " 日付: " . $reservation->rese_date . "<br>";
-            $messageBody .= " 時間: " . $reservation->rese_time . "<br>";
-            $messageBody .= " 人数: " . $reservation->rese_people . "<br>";
-            $messageBody .= " <br>";
-            $messageBody .= " 万が一ご都合が悪くなってしまった場合は、お気軽にご連絡ください。 <br>";
-            $messageBody .= " ご来店を心よりお待ちしております。 <br>";
-            $messageBody .= " <br>";
-            $messageBody .= " Reseグループ " . $shop->shop_name . " スタッフ一同 <br>";
+        try {
 
-            Mail::send([], [], function ($message) use ($user, $messageBody) {
-                $message->to($user->email)
-                        ->subject('ご予約内容のお知らせ')
-                        ->setBody($messageBody, 'text/html');
-            });
+            // 今日の日付を取得
+            $today = Carbon::today();
 
-            $this->info('Reminders sent successfully.');
+            // 今日の日付に該当する予約レコードを取得
+            $reservations = Reservation::whereDate('rese_date', $today)->get();
+
+            // 予約が存在するかチェック
+            if ($reservations->isEmpty()) {
+                $this->info('There is no reservation today.');
+                return;
+            }
+
+            foreach ($reservations as $reservation) {
+                // 予約者のユーザー情報を取得
+                $user = User::find($reservation->user_id);
+                $shop = Shop::find($reservation->shop_id);
+
+                // 予約内容を含めたリマインダーメールを送信
+                $messageBody = "ご予約日となりましたのでお知らせいたします。 </br>";
+                $messageBody .= " <br>";
+                $messageBody .= "【ご予約内容】 <br>";
+                $messageBody .= " 店舗名: " . $shop->shop_name . "<br>";
+                $messageBody .= " 日付: " . $reservation->rese_date . "<br>";
+                $messageBody .= " 時間: " . $reservation->rese_time . "<br>";
+                $messageBody .= " 人数: " . $reservation->rese_people . "<br>";
+                $messageBody .= " <br>";
+                $messageBody .= " 万が一ご都合が悪くなってしまった場合は、お気軽にご連絡ください。 <br>";
+                $messageBody .= " ご来店を心よりお待ちしております。 <br>";
+                $messageBody .= " <br>";
+                $messageBody .= " Reseグループ " . $shop->shop_name . " スタッフ一同 <br>";
+
+                Mail::send([], [], function ($message) use ($user, $messageBody) {
+                    $message->to($user->email)
+                            ->subject('ご予約内容のお知らせ')
+                            ->setBody($messageBody, 'text/html');
+                });
+
+
+                $this->info('Reminders sent successfully.');
+            }
+        } finally {
+            // ロックを解除
+            unlink($lockFilePath);
         }
     }
 }
