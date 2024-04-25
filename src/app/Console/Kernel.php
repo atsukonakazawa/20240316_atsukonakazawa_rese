@@ -18,7 +18,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
         $schedule
         ->command('send:reminders')
-        ->dailyAt('14:20')
+        ->dailyAt('9:00')
         ->withoutOverlapping()
         ->appendOutputTo(storage_path('logs/sendreminders.log'));
         //withoutOverlapping()はメールの送信自体は制御できないが、
