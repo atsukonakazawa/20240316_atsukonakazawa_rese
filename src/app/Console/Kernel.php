@@ -19,11 +19,9 @@ class Kernel extends ConsoleKernel
         $schedule
         ->command('send:reminders')
         ->dailyAt('9:00')
-        ->withoutOverlapping()
-        ->appendOutputTo(storage_path('logs/sendreminders.log'));
+        ->withoutOverlapping();
         //withoutOverlapping()はメールの送信自体は制御できないが、
         //競合するプロセスを回避するために役立つ。
-        //appendOutputToでメール送信についてlog出力をして情報を目視できるようにする。
     }
 
     /**
