@@ -37,6 +37,8 @@
   メールによって本人確認を行うことができる  
   店舗代表者の管理画面から利用者にお知らせメールを送信することができる  
   タスクスケジューラを利用して、予約当日の朝に予約情報のリマインダーを送る
+  利用者が来店した際に店舗側に見せるQRコードを発行し、お店側は照合することができる
+  Stripeを利用して決済をすることができる
  
   ##使用技術  
   Laravel Framework 8.83.27  
@@ -65,6 +67,8 @@
      3.env.exampleファイルから.envを作成し、環境変数を変更  
      4.php artisan key:generate  
      5.php artisan migrate  
+     6.composer require simplesoftwareio/simple-qrcode
+     7.composer require laravel/cashier
       
    ##その他  
  ⚫︎利用者アカウント  
