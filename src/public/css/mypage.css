@@ -42,6 +42,43 @@
     }
 }
 
+.payment-outer {
+    margin: 20px 150px 20px auto;
+    text-align: right;
+}
+
+@media screen and (max-width:768px) {
+    .payment-outer {
+        margin: 20px 100px 16px auto;
+        text-align: right;
+    }
+}
+.payment{
+    border: 30px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px gray;
+    background-color: #305DFF;
+    padding: 15px;
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .payment {
+        border: 24px;
+        border-radius: 3px;
+        box-shadow: 3px 3px 5px gray;
+        background-color: #305DFF;
+        padding: 12px;
+        text-align: right;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
 .reservation-list__box{
     margin: 30px auto;
     width: 600px;

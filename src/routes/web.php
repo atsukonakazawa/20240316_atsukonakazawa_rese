@@ -9,6 +9,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ManagerController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MailSendController;
+use App\Http\Controllers\PaymentController;
 
 
 /*
@@ -40,7 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/like',[FavoriteController::class,'like']);
     Route::get('/like/mypage',[FavoriteController::class,'likeMypage']);
     Route::get('/done',[ReservationController::class,'done']);
-    Route::get('mypage',[ShopController::class,'mypage']);
+    Route::get('/mypage',[ShopController::class,'mypage']);
     Route::get('/delete',[ReservationController::class,'delete']);
     Route::get('/change',[ReservationController::class,'change']);
     Route::get('/changed',[ReservationController::class,'changed']);
@@ -61,9 +62,14 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/create/manager',[AdminController::class,'createManager']);
 
 /* メール送信関係 */
-Route::post('/verify',[MailSendController::class,'verify']);
-Route::get('/thanks', [MailSendController::class, 'thanks']);
-Route::get('/manager/notify/email/create', [MailSendController::class, 'notifyEmail']);
-Route::post('/manager/notify/email/confirm', [MailSendController::class, 'notifyEmailConfirm']);
-Route::post('/manager/notify/email/send', [MailSendController::class, 'notifyEmailSend']);
+    Route::post('/verify',[MailSendController::class,'verify']);
+    Route::get('/thanks', [MailSendController::class, 'thanks']);
+    Route::get('/manager/notify/email/create', [MailSendController::class, 'notifyEmail']);
+    Route::post('/manager/notify/email/confirm', [MailSendController::class, 'notifyEmailConfirm']);
+    Route::post('/manager/notify/email/send', [MailSendController::class, 'notifyEmailSend']);
 
+/* 決済 */
+Route::middleware('auth')->group(function () {
+    Route::get('/payment',[PaymentController::class,'payment']);//決済ページに飛ぶ
+    Route::post('/pay',[PaymentController::class,'pay']);//カード番号などの送信
+});

@@ -1,0 +1,31 @@
+.pay-form{
+    margin: 0 auto;
+    padding-top: 150px;
+    width: 1000px;
+}
+
+@media screen and (max-width:768px) {
+    .pay-form {
+        margin: 0 auto;
+        padding-top: 120px;
+        width: 600px;
+    }
+}
+
+.amount{
+    border-radius: 5px;
+    margin: 50px auto;
+    height: 40px;
+    width: 600px;
+    font-size: 15px;
+}
+
+@media screen and (max-width:768px) {
+    .amount {
+        border-radius: 5px;
+        margin: 30px auto;
+        height: 32px;
+        width: 400px;
+        font-size: 12px;
+    }
+}

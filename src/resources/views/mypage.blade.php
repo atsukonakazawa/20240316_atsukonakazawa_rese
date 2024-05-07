@@ -9,6 +9,9 @@
     <h2 class="user-name">
         {{ Auth::user()->name }}さん マイページ
     </h2>
+    <div class="payment-outer">
+        <a class="payment" href="/payment">オンラインで支払をする</a>
+    </div>
     <div class="content">
         <div class="reservation-list__box">
             <div class="message-outer">

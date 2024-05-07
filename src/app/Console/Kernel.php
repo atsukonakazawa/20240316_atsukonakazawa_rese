@@ -18,7 +18,7 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
         $schedule
         ->command('send:reminders')
-        ->dailyAt('9:00')
+        ->dailyAt('09:00')
         ->withoutOverlapping();
         //withoutOverlapping()はメールの送信自体は制御できないが、
         //競合するプロセスを回避するために役立つ。
