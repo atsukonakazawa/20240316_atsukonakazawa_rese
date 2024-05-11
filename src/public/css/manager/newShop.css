@@ -232,6 +232,10 @@
     }
 }
 
+.shop-img__size{
+    color: red;
+}
+
 .button-outer{
     margin-bottom: 20px;
     width: 100%;

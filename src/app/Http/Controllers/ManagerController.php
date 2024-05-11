@@ -194,6 +194,10 @@ class ManagerController extends Controller
         }else{
 
             if($newShopImg !== null && $newShopImg !== 'null'){
+
+                $file_name = $request->file('newShop_img')->getClientOriginalName();
+                $request->file('newShop_img')->storeAs('shopImg',$file_name);
+
                 $result5 = [
                     'shop_img' => $newShopImg,
                 ];

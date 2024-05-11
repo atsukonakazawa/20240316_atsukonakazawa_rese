@@ -54,7 +54,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/manager/new/shop',[ManagerController::class,'newShop']);
     Route::post('/manager/new/shop/created',[ManagerController::class,'store']);
     Route::get('/manager/update/shop',[ManagerController::class,'updateShop']);
-    Route::get('/manager/updated/shop',[ManagerController::class,'updatedShop']);
+    Route::post('/manager/updated/shop',[ManagerController::class,'updatedShop']);
     Route::get('/manager/confirm/rese',[ManagerController::class,'confirmRese']);
 
 /* 管理者 */

@@ -287,6 +287,10 @@
     }
 }
 
+.shop-img__size {
+    color: red;
+}
+
 .button-outer {
     margin: 50px auto;
     width: 100%;

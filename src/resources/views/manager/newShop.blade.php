@@ -76,6 +76,7 @@
                 </div>
                 <div class="img-outer">
                     <p class="shop-img__title">店舗画像を選択してください</p>
+                    <p class="shop-img__size">※容量の単位はKBまで使用可能（MBは使用不可）</p>
                     <input class="img-select" type="file" name="shop_img" accept="image/png, image/jpeg">
                     {{session('img_path')}}
                     <div class="error-outer">

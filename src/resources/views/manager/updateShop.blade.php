@@ -9,7 +9,7 @@
     <div class="content">
         <div class="title-outer">
             <h2 class="title">
-                店舗代表者　専用画面 
+                店舗代表者　専用画面
             </h2>
         </div>
         <div class="subtitle-outer">
@@ -24,7 +24,7 @@
             @endif
             </p>
         </div>
-        <form action="/manager/updated/shop" method="get" enctype="multipart/form-data">
+        <form action="/manager/updated/shop" method="post" enctype="multipart/form-data">
         @csrf
             <div class="required">
                 <div class="id-outer">
@@ -82,6 +82,7 @@
                 </div>
                 <div class="img-outer">
                     <p class="shop-img__title">店舗画像を選択してください</p>
+                    <p class="shop-img__size">※容量の単位はKBまで使用可能（MBは使用不可）</p>
                     <input class="img-select" type="file" name="newShop_img">
                 </div>
             </div>

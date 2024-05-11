@@ -34,9 +34,6 @@
 
 @media screen and (max-width:768px) {
     .change-box {
-        position: absolute;
-        top: 580px;
-        left: 90px;
         background-color: #305DFF;
         border-radius: 10px;
         box-shadow: 3px 3px 3px gainsboro;
