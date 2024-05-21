@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Favorite;
 use App\Http\Requests\ReservationRequest;
-
+use Carbon\Carbon;
 
 class ReservationController extends Controller
 {
@@ -33,7 +33,12 @@ class ReservationController extends Controller
         ->delete();
 
         $userId = $request->user_id;
-        $reservations = Reservation::where('user_id',$userId)->get();
+        $today = Carbon::today();
+        $reservations = Reservation::where('user_id',$userId)
+                    ->whereDate('rese_date','>=',$today)
+                    ->orderBy('rese_date','asc')
+                    ->orderBy('rese_time','asc')
+                    ->get();
 
         //お気に入り店舗情報を取得
         $favorites = Favorite::where('user_id',$userId)
