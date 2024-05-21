@@ -11,6 +11,7 @@ use App\Models\Reservation;
 use App\Http\Requests\ShopRequest;
 use App\Http\Requests\UpdateRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ManagerController extends Controller
 {
@@ -54,23 +55,48 @@ class ManagerController extends Controller
 
     public function store(ShopRequest $request){
 
-        $file_name = $request->file('shop_img')->getClientOriginalName();
-        $request->file('shop_img')->storeAs('shopImg',$file_name);
+        // genre_idに応じた画像のURLを生成
+        switch ($request->genre_id) {
+            case 1:
+                $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/sushi.jpg';
+                break;
+            case 2:
+                $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/yakiniku.jpg';
+                break;
+            case 3:
+                $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/izakaya.jpg';
+                break;
+            case 4:
+                $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/italian.jpg';
+                break;
+            case 5:
+                $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/ramen.jpg';
+                break;
+            default:
+                $imageUrl = null;
+                break;
+        }
 
+        // データベースに保存する情報をまとめる
         $result = [
             'area_id' => $request->area_id,
             'genre_id' => $request->genre_id,
             'shop_name' => $request->shop_name,
             'shop_detail' => $request->shop_detail,
-            'shop_img' => $request->shop_img,
+            // 画像URLを保存する
+            'shop_img' => $imageUrl,
         ];
+
+        // データベースに新しい店舗情報を作成
         Shop::create($result);
 
+        // 新しい店舗情報を取得
         $newShopId = Shop::where('area_id',$request->area_id)
                     ->where('genre_id',$request->genre_id)
                     ->where('shop_name',$request->shop_name)
                     ->first();
 
+        // 新しい店舗情報の表示
         return view('manager.newShopCreated',compact('newShopId'));
     }
 
@@ -134,13 +160,39 @@ class ManagerController extends Controller
                 $result2 = [
                     'genre_id' => $newGenreId,
                 ];
-                Shop::where('id',$shopId)
-                    ->where('shop_name',$shopName)
+                // ジャンルが更新された場合は、それに応じた画像URLも更新
+                //$imageUrl = null; // デフォルトの画像URLをnullに設定
+                switch ($newGenreId) {
+                    case 1:
+                        $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/sushi.jpg';
+                        break;
+                    case 2:
+                        $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/yakiniku.jpg';
+                        break;
+                    case 3:
+                        $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/izakaya.jpg';
+                        break;
+                    case 4:
+                        $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/italian.jpg';
+                        break;
+                    case 5:
+                        $imageUrl = 'https://rese.s3.ap-northeast-1.amazonaws.com/shop_images/ramen.jpg';
+                        break;
+                    default:
+                        // デフォルトの画像URLを元々保存されていたものに設定
+                        $imageUrl = $match->shop_img;
+                        break;
+                }
+                // 画像URLが更新される場合のみ更新処理を行う
+                if ($imageUrl !== null) {
+                    $result2['shop_img'] = $imageUrl;
+                }
+                Shop::where('id', $shopId)
+                    ->where('shop_name', $shopName)
                     ->update($result2);
-            }else{
-
             }
         }
+
 
         //店舗名を更新
         if($match == null){
@@ -179,31 +231,6 @@ class ManagerController extends Controller
                 Shop::where('id',$shopId)
                     ->where('shop_name',$shopName)
                     ->update($result4);
-            }else{
-
-            }
-        }
-
-        //店舗画像を更新
-        if($match == null){
-
-            session()->flash('message','店舗IDと店舗名が一致しません');
-
-            return view('manager.updateShop',compact('areas','genres'));
-
-        }else{
-
-            if($newShopImg !== null && $newShopImg !== 'null'){
-
-                $file_name = $request->file('newShop_img')->getClientOriginalName();
-                $request->file('newShop_img')->storeAs('shopImg',$file_name);
-
-                $result5 = [
-                    'shop_img' => $newShopImg,
-                ];
-                Shop::where('id',$shopId)
-                    ->where('shop_name',$shopName)
-                    ->update($result5);
             }else{
 
             }

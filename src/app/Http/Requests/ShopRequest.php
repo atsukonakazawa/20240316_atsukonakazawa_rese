@@ -28,7 +28,6 @@ class ShopRequest extends FormRequest
             'area_id' => 'required',
             'genre_id' => 'required',
             'shop_detail' => 'required',
-            'shop_img' => 'required'
         ];
     }
 
@@ -39,7 +38,6 @@ class ShopRequest extends FormRequest
             'area_id.required' => 'エリアを選択してください',
             'genre_id.required' => 'ジャンルを選択してください',
             'shop_detail.required' => '店舗概要を入力してください',
-            'shop_img.required' => '店舗画像を選択してください'
         ];
     }
 }

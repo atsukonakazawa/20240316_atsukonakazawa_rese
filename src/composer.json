@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.2",
         "arcanedev/laravel-lang": "*",
+        "aws/aws-sdk-php": "^3.307",
         "endroid/qr-code": "*",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",

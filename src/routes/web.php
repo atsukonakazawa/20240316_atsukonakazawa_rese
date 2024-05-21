@@ -69,7 +69,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/manager/notify/email/send', [MailSendController::class, 'notifyEmailSend']);
 
 /* 決済 */
-Route::middleware('auth')->group(function () {
-    Route::get('/payment',[PaymentController::class,'payment']);//決済ページに飛ぶ
-    Route::post('/pay',[PaymentController::class,'pay']);//カード番号などの送信
-});
+    Route::middleware('auth')->group(function () {
+        Route::get('/payment',[PaymentController::class,'payment']);//決済ページに飛ぶ
+        Route::post('/pay', [PaymentController::class, 'pay']);//カード番号などの送信
+
+    });

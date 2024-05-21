@@ -17,7 +17,7 @@
                 店舗情報　新規作成画面
             </h2>
         </div>
-        <form action="/manager/new/shop/created" method="post" enctype="multipart/form-data">
+        <form action="/manager/new/shop/created" method="post">
         @csrf
             <div class="inputs-group">
                 <div class="area-outer">
@@ -70,19 +70,6 @@
                         @error('shop_detail')
                         <p class="error-p" style="color: red">
                             {{$errors->first('shop_detail')}}
-                        </p>
-                        @enderror
-                    </div>
-                </div>
-                <div class="img-outer">
-                    <p class="shop-img__title">店舗画像を選択してください</p>
-                    <p class="shop-img__size">※容量の単位はKBまで使用可能（MBは使用不可）</p>
-                    <input class="img-select" type="file" name="shop_img" accept="image/png, image/jpeg">
-                    {{session('img_path')}}
-                    <div class="error-outer">
-                        @error('shop_img')
-                        <p class="error-p" style="color: red">
-                            {{$errors->first('shop_img')}}
                         </p>
                         @enderror
                     </div>

@@ -24,7 +24,7 @@
             @endif
             </p>
         </div>
-        <form action="/manager/updated/shop" method="post" enctype="multipart/form-data">
+        <form action="/manager/updated/shop" method="post">
         @csrf
             <div class="required">
                 <div class="id-outer">
@@ -79,11 +79,6 @@
                 </div>
                 <div class="detail-outer">
                     <textarea name="newShop_detail" id="" cols="50" rows="5" placeholder="更新後の店舗概要を入力してください"></textarea>
-                </div>
-                <div class="img-outer">
-                    <p class="shop-img__title">店舗画像を選択してください</p>
-                    <p class="shop-img__size">※容量の単位はKBまで使用可能（MBは使用不可）</p>
-                    <input class="img-select" type="file" name="newShop_img">
                 </div>
             </div>
             <div class="button-outer">

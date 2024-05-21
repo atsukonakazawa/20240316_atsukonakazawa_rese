@@ -51,6 +51,12 @@
         <p class="message">
         {{ Auth::user()->name }}さま、ようこそ！
         </p>
+        <form action="/logout" method="post">
+        @csrf
+            <button class="logout-button">
+                ログアウト
+            </button>
+        </form>
 
         <!--1店舗-->
         @foreach($shops as $shop)
