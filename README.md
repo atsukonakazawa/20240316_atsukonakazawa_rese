@@ -48,7 +48,9 @@
   MySQL Community Server - GPL 8.0.26  
 
    ##テーブル設計  
-   　<img width="1231" alt="Rese テーブル設計　更新版" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/6f10aae4-a325-4c83-92bd-a6d112107979">
+   <img width="1386" alt="スクリーンショット 2024-05-22 12 51 02" src="https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese/assets/140526473/55453ed9-ab08-4661-9321-ed1fa9dcc1e2">  
+
+   　
 
 
    ##ER図  
