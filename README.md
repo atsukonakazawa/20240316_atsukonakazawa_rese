@@ -65,7 +65,7 @@
      3.メールサーバー(mailhog)立ち上げ後.envと　docker-compose.ymlを編集  
      4.再度docker compose up -d --build  
       
-     Laravel環境構築  
+   ##Laravel環境構築  
      1.docker compose exec php bash  
      2.composer install  
      3.env.exampleファイルから.envを作成し、環境変数を変更  
@@ -74,7 +74,7 @@
      6.composer require simplesoftwareio/simple-qrcode
      7.composer require laravel/cashier
 
-    ##デプロイ環境
+   ##デプロイ環境
     デプロイ先: AWS EC2  
     DB: RDS  
     ストレージ:S3  
