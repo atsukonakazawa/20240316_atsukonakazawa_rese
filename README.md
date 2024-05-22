@@ -62,7 +62,7 @@ http://35.76.162.242
      1.git clone git@github.com:coachtech-material/laravel-docker-template.git  
      2.docker compose up -d --build  
      ※MySQLは、OSによっては起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集してください。  
-     3.メールサーバー(mailhog)立ち上げのため.envと　docker-compose.ymlを編集  
+     3.メールサーバー(mailhog)立ち上げのため.envとdocker-compose.ymlを編集  
      4.再度docker compose up -d --build  
      
       
@@ -159,8 +159,8 @@ php -r "unlink('composer-setup.php');"
   ルートユーザーメールアドレス：tsqe8qm1bmqztbxbjre9@docomo.ne.jp  
   パスワード：Stillababy1  
 
-  ##Reseテストユーザー
-  ⚫︎利用者（ブラウザにて会員登録済み） 
+  ##Reseテストユーザー  
+  ⚫︎利用者（ブラウザにて会員登録済み）  
   名前:a  
   メールアドレス:a@docomo.com  
   パスワード:aaaaaaaa(aが８個)  
