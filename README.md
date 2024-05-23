@@ -172,7 +172,7 @@ php -r "unlink('composer-setup.php');"
   名前:b-manager  
   メールアドレス:b@docomo.com  
   パスワード:bbbbbbbb(bが8個)  
-  ⚫︎管理者（ブラウザにて会員登録後、EC2インスタンスのコマンドラインからMySQLでroleのadminを追加）  
+  ⚫︎管理者（ブラウザにて会員登録後、EC2インスタンスのコマンドラインからMySQLでroleカラムのadminを追加）  
   名前：c-admin  
   メールアドレス:c@docomo.com  
   パスワード:cccccccc(cが8個)  
