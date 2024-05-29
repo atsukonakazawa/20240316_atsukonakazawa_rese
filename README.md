@@ -157,11 +157,7 @@ php -r "unlink('composer-setup.php');"
    44.composer update  
    45..envファイルのmail部分、STRIPE部分を変更  
    46.sudo systemctl nginx restart  
-
-      
-  ##AWS アカウント　サインイン情報  
-  ルートユーザーメールアドレス：tsqe8qm1bmqztbxbjre9@docomo.ne.jp  
-  パスワード：Stillababy1  
+ 
 
   ##Reseテストユーザー  
   ⚫︎利用者（ブラウザにて会員登録済み）  
