@@ -79,6 +79,7 @@
   【Pro入会テスト】口コミ機能  
   【Pro入会テスト】店舗一覧ソート機能  
   【Pro入会テスト】CSVインポート機能  
+  ※インポートする前に、新規店舗の画像をsrc/public/temp_imagesディレクトリに保存をお願いいたします。  
   ※CSVファイルの記述方法は以下の画像の通りにお願いいたします  
   <img width="811" alt="Rese-Protest-CSV入力例" src="https://github.com/user-attachments/assets/26fad481-4651-4cf0-87e2-8f3f8b161491">  
   Excelをお使いの方は画像を参考に１行目に項目名（１つのセルに１つの項目）、２行目に店舗の情報を入力後、csvファイルとして保存してください。  
