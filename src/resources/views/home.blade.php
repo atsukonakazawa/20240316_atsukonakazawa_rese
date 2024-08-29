@@ -9,35 +9,29 @@
 <div class="search-outer">
     <div class="search-box">
         <div class="search-area" >
-            <form id="area-form" action="/home/area" method="get">
-            @csrf
+            <form id="search-form" action="/home/search" method="get">
+                @csrf
                 <select class="search-area__inner" name="area_id" onchange="this.form.submit()">
-                    <option disabled selected value="">All area</option>
+                    <option disabled selected value="">Area</option>
                     @foreach($areas as $area)
                     <option value="{{ $area['id'] }}" {{ session('selected_area_id') == $area['id'] ? 'selected' : '' }}>
                         {{ $area['area_name'] }}
                     </option>
                     @endforeach
                 </select>
-            </form>
         </div>
-        <div class="search-genre" >
-            <form id="genre-form" action="/home/genre" method="get">
-            @csrf
+        <div class="search-genre">
                 <select class="search-genre__inner" name="genre_id" onchange="this.form.submit()">
-                    <option disabled selected value="">All genre</option>
+                    <option disabled selected value="">Genre</option>
                     @foreach($genres as $genre)
                     <option value="{{ $genre['id'] }}" {{ session('selected_genre_id') == $genre['id'] ? 'selected' : '' }}>
                         {{ $genre['genre_name'] }}
                     </option>
                     @endforeach
                 </select>
-            </form>
         </div>
-        <div class="search-keyword" >
-            <form id="keyword-form" action="/home/keyword" method="get">
-            @csrf
-                <input class="search-keyword__inner" type="text" name="keyword" onchange="this.form.submit()" placeholder="🔍Search with Shop name..." value="{{ session('selected_keyword') }}">
+        <div class="search-keyword">
+                <input class="search-keyword__inner" type="text" name="keyword" onchange="this.form.submit()" placeholder="🔍Search" value="{{ session('selected_keyword') }}">
             </form>
         </div>
     </div>
@@ -47,17 +41,48 @@
 @section('main')
 <!--店舗一覧-->
 <div class="content-outer">
-    <div class="shops-content">
+    <div class="title-outer">
         <p class="message">
         {{ Auth::user()->name }}さま、ようこそ！
         </p>
+        <form action="/mypage" method="get">
+        @csrf
+            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                <button class="mypage-button" type="submit">
+                    マイページ
+                </button>
+        </form>
         <form action="/logout" method="post">
         @csrf
             <button class="logout-button">
                 ログアウト
             </button>
         </form>
-
+    </div>
+    <div class="sort-row">
+        <div class="shuffle-button__outer" type="submit">
+            <form action="/home/shuffle">
+                <button class="shuffle-button">
+                    ランダムに表示
+                </button>
+            </form>
+        </div>
+        <div class="desc-button__outer" type="submit">
+            <form action="/home/desc">
+                <button class="desc-button">
+                    評価が高い順に表示
+                </button>
+            </form>
+        </div>
+        <div class="asc-button__outer" type="submit">
+            <form action="/home/asc">
+                <button class="asc-button">
+                    評価が低い順に表示
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="shops-content">
         <!--1店舗-->
         @foreach($shops as $shop)
         <div class="shop-box">
@@ -109,10 +134,10 @@
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
             </form>
         </div>
-        <div class="toAdmin-outer">
-            <form action="/admin/admin" method="get">
+        <div class="to-admin-outer">
+            <form action="/admin/menu" method="get">
             @csrf
-                <button class="toAdmin" type="submit">
+                <button class="to-admin__menu" type="submit">
                     管理者さまはこちら
                 </button>
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">

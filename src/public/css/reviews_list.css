@@ -1,0 +1,1010 @@
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
+    .content-outer {
+        width: 100%;
+        min-width: 2400px;
+    }
+
+    .content {
+        margin: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .detail-box {
+        margin-left: 100px;
+        padding-bottom: 20px;
+        width: 1000px;
+        position: relative;
+        border: solid 1px black;
+        border-radius: 10px;
+    }
+
+    .shop-title__row {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .back-button {
+        background: white;
+        margin: auto 20px;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+        padding: auto 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .shop-name {
+        margin: 5px;
+        padding: auto 5px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .shop-img {
+        width: 80%;
+        height: 400px;
+    }
+
+    .area-genre__row {
+        margin: 10px auto;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .area-genre__row div {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .shop-detail {
+        margin: 10px auto;
+        width: 90%;
+        font-size: 20px;
+        text-align: left;;
+    }
+
+    .show-reviews__outer{
+        margin: 40px auto;
+        padding-bottom: 30px;
+        width: 80%;
+        border-bottom: solid 2px gainsboro;
+    }
+
+    .show-reviews__button{
+        margin: 10px auto;
+        padding: 10px 50px;
+        width: 100%;
+        background-color: blue;
+        color: white;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .review__list{
+        width: 90%;
+    }
+
+    .edit-delete{
+        margin: 5px auto;
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .to-edit__outer,
+    .to-delete__outer{
+        margin: 5px 0px 5px 20px;
+    }
+
+    .to-edit,
+    .to-delete{
+        background: white;
+        color: black;
+        border: 0;
+        text-decoration: underline;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .review-user{
+        margin: 5px auto;
+        width: 80%;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .rating{
+        margin: 5px auto;
+        width: 80%;
+        font-size: 30px;
+        color: blue;
+        text-align: left;
+    }
+
+    .comment-content{
+        margin: 30px auto;
+        width: 80%;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .review-img__outer{
+        margin: 30px auto;
+        padding-bottom: 30px;
+        width: 80%;
+        border-bottom: solid 2px gainsboro;
+    }
+
+    .review-img{
+        margin: 5px auto;
+        width: 80%;
+    }
+
+    .reservation-box {
+        position: absolute;
+        top: 105px;
+        left: 1300px;
+        background-color: #305DFF;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px gray;
+        margin-right: 10px auto;
+        width: 1000px;
+        color: white;
+        text-align: left;
+    }
+
+    .reservation-title {
+        margin: 30px auto 10px 40px;
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .date {
+        margin-top: 10px;
+        margin-left: 40px;
+        border: 0;
+        border-radius: 5px;
+        width: 200px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .time {
+        margin-top: 10px;
+        margin-left: 40px;
+        border: 0;
+        border-radius: 5px;
+        width: 550px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .people {
+        margin-top: 10px;
+        margin-left: 40px;
+        border: 0;
+        border-radius: 5px;
+        width: 550px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .confirm-outer {
+        width: 100%;
+    }
+
+    .confirm-table {
+        background: cornflowerblue;
+        border-radius: 7px;
+        margin-top: 30px;
+        margin-left: 40px;
+        width: 530px;
+        height: 200px;
+    }
+
+
+    .confirm-table th {
+        padding: 0 0 0 30px;
+        width: 120px;
+        height: 20px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    .confirm-table td {
+        width: 300px;
+        height: 20px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    .error-messages {
+        margin: 0;
+        padding-top: 170px;
+        padding-left: 30px;
+        height: 300px;
+    }
+
+    .error-messages li {
+        margin-bottom: 10px;
+    }
+
+    .reservation-button {
+        background-color: blue;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: 60px;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    .content-outer {
+        width: 100%;
+        min-width: 1024px;
+    }
+
+    .content {
+        margin: 5px;
+        text-align: center;
+    }
+
+    .detail-box {
+        margin-left: 30px;
+        padding-bottom: 20px;
+        width: 45%;
+        position: relative;
+        border: solid 1px black;
+        border-radius: 10px;
+    }
+
+    .shop-title__row {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .back-button {
+        background: white;
+        margin: auto 20px;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+        padding: auto 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .shop-name {
+        margin: 5px;
+        padding: auto 5px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .shop-img {
+        width: 80%;
+        height: 400px;
+    }
+
+    .area-genre__row {
+        margin: 10px auto;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .area-genre__row div {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .shop-detail {
+        margin: 10px auto;
+        width: 90%;
+        font-size: 20px;
+        text-align: left;
+        ;
+    }
+
+    .show-reviews__outer {
+        margin: 40px auto;
+        padding-bottom: 30px;
+        width: 80%;
+        border-bottom: solid 2px gainsboro;
+    }
+
+    .show-reviews__button {
+        margin: 10px auto;
+        padding: 10px 50px;
+        width: 100%;
+        background-color: blue;
+        color: white;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .review__list {
+        width: 90%;
+    }
+
+    .edit-delete {
+        margin: 5px auto;
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .to-edit__outer,
+    .to-delete__outer {
+        margin: 5px 0px 5px 20px;
+    }
+
+    .to-edit,
+    .to-delete {
+        background: white;
+        color: black;
+        border: 0;
+        text-decoration: underline;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .review-user {
+        margin: 5px auto;
+        width: 80%;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .rating {
+        margin: 5px auto;
+        width: 80%;
+        font-size: 30px;
+        color: blue;
+        text-align: left;
+    }
+
+    .comment-content {
+        margin: 30px auto;
+        width: 80%;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .review-img__outer {
+        margin: 30px auto;
+        padding-bottom: 30px;
+        width: 80%;
+        border-bottom: solid 2px gainsboro;
+    }
+
+    .review-img {
+        margin: 5px auto;
+        width: 80%;
+    }
+
+    .reservation-box {
+        position: absolute;
+        top: 105px;
+        left: 70%;
+        background-color: #305DFF;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px gray;
+        margin-right: 10px auto;
+        width: 450px;
+        color: white;
+        text-align: left;
+    }
+
+    .reservation-title {
+        margin: 30px auto 10px 40px;
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .date {
+        margin-top: 10px;
+        margin-left: 20px;
+        border: 0;
+        border-radius: 5px;
+        width: 200px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .time {
+        margin-top: 10px;
+        margin-left: 20px;
+        border: 0;
+        border-radius: 5px;
+        width: 400px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .people {
+        margin-top: 10px;
+        margin-left: 20px;
+        border: 0;
+        border-radius: 5px;
+        width: 400px;
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .confirm-outer {
+        width: 100%;
+    }
+
+    .confirm-table {
+        background: cornflowerblue;
+        border-radius: 7px;
+        margin-top: 30px;
+        margin-left: 20px;
+        width: 400px;
+        height: 200px;
+    }
+
+    .confirm-table th {
+        padding: 0 0 0 30px;
+        width: 120px;
+        height: 20px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    .confirm-table td {
+        width: 300px;
+        height: 20px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    .error-messages {
+        margin: 0;
+        padding-top: 170px;
+        padding-left: 30px;
+        height: 300px;
+    }
+
+    .error-messages li {
+        margin-bottom: 10px;
+    }
+
+    .reservation-button {
+        background-color: blue;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: 60px;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .content-outer {
+        width: 100%;
+        min-width: 768px;
+    }
+
+    .content {
+        width: 90%;
+        margin: 5px auto;
+        padding: 0 25px;
+    }
+
+    .detail-box {
+        width: 90%;
+        margin-left: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .shop-title__row {
+        padding: 10px;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .back-button {
+        background: white;
+        margin: auto 16px;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+        padding: auto p4x;
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .shop-name {
+        margin: 5px;
+        padding: auto 5px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .shop-img {
+        width: 90%;
+        height: 320px;
+    }
+
+    .area-genre__row {
+        margin: 10px auto;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .area-genre__row div {
+        margin: 8px;
+        font-size: 16px;
+    }
+
+    .shop-detail {
+        margin: 10px auto;
+        width: 90%;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .show-reviews__outer {
+        margin: 40px auto;
+        padding-bottom: 30px;
+        width: 80%;
+        border-bottom: solid 2px gainsboro;
+    }
+
+    .show-reviews__button {
+        margin: 10px auto;
+        padding: 10px 50px;
+        width: 100%;
+        background-color: blue;
+        color: white;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .review__list {
+        width: 90%;
+    }
+
+    .edit-delete {
+        margin: 5px auto;
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .to-edit__outer,
+    .to-delete__outer {
+        margin: 5px 0px 5px 20px;
+    }
+
+    .to-edit,
+    .to-delete {
+        background: white;
+        color: black;
+        border: 0;
+        text-decoration: underline;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .review-user {
+        margin: 5px auto;
+        width: 80%;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .rating {
+        margin: 5px auto;
+        width: 80%;
+        font-size: 30px;
+        color: blue;
+        text-align: left;
+    }
+
+    .comment-content {
+        margin: 30px auto;
+        width: 80%;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .review-img__outer {
+        margin: 30px auto;
+        padding-bottom: 30px;
+        width: 80%;
+        border-bottom: solid 2px gainsboro;
+    }
+
+    .review-img {
+        margin: 5px auto;
+        width: 80%;
+    }
+
+    .reservation-box {
+        background-color: #305DFF;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px gainsboro;
+        margin: 100px auto 200px;
+        padding-top: 30px;
+        width: 80%;
+        color: white;
+        text-align: left;
+    }
+
+    .reservation-title {
+        margin: 24px auto;
+        width: 90%;
+        font-size: 24px;
+    }
+
+    .date {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        margin-left: 32px;
+        border: 0;
+        border-radius: 5px;
+        width: 50%;
+        height: 28px;
+        cursor: pointer;
+    }
+
+    .time {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        margin-left: 32px;
+        border: 0;
+        border-radius: 5px;
+        width: 80%;
+        height: 28px;
+        cursor: pointer;
+    }
+
+    .people {
+        margin-top: 8px;
+        margin-left: 32px;
+        border: 0;
+        border-radius: 5px;
+        width: 80%;
+        height: 28px;
+        cursor: pointer;
+    }
+
+    .confirm-outer {
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    .confirm-table {
+        margin-top: 5px;
+        margin-left: 37px;
+        background: cornflowerblue;
+        border-radius: 7px;
+        width: 85%;
+        height: 160px;
+    }
+
+    .confirm-table th {
+        padding: 0 0 0 24px;
+        width: 20%;
+        height: 16px;
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .confirm-table td {
+        width: 80%;
+        height: 16px;
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    .error-messages {
+        margin: 0;
+        padding-top: 0;
+        padding-left: 24px;
+        height: 120px;
+    }
+
+    .error-messages li {
+        margin-bottom: 8px;
+    }
+
+    .reservation-button {
+        background-color: blue;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: 48px;
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    .content-outer {
+        width: 100%;
+        min-width: 425px;
+    }
+
+    .content {
+        width: 90%;
+        margin: 5px auto;
+        padding: 0 25px;
+    }
+
+    .detail-box {
+        width: 90%;
+        margin-left: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .shop-title__row {
+        padding: 10px;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .back-button {
+        background: white;
+        margin: auto 16px;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .shop-name {
+        margin: 5px;
+        padding: auto 5px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .shop-img {
+        width: 90%;
+        height: 200px;
+    }
+
+    .area-genre__row {
+        margin: 10px auto;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .area-genre__row div {
+        margin: 8px;
+        font-size: 16px;
+    }
+
+    .shop-detail {
+        margin: 10px auto;
+        width: 90%;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .show-reviews__outer {
+        margin: 40px auto;
+        padding-bottom: 30px;
+        width: 80%;
+        border-bottom: solid 2px gainsboro;
+    }
+
+    .show-reviews__button {
+        margin: 10px auto;
+        padding: 10px 50px;
+        width: 100%;
+        background-color: blue;
+        color: white;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .review__list {
+        width: 90%;
+    }
+
+    .edit-delete {
+        margin: 20px;
+        width: 100%;
+        text-align: right;
+    }
+
+    .to-edit__outer,
+    .to-delete__outer {
+        margin: 5px 0px 5px 20px;
+    }
+
+    .to-edit,
+    .to-delete {
+        background: white;
+        color: black;
+        border: 0;
+        text-decoration: underline;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .review-user {
+        margin: 5px auto;
+        width: 80%;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .rating {
+        margin: 5px auto;
+        width: 80%;
+        font-size: 30px;
+        color: blue;
+        text-align: left;
+    }
+
+    .comment-content {
+        margin: 30px auto;
+        width: 80%;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .review-img__outer {
+        margin: 30px auto;
+        padding-bottom: 30px;
+        width: 80%;
+        border-bottom: solid 2px gainsboro;
+    }
+
+    .review-img {
+        margin: 5px auto;
+        width: 80%;
+    }
+
+    .reservation-box {
+        background-color: #305DFF;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px gainsboro;
+        margin: 50px auto 200px;
+        padding-top: 20px;
+        width: 80%;
+        color: white;
+        text-align: left;
+    }
+
+    .reservation-title {
+        margin: 24px auto;
+        width: 90%;
+        font-size: 24px;
+    }
+
+    .date {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        border: 0;
+        border-radius: 5px;
+        width: 50%;
+        height: 28px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .time {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        border: 0;
+        border-radius: 5px;
+        width: 80%;
+        height: 28px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .people {
+        margin-top: 8px;
+        margin-left: 10px;
+        border: 0;
+        border-radius: 5px;
+        width: 80%;
+        height: 28px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .confirm-outer {
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    .confirm-table {
+        margin: 5px auto;
+        background: cornflowerblue;
+        border-radius: 7px;
+        width: 85%;
+        height: 160px;
+    }
+
+    .confirm-table th {
+        padding: 0 0 0 10px;
+        width: 35%;
+        height: 16px;
+        font-size: 10px;
+        font-weight: lighter;
+    }
+
+    .confirm-table td {
+        width: 60%;
+        height: 16px;
+        font-size: 10px;
+        font-weight: lighter;
+    }
+
+    .error-messages {
+        margin: 0;
+        padding-top: 0;
+        padding-left: 24px;
+        height: 120px;
+    }
+
+    .error-messages li {
+        margin-bottom: 8px;
+    }
+
+    .reservation-button {
+        background-color: blue;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: 48px;
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}

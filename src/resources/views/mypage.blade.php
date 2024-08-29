@@ -9,8 +9,19 @@
     <h2 class="user-name">
         {{ Auth::user()->name }}さん マイページ
     </h2>
-    <div class="payment-outer">
-        <a class="payment" href="/payment">オンラインで支払をする</a>
+    <div class="visited-payment">
+        <div class="visited-box">
+            <form action="/visited" method="get">
+            @csrf
+                <button class="visited" type="submit" >
+                    来店履歴
+                </button>
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+            </form>
+        </div>
+        <div class="payment-outer">
+            <a class="payment" href="/payment">オンラインで支払をする</a>
+        </div>
     </div>
     <div class="content">
         <div class="reservation-list__box">
@@ -31,11 +42,11 @@
                     <h3 class="each-title">
                         予約{{ $key + 1 }} <!-- 予約番号を表示 -->
                     </h3>
-                    <form action="/delete" method="get">
+                    <form action="/delete/rese" method="get">
                     @csrf
                         <input type="hidden" name="delete_id" value="{{ $reservation->id }}">
                         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                        <button class="close">
+                        <button class="cancel-button">
                             &times;
                         </button>
                     </form>
@@ -85,14 +96,6 @@
                 </form>
             </div>
             @endforeach
-            <div class="review-box">
-                <form action="/review" method="get">
-                    <button class="review" type="submit" >
-                        レビューを書く
-                    </button>
-                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                </form>
-            </div>
         </div>
         <div class="favorites-box">
             <h3 class="favorites-title">

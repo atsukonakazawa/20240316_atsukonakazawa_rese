@@ -51,7 +51,9 @@
                 </div>
             </div>
         </form>
+        <a class="login-a" href="/login">
+            ログインはこちら
+        </a>
     </div>
-
 </div>
 @endsection

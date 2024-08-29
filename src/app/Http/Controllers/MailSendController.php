@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use Mail;
 use App\Models\User;
 use App\Http\Requests\UserRequest;
-use Carbon\Carbon;
 
 
 class MailSendController extends Controller

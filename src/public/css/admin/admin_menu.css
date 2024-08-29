@@ -1,0 +1,283 @@
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
+    .content-outer {
+        width: 100%
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .title-outer {
+        width: 100%;
+    }
+
+    .title {
+        width: 40%;
+        padding: 30px 50px;
+        border: double 5px gold;
+        border-radius: 5px;
+        background-color: orangered;
+        margin: 5px 5px 5px auto;
+        color: white;
+        font-size: 30px;
+    }
+
+    .links-outer {
+        margin: 50px auto;
+        width: 100%;
+    }
+
+    .to-admin__outer,
+    .to-review__outer,
+    .to-import__outer {
+        margin: 20px auto;
+        padding: 25px 50px;
+        width: 50%;
+        border: solid 1px #305DFF;
+        box-shadow: 3px 3px 3px gainsboro;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    .to-admin,
+    .to-review,
+    .to-import {
+        background: white;
+        color: blue;
+        font-size: 30px;
+        border: 0;
+        font-weight: lighter;
+        cursor: pointer;
+    }
+
+    .logout-outer {
+        margin: 50px auto;
+        width: 100%;
+    }
+
+    .logout-button {
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        padding: 10px 20px;
+        font-size: 15px;
+        color: black;
+        cursor: pointer;
+    }
+}
+
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    .content-outer {
+        width: 100%
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .title-outer {
+        width: 100%;
+    }
+
+    .title {
+        width: 40%;
+        padding: 30px 50px;
+        border: double 5px gold;
+        border-radius: 5px;
+        background-color: orangered;
+        margin: 5px 5px 5px auto;
+        color: white;
+        font-size: 30px;
+    }
+
+    .links-outer {
+        margin: 50px auto;
+        width: 100%;
+    }
+
+    .to-admin__outer,
+    .to-review__outer,
+    .to-import__outer {
+        margin: 20px auto;
+        padding: 25px 50px;
+        width: 50%;
+        border: solid 1px #305DFF;
+        box-shadow: 3px 3px 3px gainsboro;
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    .to-admin,
+    .to-review,
+    .to-import {
+        background: white;
+        color: blue;
+        font-size: 30px;
+        border: 0;
+        font-weight: lighter;
+        cursor: pointer;
+    }
+
+    .logout-outer {
+        margin: 50px auto;
+        width: 100%;
+    }
+
+    .logout-button {
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        padding: 10px 20px;
+        font-size: 15px;
+        color: black;
+        cursor: pointer;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+        .content {
+            margin: 5px;
+            padding: 0 25px;
+            width: 100%;
+            display: block;
+        }
+
+        .title-outer {
+            width: 100%;
+        }
+
+        .title {
+            width: 30%;
+            margin: 5px 5px 5px auto;
+            padding: 10px 15px;
+            border: double 5px gold;
+            border-radius: 5px;
+            background-color: orangered;
+            color: white;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        .links-outer {
+            margin: 40px auto;
+            width: 100%;
+        }
+
+        .to-admin__outer,
+        .to-review__outer,
+        .to-import__outer {
+            margin: 20px auto;
+            padding: 15px 20px;
+            width: 50%;
+            border: solid 1px #305DFF;
+            box-shadow: 3px 3px 3px gainsboro;
+            border-radius: 5px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .to-admin,
+        .to-review,
+        .to-import {
+            background: white;
+            color: blue;
+            font-size: 17px;
+            border: 0;
+            font-weight: lighter;
+            cursor: pointer;
+        }
+
+        .logout-outer {
+            margin: 40px auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logout-button {
+            border: 0;
+            border-radius: 5px;
+            background-color: gainsboro;
+            padding: 8px 16px;
+            font-size: 12px;
+            color: black;
+            cursor: pointer;
+        }
+    }
+
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    .content {
+        margin: 5px;
+        padding: 0 25px;
+        display: block;
+    }
+
+    .title-outer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .title {
+        width: 40%;
+        margin: 5px 5px 5px auto;
+        padding: 7px 10px;
+        border: double 5px gold;
+        border-radius: 5px;
+        background-color: orangered;
+        color: white;
+        font-size: 15px;
+    }
+
+    .links-outer {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .to-admin__outer,
+    .to-review__outer,
+    .to-import__outer {
+        margin: 20px auto;
+        padding: 10px 15px;
+        width: 60%;
+        border: solid 1px #305DFF;
+        box-shadow: 3px 3px 3px gainsboro;
+        border-radius: 5px;
+        background-color: white;
+        text-align: center;
+    }
+
+    .to-admin,
+    .to-review,
+    .to-import {
+        background: white;
+        color: blue;
+        font-size: 15px;
+        border: 0;
+        font-weight: lighter;
+        cursor: pointer;
+    }
+
+    .logout-outer {
+        margin: 40px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logout-button {
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        padding: 8px 16px;
+        font-size: 12px;
+        color: black;
+        cursor: pointer;
+    }
+
+}

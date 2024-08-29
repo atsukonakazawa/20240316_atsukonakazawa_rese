@@ -1,17 +1,118 @@
-.content-outer {
-    width: 100%
-}
-
-@media screen and (max-width:768px) {
+@media screen and (min-width:769px) {
     .content-outer {
-        width: 768px;
+        width: 100%
     }
-}
 
-.content {
-    margin: 5px;
-    padding: 0 50px;
-    text-align: center;
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .title-outer {
+        width: 100%;
+    }
+
+    .title {
+        border: double 5px gold;
+        border-radius: 5px;
+        background-color: orangered;
+        margin: 5px 5px 5px auto;
+        padding: 30px;
+        width: 400px;
+        color: white;
+        font-size: 30px;
+    }
+
+    .subtitle-outer {
+        margin: 50px auto 5px;
+        width: 100%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .subtitle {
+        border-radius: 5px;
+        margin: 15px auto;
+        width: 600px;
+    }
+
+    .input-id__outer{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .input-id{
+        border-radius: 5px;
+        border: solid 1px black;
+        margin: 30px auto;
+        padding: 20px;
+        width: 300px;
+        font-size: 20px;
+    }
+
+    .id-button{
+        border-radius: 5px;
+        border: 0;
+        margin-left: 50px;
+        padding: 10px 20px;
+        background-color: #305DFF;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .confirm-table__outer{
+        border-radius: 5px;
+        border: solid 1px black;
+        margin: 0 auto;
+        width: 1600px;
+    }
+
+    .confirm-table{
+        margin: 10px auto;
+        width: 1600px;
+    }
+
+    .confirm-table tr{
+        height: 80px;
+    }
+
+    .title-row{
+        border-bottom: solid 1px black;
+        font-size: 25px;
+    }
+
+    .title-row th{
+        width: 400px;
+    }
+
+    .rese-row{
+        padding: 20px auto;
+        font-size: 20px;
+    }
+
+    .rese-row td{
+        width: 400px;
+        font-size: 20px;
+    }
+
+    .back-link__outer {
+        width: 100%;
+        padding: 50px 0;
+        text-align: right;
+    }
+
+    .back-link {
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        cursor: pointer;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -21,30 +122,11 @@
         padding: 0 25px;
         display: block;
     }
-}
 
-.title-outer {
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
     .title-outer {
         width: 700px;
     }
-}
 
-.title {
-    border: double 5px gold;
-    border-radius: 5px;
-    background-color: orangered;
-    margin: 5px 5px 5px auto;
-    padding: 30px;
-    width: 400px;
-    color: white;
-    font-size: 30px;
-}
-
-@media screen and (max-width:768px) {
     .title {
         border: double 4px gold;
         border-radius: 5px;
@@ -55,60 +137,25 @@
         color: white;
         font-size: 24px;
     }
-}
 
-.subtitle-outer {
-    margin: 50px auto 5px;
-    width: 100%;
-    font-size: 25px;
-    text-align: center;
-}
-
-@media screen and (max-width:768px) {
     .subtitle-outer {
         margin: 40px auto 4px;
         width: 700px;
         font-size: 20px;
         text-align: center;
     }
-}
 
-.subtitle {
-    border-radius: 5px;
-    margin: 15px auto;
-    width: 600px;
-}
-
-@media screen and (max-width:768px) {
     .subtitle {
         border-radius: 5px;
         margin: 12px auto;
         width: 400px;
     }
-}
 
-.input-id__outer{
-    margin: 0 auto;
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
     .input-id__outer {
         margin: 0 auto;
         width: 750px;
     }
-}
 
-.input-id{
-    border-radius: 5px;
-    border: solid 1px black;
-    margin: 30px auto;
-    padding: 20px;
-    width: 300px;
-    font-size: 20px;
-}
-
-@media screen and (max-width:768px) {
     .input-id {
         border-radius: 5px;
         border: solid 1px black;
@@ -117,20 +164,7 @@
         width: 240px;
         font-size: 16px;
     }
-}
 
-.id-button{
-    border-radius: 5px;
-    border: 0;
-    margin-left: 50px;
-    padding: 10px 20px;
-    background-color: #305DFF;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-@media screen and (max-width:768px) {
     .id-button {
         border-radius: 5px;
         border: 0;
@@ -141,119 +175,49 @@
         font-size: 16px;
         cursor: pointer;
     }
-}
 
-.confirm-table__outer{
-    border-radius: 5px;
-    border: solid 1px black;
-    margin: 0 auto;
-    width: 1600px;
-}
-
-@media screen and (max-width:768px) {
     .confirm-table__outer {
         border-radius: 5px;
         border: solid 1px black;
         margin: 0 auto;
         width: 700px;
     }
-}
 
-.confirm-table{
-    margin: 10px auto;
-    width: 1600px;
-}
-
-@media screen and (max-width:768px) {
     .confirm-table {
         margin: 8px auto;
         width: 700px;
     }
-}
 
-.confirm-table tr{
-    height: 80px;
-}
-
-@media screen and (max-width:768px) {
     .confirm-table tr {
         height: 64px;
     }
-}
 
-.title-row{
-    border-bottom: solid 1px black;
-    font-size: 25px;
-}
-
-@media screen and (max-width:768px) {
     .title-row {
         border-bottom: solid 1px black;
         font-size: 20px;
     }
-}
 
-.title-row th{
-    width: 400px;
-}
-
-@media screen and (max-width:768px) {
     .title-row th {
         width: 175px;
     }
-}
 
-.rese-row{
-    padding: 20px auto;
-    font-size: 20px;
-}
-
-@media screen and (max-width:768px) {
     .rese-row {
         padding: 16px auto;
         font-size: 16px;
     }
-}
 
-.rese-row td{
-    width: 400px;
-    font-size: 20px;
-}
-
-@media screen and (max-width:768px) {
     .rese-row td {
         border-top: solid 1px black;
         width: 175px;
         font-size: 16px;
     }
-}
 
-.back-link__outer {
-    width: 100%;
-    padding: 50px 0;
-    text-align: right;
-}
-
-@media screen and (max-width:768px) {
     .back-link__outer {
         width: 750px;
         padding: 40px;
         text-align: right;
     }
-}
 
-.back-link {
-    border: 0;
-    border-radius: 5px;
-    background-color: gainsboro;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-@media screen and (max-width:768px) {
     .back-link {
         border: 0;
         border-radius: 5px;

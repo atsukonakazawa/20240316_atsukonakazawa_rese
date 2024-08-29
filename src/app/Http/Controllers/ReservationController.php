@@ -26,7 +26,7 @@ class ReservationController extends Controller
         return view('done');
     }
 
-    public function delete(Request $request){
+    public function deleteRese(Request $request){
 
         $deleteId = $request->delete_id;
         Reservation::where('id',$deleteId)

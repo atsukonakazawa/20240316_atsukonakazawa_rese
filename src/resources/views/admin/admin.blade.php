@@ -9,12 +9,14 @@
     <div class="content">
         <div class="title-outer">
             <h2 class="title">
-                管理者　専用画面
+                管理者<br>
+                専用画面
             </h2>
         </div>
         <div class="subtitle-outer">
             <h2 class="subtitle">
-                店舗代表者　新規作成画面
+                店舗代表者<br>
+                新規作成画面
             </h2>
         </div>
         <form action="/admin/create/manager" method="post">

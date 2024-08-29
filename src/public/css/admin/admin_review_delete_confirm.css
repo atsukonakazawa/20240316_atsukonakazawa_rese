@@ -1,0 +1,321 @@
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
+    /* content */
+    .content__outer {
+        width: 100%;
+        margin: 5px auto 50px;
+        text-align: center;
+    }
+
+    .title__outer {
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .title__outer-p {
+        color: red;
+        font-size: 20px;
+    }
+
+    .button__outer {
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .remove__button {
+        margin: 5px 50px 100px 50px;
+        padding: 10px 30px;
+        border: 0;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .to-review {
+        margin: 5px 50px 100px 50px;
+        padding: 10px 30px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .table{
+        margin: 5px auto;
+        width: 90%;
+        border: solid 1px black;
+        border-radius: 3%;
+    }
+
+    .rating{
+        width: 10%;
+    }
+
+    .user__name,
+    .shop__name,
+    .review__img {
+        width: 10%;
+    }
+
+    .comment {
+        width: 40%;
+        word-break: break-all;
+    }
+
+    .each__row {
+        height: 90px;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    /* content */
+    .content__outer {
+        width: 100%;
+        margin: 5px auto 50px;
+        text-align: center;
+    }
+
+    .title__outer {
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+
+
+    .title {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+
+    .title__outer-p {
+        color: red;
+        font-size: 20px;
+    }
+
+    .button__outer {
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .remove__button {
+        margin: 5px 50px 100px 50px;
+        padding: 10px 30px;
+        border: 0;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .to-review {
+        margin: 5px 50px 100px 50px;
+        padding: 10px 30px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .table {
+        margin: 5px auto;
+        width: 90%;
+        border: solid 1px black;
+        border-radius: 3%;
+    }
+
+    .rating {
+        width: 10%;
+    }
+
+    .user__name,
+    .shop__name,
+    .review__img {
+        width: 10%;
+    }
+
+    .comment {
+        width: 40%;
+        word-break: break-all;
+    }
+
+    .each__row {
+        height: 90px;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    /* content */
+    .content__outer {
+        width: 100%;
+        margin: 5px auto 50px;
+        text-align: center;
+    }
+
+    .title__outer {
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .title__outer-p {
+        color: red;
+        font-size: 10px;
+    }
+
+    .title__row {
+        font-size: 7px;
+    }
+
+    .button__outer {
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .remove__button {
+        margin: 5px 25px 50px 25px;
+        padding: 5px 15px;
+        border: 0;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .to-review {
+        margin: 5px 25px 50px 25px;
+        padding: 5px 15px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .table {
+        margin: 5px auto;
+        width: 90%;
+        border: solid 1px black;
+        border-radius: 3%;
+    }
+
+    .rating {
+        width: 10%;
+    }
+
+    .user__name,
+    .shop__name,
+    .review__img {
+        width: 10%;
+    }
+
+    .comment {
+        width: 40%;
+        word-break: break-all;
+    }
+
+    .each__row {
+        height: 45px;
+        border-top: solid 1px black;
+        text-align: center;
+        font-size: 7px;
+    }
+}
+
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    /* content */
+    .content__outer {
+        width: 100%;
+        margin: 5px auto 50px;
+        text-align: center;
+    }
+
+    .title__outer {
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .title__outer-p {
+        color: red;
+        font-size: 7px;
+    }
+
+    .button__outer {
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title__row{
+        font-size: 7px;
+    }
+
+    .remove__button {
+        margin: 5px 25px 50px 25px;
+        padding: 3px 7px;
+        width: 50%;
+        border: 0;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: 5px;
+        cursor: pointer;
+    }
+
+    .to-review {
+        margin: 5px 25px 50px 25px;
+        padding: 3px 7px;
+        width: 50%;
+        font-size: 5px;
+        cursor: pointer;
+    }
+
+    .table {
+        margin: 5px auto;
+        width: 90%;
+        border: solid 1px black;
+        border-radius: 3%;
+    }
+
+    .rating {
+        width: 10%;
+    }
+
+    .user__name,
+    .shop__name,
+    .review__img {
+        width: 10%;
+    }
+
+    .comment {
+        width: 40%;
+        word-break: break-all;
+    }
+
+    .each__row {
+        height: 45px;
+        border-top: solid 1px black;
+        text-align: center;
+        font-size: 7px;
+    }
+}

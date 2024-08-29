@@ -1,0 +1,172 @@
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
+    .content-outer {
+        width: 100%;
+    }
+
+    .content {
+        margin: 5px auto;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 25px;
+    }
+
+    .import-box{
+        margin: 20px auto;
+        padding-top: 100px;
+        width: 90%;
+        border: solid 1px black;
+    }
+
+    .csv-p{
+        font-size: 20px;
+    }
+
+    .message-outer{
+        margin: 0 auto;
+        width: 80%;
+        height: 100px;
+    }
+
+    .alert-danger,
+    .alert-success{
+        font-size: 20px;
+        color: red;
+    }
+}
+
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    .content-outer {
+        width: 100%
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .import-box {
+        margin: 20px auto;
+        padding-top: 100px;
+        width: 90%;
+        border: solid 1px black;
+    }
+
+    .csv-p {
+        font-size: 20px;
+    }
+
+    .message-outer {
+        margin: 0 auto;
+        width: 80%;
+        height: 100px;
+    }
+
+    .alert-danger,
+    .alert-success {
+        font-size: 20px;
+        color: red;
+    }
+
+}
+
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .content-outer {
+        width: 100%
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .import-box {
+        margin: 20px auto;
+        padding-top: 50px;
+        width: 90%;
+        border: solid 1px black;
+    }
+
+    .csv-p {
+        font-size: 10px;
+    }
+
+    .message-outer {
+        margin: 0 auto;
+        width: 80%;
+        height: 50px;
+    }
+
+    .alert-danger,
+    .alert-success {
+        font-size: 10px;
+        color: red;
+    }
+
+    .input,
+    .button{
+        font-size: 10px;
+    }
+}
+
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    .content-outer {
+        width: 100%;
+        min-width: 425px;
+    }
+
+    .content {
+        margin: 5px auto;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .import-box {
+        margin: 20px auto;
+        padding-top: 50px;
+        width: 90%;
+        border: solid 1px black;
+    }
+
+    .csv-p {
+        font-size: 10px;
+    }
+
+    .message-outer {
+        margin: 0 auto;
+        width: 80%;
+        height: 50px;
+    }
+
+    .alert-danger,
+    .alert-success {
+        font-size: 10px;
+        color: red;
+    }
+
+    .input,
+    .button {
+        font-size: 10px;
+    }
+}

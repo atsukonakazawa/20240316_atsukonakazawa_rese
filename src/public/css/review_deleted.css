@@ -1,0 +1,187 @@
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
+    .content-outer {
+        width: 100%;
+        min-width: 1024px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .deleted-box {
+        box-shadow: 3px 3px 3px gray;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        margin: 50px auto;
+        padding: 100px 30px;
+        width: 50%;
+    }
+
+    .deleted-message {
+        width: 100%;
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    .visited-box {
+        margin: 20px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .visited {
+        margin: 15px auto;
+        border: 0;
+        border-radius: 3px;
+        box-shadow: 3px 3px 5px gray;
+        background-color: #305DFF;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    .content-outer {
+        width: 100%;
+        min-width: 1024px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .deleted-box {
+        box-shadow: 3px 3px 3px gray;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        margin: 50px auto;
+        padding: 100px 30px;
+        width: 50%;
+    }
+
+    .deleted-message {
+        width: 100%;
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    .visited-box {
+        margin: 20px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .visited {
+        margin: 15px auto;
+        border: 0;
+        border-radius: 3px;
+        box-shadow: 3px 3px 5px gray;
+        background-color: #305DFF;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .content-outer {
+        width: 100%;
+        min-width: 768px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .deleted-box {
+        box-shadow: 3px 3px 3px gainsboro;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        margin: 50px auto;
+        padding: 70px 20px;
+        width: 50%;
+    }
+
+    .deleted-message {
+        width: 100%;
+        font-weight: lighter;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .visited-box {
+        margin: 15px auto;
+        width: 90%;
+    }
+
+    .visited {
+        margin: 10px auto;
+        border: 0;
+        border-radius: 3px;
+        box-shadow: 3px 3px 5px gray;
+        background-color: #305DFF;
+        padding: 12px;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    .content-outer {
+        width: 100%;
+        min-width: 768px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .deleted-box {
+        box-shadow: 3px 3px 3px gainsboro;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        margin: 50px auto;
+        padding: 70px 20px;
+        width: 50%;
+    }
+
+    .deleted-message {
+        width: 100%;
+        font-weight: lighter;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .visited-box {
+        margin: 15px auto;
+        width: 90%;
+    }
+
+    .visited {
+        margin: 10px auto;
+        border: 0;
+        border-radius: 3px;
+        box-shadow: 3px 3px 5px gray;
+        background-color: #305DFF;
+        padding: 12px;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+}

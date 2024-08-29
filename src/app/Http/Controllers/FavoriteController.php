@@ -11,7 +11,6 @@ use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
 
 
-
 class FavoriteController extends Controller
 {
     public function like(Request $request){

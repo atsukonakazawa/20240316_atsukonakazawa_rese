@@ -1,319 +1,646 @@
-.search-outer {
-    margin: auto 30px;
-    width: 700px;
-}
-
-@media screen and (max-width:768px) {
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
     .search-outer {
-        margin: auto 10px;
-        width: 550px;
+        margin: auto 30px;
+        width: 40%;
     }
-}
 
-.search-box {
-    margin: 5px;
-    width: 650px;
-    height: 65px;
-    display: flex;
-    justify-content: right;
-}
-
-@media screen and (max-width:768px) {
     .search-box {
         margin: 5px;
-        width: 470px;
-        height: 45px;
+        height: 100%;
         display: flex;
         justify-content: right;
     }
-}
 
-.search-area {
-    padding: 0 10px;
-    width: 150px;
-}
-
-@media screen and (max-width:768px) {
     .search-area {
-        padding: 0 5px;
-        width: 100px;
+        padding: 0 10px;
+        width: 150px;
     }
-}
 
-.search-area__inner {
-    width: 100%;
-    margin: 10px 0;
-    height: 45px;
-    font-size: 20px;
-}
-
-@media screen and (max-width:768px) {
     .search-area__inner {
-        width: 100px;
-        margin: 7px 0;
-        height: 32px;
-        font-size: 14px;
+        width: 100%;
+        margin: 10px 0;
+        height: 45px;
+        font-size: 15px;
+        cursor: pointer;
     }
-}
 
-.search-genre {
-    padding: 0 10px;
-    width: 150px;
-}
-
-@media screen and (max-width:768px) {
     .search-genre {
-        padding: 0 5px;
-        width: 100px;
+        padding: 0 10px;
+        width: 150px;
     }
-}
 
-.search-genre__inner {
-    width: 100%;
-    margin: 10px 0;
-    height: 45px;
-    font-size: 20px;
-}
-
-@media screen and (max-width:768px) {
     .search-genre__inner {
-        width: 100px;
-        margin: 7px 3px;
-        height: 32px;
-        font-size: 14px;
+        width: 100%;
+        margin: 10px 0;
+        height: 45px;
+        font-size: 15px;
+        cursor: pointer;
     }
-}
 
-.search-keyword {
-    padding: 0 10px;
-    width: 450px;
-}
-
-@media screen and (max-width:768px) {
     .search-keyword {
-        padding: 0 11px;
-        width: 200px;
+        padding: 0 15px;
+        width: 450px;
     }
-}
 
-.search-keyword__inner {
-    width: 100%;
-    margin: 10px 0;
-    height: 45px;
-    font-size: 20px;
-}
-
-@media screen and (max-width:768px) {
     .search-keyword__inner {
-        width: 200px;
-        margin: 7px 0;
-        height: 32px;
-        font-size: 14px;
+        width: 100%;
+        margin: 10px 0;
+        height: 45px;
+        font-size: 15px;
+        cursor: pointer;
     }
-}
 
-.content-outer {
-    width: 100%
-}
-
-@media screen and (max-width:768px) {
     .content-outer {
-        width: 768px;
+        margin: 0 auto;
+        width: 100%;
     }
-}
 
-.shops-content {
-    margin: 5px;
-    padding: 10px 50px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-@media screen and (max-width:768px) {
-    .shops-content {
-        margin: 5px;
-        padding: 5px 25px;
+    .sort-row {
+        margin: 0 auto;
+        width: 95%;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-end;
+    }
+
+    .shuffle-button,
+    .desc-button,
+    .asc-button {
+        margin: 5px 0 5px 10px;
+        padding: 5px 15px;
+        background-color: white;
+        border: solid 1px black;
+        border-radius: 5px;
+        color: black;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .title-outer{
+        width: 95%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .message {
+        margin: 20px auto 20px 100px;
+        width: 65%;
+        height: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #305DFF;
+    }
+
+    .mypage-button {
+        margin: 20px 0;
+        cursor: pointer;
+    }
+
+    .logout-button {
+        margin: 20px 0 20px 30px;
+        cursor: pointer;
+    }
+
+    .shops-content {
+        margin: 5px auto;
+        padding: 10px 50px;
+        width: 98%;
+        display: flex;
+        justify-content: flex-start;
         flex-wrap: wrap;
     }
+
+    .shop-box {
+        border-radius: 5px;
+        margin: 30px auto;
+        width: 350px;
+        height: 350px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+
+    .shop-img {
+        width: 350px;
+        height: 200px;
+    }
+
+    .shop-img img {
+        width: 350px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .shop-content {
+        width: 100%;
+    }
+
+    .shop-name {
+        margin: 10px auto;
+        width: 300px;
+        font-size: 20px;
+    }
+
+    .area-genre__row {
+        margin: 5px auto;
+        width: 300px;
+        display: flex;
+        justify-content: left;
+    }
+
+    .shop-area {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .shop-genre {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .button-outer {
+        margin: 5px auto;
+        width: 300px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        margin: 5px 5px auto 5px;
+        padding: 0 15px;
+        border-radius: 5px;
+        height: 35px;
+        color: #fefefe;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .like-button {
+        background-color: white;
+        border: 0;
+        margin: 0 0 0 auto;
+        cursor: pointer;
+    }
+
+    .like-button img {
+        background-color: white;
+        border: 0;
+        width: 45px;
+        height: 45px;
+    }
+
+    .manager-admin {
+        border-top: solid 1px gainsboro;
+        margin: 50px auto 0;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .toManager-outer {
+        margin: 10px 20px;
+    }
+
+    .toManager {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .to-admin-outer {
+        margin: 10px 20px;
+    }
+
+    .to-admin__menu {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .second-message__outer {
+        margin-bottom: 50px;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+    }
+
+    .second-message {
+        font-size: 20px;
+        color: red;
+    }
 }
 
-.message{
-    padding-left: 30px;
-    width: 80%;
-    height: 20px;
-    font-size: 25px;
-    font-weight: bold;
-    color: #305DFF;
-}
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    .search-outer {
+        margin-top: 15px;
+        width: 40%;
+    }
 
-@media screen and (max-width:768px) {
+    .search-box {
+        margin: 5px;
+        height: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    .search-area {
+        width: 150px;
+    }
+
+    .search-area__inner {
+        width: 100%;
+        margin: 10px 0;
+        height: 45px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .search-genre {
+        width: 150px;
+    }
+
+    .search-genre__inner {
+        width: 100%;
+        margin: 10px 0;
+        height: 45px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .search-keyword {
+        width: 450px;
+    }
+
+    .search-keyword__inner {
+        width: 100%;
+        margin: 10px 0;
+        height: 45px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .content-outer {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .sort-row {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .shuffle-button,
+    .desc-button,
+    .asc-button {
+        margin: 3px 0 3px 12px;
+        padding: 3px 12px;
+        background-color: white;
+        border: solid 1px black;
+        border-radius: 5px;
+        color: black;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .title-outer {
+        width: 95%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .message {
-        padding-left: 30px;
-        width: 600px;
-        height: 16px;
+        margin: 20px auto 20px 100px;
+        width: 65%;
+        height: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #305DFF;
+    }
+
+    .mypage-button {
+        margin: 20px 0;
+        width: 70px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .logout-button {
+        margin: 20px 0 20px 30px;
+        width: 70px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .shops-content {
+        margin: 5px auto;
+        width: 98%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .shop-box {
+        border-radius: 5px;
+        margin: 2px auto;
+        width: 350px;
+        height: 350px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+
+    .shop-img {
+        width: 350px;
+        height: 200px;
+    }
+
+    .shop-img img {
+        width: 350px;
+        height: 200px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .shop-content {
+        width: 100%;
+    }
+
+    .shop-name {
+        margin: 10px auto;
+        width: 300px;
+        font-size: 20px;
+    }
+
+    .area-genre__row {
+        margin: 5px auto;
+        width: 300px;
+        display: flex;
+        justify-content: left;
+    }
+
+    .shop-area {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .shop-genre {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .button-outer {
+        margin: 5px auto;
+        width: 300px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        margin: 5px 5px auto 5px;
+        padding: 0 15px;
+        border-radius: 5px;
+        height: 35px;
+        color: #fefefe;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .like-button {
+        background-color: white;
+        border: 0;
+        margin: 0 0 0 auto;
+        cursor: pointer;
+    }
+
+    .like-button img {
+        background-color: white;
+        border: 0;
+        width: 45px;
+        height: 45px;
+    }
+
+    .manager-admin {
+        border-top: solid 1px gainsboro;
+        margin: 50px auto 0;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .toManager-outer {
+        margin: 10px 20px;
+    }
+
+    .toManager {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .to-admin-outer {
+        margin: 10px 20px;
+    }
+
+    .to-admin__menu {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .second-message__outer {
+        margin-bottom: 50px;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+    }
+
+    .second-message {
+        font-size: 20px;
+        color: red;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .search-outer {
+        margin: auto 5px;
+        width: 60%;
+    }
+
+    .search-box {
+        margin: 3px;
+        padding: 3px;
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    .search-area,
+    .search-genre {
+        padding: 0 5px;
+        width: 30%;
+    }
+
+    .search-area__inner,
+    .search-genre__inner {
+        width: 100%;
+        height: 20px;
+        font-size: 7px;
+        cursor: pointer;
+    }
+
+    .search-keyword {
+        padding: 0 5px;
+        width: 40%;
+    }
+
+    .search-keyword__inner {
+        width: 100%;
+        height: 20px;
+        font-size: 7px;
+        cursor: pointer;
+    }
+
+    .content-outer {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .sort-row {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .shuffle-button,
+    .desc-button,
+    .asc-button {
+        margin: 3px 0 3px 5px;
+        padding: 3px 10px;
+        background-color: white;
+        border: solid 1px black;
+        border-radius: 5px;
+        color: black;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .title-outer {
+        width: 95%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .message {
+        margin: 20px auto 20px 50px;
+        width: 65%;
+        height: 20px;
         font-size: 20px;
         font-weight: bold;
         color: #305DFF;
     }
-}
 
-.logout-button{
-    margin-top: 20px;
-    cursor: pointer;
-}
+    .mypage-button {
+        margin: 20px 0;
+        width: 70px;
+        cursor: pointer;
+        font-size: 10px;
+    }
 
-.shop-box {
-    border-radius: 5px;
-    margin: 15px;
-    width: 350px;
-    height: 350px;
-    box-shadow: 3px 3px 3px gainsboro;
-}
+    .logout-button {
+        margin: 20px 0 20px 20px;
+        width: 70px;
+        cursor: pointer;
+        font-size: 10px;
+    }
 
-@media screen and (max-width:768px) {
+    .shops-content {
+        margin: 5px auto;
+        padding: 5px 25px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
     .shop-box {
         border-radius: 5px;
-        margin: 7px;
+        margin: 7px auto;
         width: 300px;
         height: 300px;
         box-shadow: 3px 3px 3px gainsboro;
     }
-}
 
-.shop-img {
-    width: 350px;
-    height: 200px;
-}
-
-@media screen and (max-width:768px) {
     .shop-img {
         width: 300px;
         height: 172px;
     }
-}
 
-.shop-img img {
-    width: 350px;
-    height: 200px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-@media screen and (max-width:768px) {
     .shop-img img {
         width: 300px;
         height: 165px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
-}
 
-.shop-content {
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
     .shop-content {
         width: 300px;
     }
-}
 
-.shop-name {
-    margin: 10px auto;
-    width: 300px;
-    font-size: 20px;
-}
-
-@media screen and (max-width:768px) {
     .shop-name {
         margin: 10px auto;
         width: 270px;
         font-size: 20px;
     }
-}
 
-.area-genre__row {
-    margin: 5px auto;
-    width: 300px;
-    display: flex;
-    justify-content: left;
-}
-
-@media screen and (max-width:768px) {
     .area-genre__row {
         margin: 2px auto;
         width: 270px;
         display: flex;
         justify-content: left;
     }
-}
 
-.shop-area {
-    font-size: 15px;
-    font-family: "Zen Old Mincho", serif;
-    font-weight: 500;
-    font-style: normal;
-}
-
-@media screen and (max-width:768px) {
     .shop-area {
         font-size: 15px;
         font-family: "Zen Old Mincho", serif;
         font-weight: 250;
         font-style: normal;
     }
-}
 
-.shop-genre {
-    font-size: 15px;
-    font-family: "Zen Old Mincho", serif;
-    font-weight: 500;
-    font-style: normal;
-}
-
-@media screen and (max-width:768px) {
     .shop-genre {
         font-size: 15px;
         font-family: "Zen Old Mincho", serif;
         font-weight: 250;
         font-style: normal;
     }
-}
 
-.button-outer {
-    margin: 5px auto;
-    width: 300px;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-
-@media screen and (max-width:768px) {
     .button-outer {
-        margin: 2px auto 2px 20px;
+        margin: 5px auto 2px 20px;
         width: 270px;
         height: 35px;
         display: flex;
         justify-content: space-between;
     }
-}
 
-.detail-button {
-    background-color: #305DFF;
-    border: 0;
-    margin: 5px 5px auto 5px;
-    padding: 0 15px;
-    border-radius: 5px;
-    height: 35px;
-    color: #fefefe;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-@media screen and (max-width:768px) {
     .detail-button {
         background-color: #305DFF;
         border: 0;
@@ -325,134 +652,509 @@
         font-size: 12px;
         cursor: pointer;
     }
-}
 
-.like-button {
-    background-color: white;
-    border: 0;
-    margin: 0 0 0 auto;
-    cursor: pointer;
-}
-
-@media screen and (max-width:768px) {
     .like-button {
         background-color: white;
         border: 0;
         margin: 0 10px 0 auto;
         cursor: pointer;
     }
-}
 
-.like-button img {
-    background-color: white;
-    border: 0;
-    width: 45px;
-    height: 45px;
-}
-
-@media screen and (max-width:768px) {
     .like-button img {
         background-color: white;
         border: 0;
         width: 35px;
         height: 35px;
     }
-}
 
-.manager-admin{
-    border-top: solid 1px gainsboro;
-    margin: 50px auto 0;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-}
-
-@media screen and (max-width:768px) {
     .manager-admin {
         border-top: solid 1px gainsboro;
         margin: 50px auto 0;
-        width: 700px;
+        width: 80%;
         display: flex;
         justify-content: center;
     }
-}
 
-.toManager-outer{
-    margin: 10px 20px;
-}
-
-@media screen and (max-width:768px) {
     .toManager-outer {
-        margin: 20px 4px 0px auto;
+        margin: 10px 20px;
     }
-}
 
-.toManager{
-    border-radius: 5px;
-    border: solid 1px gainsboro;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-@media screen and (max-width:768px) {
     .toManager {
         border-radius: 5px;
         border: solid 1px gainsboro;
-        font-size: 13px;
+        font-size: 10px;
         cursor: pointer;
     }
-}
 
-.toAdmin-outer{
-    margin: 10px 20px;
-}
-
-@media screen and (max-width:768px) {
-    .toAdmin-outer {
-        margin: 20px auto 0px 4px;
+    .to-admin-outer {
+        margin: 10px 20px;
     }
-}
 
-.toAdmin{
-    border-radius: 5px;
-    border: solid 1px gainsboro;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-@media screen and (max-width:768px) {
-    .toAdmin {
+    .to-admin__menu {
         border-radius: 5px;
         border: solid 1px gainsboro;
-        font-size: 13px;
+        font-size: 10px;
         cursor: pointer;
     }
-}
 
-.second-message__outer {
-    margin-bottom: 50px;
-    width: 100%;
-    height: 30px;
-    text-align: center;
-}
-
-@media screen and (max-width:768px) {
     .second-message__outer {
-        margin-bottom: 30px;
-        width: 768px;
-        height: 20px;
+        margin-bottom: 50px;
+        width: 100%;
+        height: 30px;
         text-align: center;
     }
-}
 
-.second-message{
-    font-size: 20px;
-    color: red;
-}
-
-@media screen and (max-width:768px) {
     .second-message {
-        font-size: 13px;
+        font-size: 10px;
         color: red;
     }
 }
+
+/* スマートフォン向け 1 */
+@media (min-width: 419px) and (max-width:425px) {
+    .search-outer {
+        margin: auto 5px;
+        width: 60%;
+    }
+
+    .search-box {
+        margin: 3px;
+        padding: 3px;
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    .search-area,
+    .search-genre {
+        padding: 0 5px;
+        width: 30%;
+    }
+
+    .search-area__inner,
+    .search-genre__inner {
+        width: 100%;
+        height: 20px;
+        font-size: 7px;
+        cursor: pointer;
+    }
+
+    .search-keyword {
+        padding: 0 5px;
+        width: 40%;
+    }
+
+    .search-keyword__inner {
+        width: 100%;
+        height: 20px;
+        font-size: 7px;
+        cursor: pointer;
+    }
+
+    .content-outer {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .sort-row {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .shuffle-button,
+    .desc-button,
+    .asc-button {
+        margin: 3px 0 3px 4px;
+        padding: 3px 7px;
+        background-color: white;
+        border: solid 1px black;
+        border-radius: 5px;
+        color: black;
+        font-size: 7px;
+        cursor: pointer;
+    }
+
+    .title-outer {
+        width: 95%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .message {
+        margin: 20px auto 20px 50px;
+        width: 65%;
+        height: 20px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #305DFF;
+    }
+
+    .mypage-button {
+        margin: 20px 0;
+        width: 50px;
+        cursor: pointer;
+        font-size: 6px;
+    }
+
+    .logout-button {
+        margin: 20px 0 20px 20px;
+        width: 50px;
+        cursor: pointer;
+        font-size: 6px;
+    }
+
+    .shops-content {
+        margin: 5px auto;
+        padding: 5px 25px;
+        width: 95%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .shop-box {
+        border-radius: 5px;
+        margin: 7px auto;
+        width: 150px;
+        height: 150px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+
+    .shop-img {
+        width: 150px;
+        height: 86px;
+    }
+
+    .shop-img img {
+        width: 150px;
+        height: 82px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .shop-content {
+        width: 150px;
+    }
+
+    .shop-name {
+        margin: 5px auto;
+        width: 135px;
+        font-size: 10px;
+    }
+
+    .area-genre__row {
+        margin: 1px auto;
+        width: 135px;
+        display: flex;
+        justify-content: left;
+    }
+
+    .shop-area,
+    .shop-genre {
+        font-size: 7px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 125;
+        font-style: normal;
+    }
+
+    .button-outer {
+        margin: 2px auto 1px 10px;
+        width: 135px;
+        height: 17px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        margin: auto 1px;
+        padding: 0 5px;
+        border-radius: 2px;
+        height: 17px;
+        color: #fefefe;
+        font-size: 6px;
+        cursor: pointer;
+    }
+
+    .like-button {
+        background-color: white;
+        border: 0;
+        margin: 0 5px 0 auto;
+        cursor: pointer;
+    }
+
+    .like-button img {
+        background-color: white;
+        border: 0;
+        width: 17px;
+        height: 17px;
+    }
+
+    .manager-admin {
+        border-top: solid 1px gainsboro;
+        margin: 50px auto 0;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .toManager-outer {
+        margin: 10px 20px;
+    }
+
+    .toManager {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .to-admin-outer {
+        margin: 10px 20px;
+    }
+
+    .to-admin__menu {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .second-message__outer {
+        margin-bottom: 50px;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+    }
+
+    .second-message {
+        font-size: 10px;
+        color: red;
+    }
+}
+
+/* スマートフォン向け 2 */
+@media screen and (max-width:419px) {
+    .search-outer {
+        margin: auto 5px;
+        width: 60%;
+    }
+
+    .search-box {
+        margin: 3px;
+        padding: 3px;
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+
+    .search-area,
+    .search-genre {
+        padding: 0 5px;
+        width: 30%;
+    }
+
+    .search-area__inner,
+    .search-genre__inner {
+        width: 100%;
+        height: 20px;
+        font-size: 7px;
+        cursor: pointer;
+    }
+
+    .search-keyword {
+        padding: 0 5px;
+        width: 40%;
+    }
+
+    .search-keyword__inner {
+        width: 100%;
+        height: 20px;
+        font-size: 7px;
+        cursor: pointer;
+    }
+
+    .content-outer {
+        width: 100%;
+        min-width: 419px;
+    }
+
+    .sort-row {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .shuffle-button,
+    .desc-button,
+    .asc-button {
+        margin: 3px 0 3px 3px;
+        padding: 3px 6px;
+        background-color: white;
+        border: solid 1px black;
+        border-radius: 5px;
+        color: black;
+        font-size: 6px;
+        cursor: pointer;
+    }
+
+    .title-outer {
+        width: 95%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .message {
+        margin: 20px auto 20px 50px;
+        width: 65%;
+        height: 20px;
+        font-size: 10px;
+        font-weight: bold;
+        color: #305DFF;
+    }
+
+    .mypage-button {
+        margin: 20px 0;
+        width: 50px;
+        cursor: pointer;
+        font-size: 6px;
+    }
+
+    .logout-button {
+        margin: 20px 0 20px 20px;
+        width: 50px;
+        cursor: pointer;
+        font-size: 6px;
+    }
+
+    .shops-content {
+        margin: 5px auto;
+        padding: 5px 25px;
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .shop-box {
+        border-radius: 5px;
+        margin: 7px auto;
+        width: 100px;
+        height: 100px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+
+    .shop-img {
+        width: 100px;
+        height: 57px;
+    }
+
+    .shop-img img {
+        width: 100px;
+        height: 54px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .shop-content {
+        width: 100px;
+    }
+
+    .shop-name {
+        margin: 1px auto 0;
+        width: 90px;
+        font-size: 6px;
+    }
+
+    .area-genre__row {
+        margin: 1px auto;
+        width: 90px;
+        display: flex;
+        justify-content: left;
+    }
+
+    .shop-area,
+    .shop-genre {
+        font-size: 4px;
+    }
+
+    .button-outer {
+        margin: 0 auto 0 6px;
+        width: 90px;
+        height: 11px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        padding: 0 3px;
+        border-radius: 2px;
+        height: 11px;
+        color: #fefefe;
+        font-size: 4px;
+        cursor: pointer;
+    }
+
+    .like-button {
+        background-color: white;
+        border: 0;
+        margin: 0 3px 0 auto;
+        cursor: pointer;
+    }
+
+    .like-button img {
+        background-color: white;
+        border: 0;
+        width: 13px;
+        height: 13px;
+    }
+
+    .manager-admin {
+        border-top: solid 1px gainsboro;
+        margin: 50px auto 0;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .toManager-outer {
+        margin: 10px 20px;
+    }
+
+    .toManager {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 5px;
+        cursor: pointer;
+    }
+
+    .to-admin-outer {
+        margin: 10px 20px;
+    }
+
+    .to-admin__menu {
+        border-radius: 5px;
+        border: solid 1px gainsboro;
+        font-size: 5px;
+        cursor: pointer;
+    }
+
+    .second-message__outer {
+        margin-bottom: 50px;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+    }
+
+    .second-message {
+        font-size: 5px;
+        color: red;
+    }
+}
+

@@ -1,0 +1,650 @@
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
+    .content-outer {
+        width: 100%;
+        min-width: 1440px;
+    }
+
+    .visited-list__title{
+        margin: 40px auto 25px;
+        width: 85%;
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .message{
+        margin: 20px auto 10px;
+        width: 85%;
+        color: red;
+        font-size: 25px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .detail-box {
+        margin: 25px;
+        padding: 15px;
+        width: 45%;
+        border: solid 1px gray;
+        border-radius: 5px;
+    }
+
+    .shop-title__row {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .back-button {
+        background: white;
+        margin: 30px;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+        padding: auto 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .shop-name {
+        margin: 30px;
+        padding: auto 5px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .shop-img {
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .shop-img__img {
+        width: 90%;
+    }
+
+    .area-genre__row {
+        margin-left: 30px;
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .area-genre__row div {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .shop-detail {
+        margin: 10px auto;
+        width: 90%;
+        height: 200px;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .show-reviews__outer{
+        margin: 50px auto 50px;
+        width: 90%;
+    }
+
+    .show-reviews__button{
+        padding: 15px 50px;
+        width: 100%;
+        background: blue;
+        color: white;
+        border: 0;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .links-outer {
+        margin: 10px auto 30px 30px;
+        width: 90%;
+        height: 100px;
+    }
+
+    .to-review__outer{
+        width: 100%;
+        text-align: left;
+    }
+
+    .to-edit__outer,
+    .to-delete__outer{
+        width: 100%;
+        text-align: left;
+    }
+
+    .to-review{
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .to-edit {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .to-delete {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+}
+
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    .content-outer {
+        width: 100%;
+        min-width: 1024px;
+    }
+
+    .visited-list__title {
+        margin: 40px auto 25px;
+        width: 85%;
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    .message {
+        margin: 20px auto 10px;
+        width: 85%;
+        color: red;
+        font-size: 25px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .detail-box {
+        margin: 15px;
+        padding: 15px;
+        width: 45%;
+        border: solid 1px gray;
+        border-radius: 5px;
+    }
+
+    .shop-title__row {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .back-button {
+        background: white;
+        margin: 30px;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+        padding: auto 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .shop-name {
+        margin: 30px;
+        padding: auto 5px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .shop-img {
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .shop-img__img {
+        width: 90%;
+    }
+
+    .area-genre__row {
+        margin-left: 30px;
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .area-genre__row div {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .shop-detail {
+        margin: 10px auto;
+        width: 90%;
+        height: 150px;
+        font-size: 17px;
+        text-align: left;
+    }
+
+    .show-reviews__outer {
+        margin: 50px auto 0px;
+        width: 90%;
+    }
+
+    .show-reviews__button {
+        padding: 15px 50px;
+        width: 100%;
+        background: blue;
+        color: white;
+        border: 0;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .links-outer {
+        margin: 10px auto 30px 25px;
+        width: 90%;
+        height: 100px;
+    }
+
+    .to-review__outer {
+        width: 100%;
+        text-align: left;
+    }
+
+    .to-edit__outer,
+    .to-delete__outer {
+        width: 100%;
+        text-align: left;
+    }
+
+    .to-review {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .to-edit {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .to-delete {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .content-outer {
+        width: 100%;
+        min-width: 768px;
+    }
+
+    .visited-list__title {
+        margin: 30px auto 20px;
+        width: 85%;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .message{
+        margin: 15px auto 5px;
+        width: 85%;
+        color: red;
+        font-size: 15px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 25px;
+        display: block;
+    }
+
+    .detail-box {
+        margin: 15px auto;
+        padding: 5px;
+        width: 90%;
+        border: solid 1px gray;
+        border-radius: 5px;
+    }
+
+    .shop-title__row {
+        padding: 10px;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .back-button {
+        background: white;
+        margin: 20px;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .shop-name {
+        margin: 20px;
+        padding: auto 5px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .shop-img {
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .shop-img__img{
+        width: 90%;
+    }
+
+    .area-genre__row {
+        margin-left: 65px;
+        margin-top: 8px;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .area-genre__row div {
+        margin: 8px;
+        font-size: 16px;
+    }
+
+    .shop-detail {
+        margin: 5px auto;
+        width: 80%;
+        height: 70px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .show-reviews__outer {
+        margin: 50px auto 0px;
+        width: 90%;
+    }
+
+    .show-reviews__button {
+        padding: 15px 50px;
+        width: 100%;
+        background: blue;
+        color: white;
+        border: 0;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .links-outer {
+        margin: 10px auto 30px 25px;
+        width: 90%;
+        height: 100px;
+    }
+
+    .to-review__outer {
+        width: 100%;
+        text-align: left;
+    }
+
+    .to-edit__outer,
+    .to-delete__outer {
+        width: 100%;
+        text-align: left;
+    }
+
+    .to-review {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .to-edit {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .to-delete {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+}
+
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    .content-outer {
+        width: 100%;
+        min-width: 768px;
+    }
+
+    .visited-list__title {
+        margin: 30px auto 20px;
+        width: 85%;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .message {
+        margin: 15px auto 5px;
+        width: 85%;
+        color: red;
+        font-size: 15px;
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 25px;
+        display: block;
+    }
+
+    .detail-box {
+        margin: 15px auto;
+        padding: 5px;
+        width: 90%;
+        border: solid 1px gray;
+        border-radius: 5px;
+    }
+
+    .shop-title__row {
+        padding: 10px;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .back-button {
+        background: white;
+        margin: 20px;
+        border: solid 1px gainsboro;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .shop-name {
+        margin: 20px;
+        padding: auto 5px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .shop-img {
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .shop-img__img {
+        width: 90%;
+    }
+
+    .area-genre__row {
+        margin-left: 65px;
+        margin-top: 8px;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .area-genre__row div {
+        margin: 8px;
+        font-size: 16px;
+    }
+
+    .shop-detail {
+        margin: 5px auto;
+        width: 80%;
+        height: 70px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .show-reviews__outer {
+        margin: 50px auto 0px;
+        width: 90%;
+    }
+
+    .show-reviews__button {
+        padding: 15px 50px;
+        width: 100%;
+        background: blue;
+        color: white;
+        border: 0;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .links-outer {
+        margin: 10px auto 30px 25px;
+        width: 90%;
+        height: 100px;
+    }
+
+    .to-review__outer {
+        width: 100%;
+        text-align: left;
+    }
+
+    .to-edit__outer,
+    .to-delete__outer {
+        width: 100%;
+        text-align: left;
+    }
+
+    .to-review {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .to-edit {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .to-delete {
+        margin: 5px auto;
+        padding-left: 25px;
+        text-align: left;
+        text-decoration: underline;
+        border: 0;
+        background-color: white;
+        color: blue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+}

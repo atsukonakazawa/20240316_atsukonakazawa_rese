@@ -28,61 +28,104 @@ class ShopController extends Controller
         return view('index',compact('shops','areas','genres'));
     }
 
-    public function searchArea(Request $request){
+    public function indexShuffle(){
 
-        $areaId = $request->area_id;
-        $shops = Shop::where('area_id',$areaId)
-                    ->get();
+        $shops = Shop::with('area')->with('genre')->get();
+
+        // 並び順をランダムにする
+        $shops = $shops->shuffle();
+
         $areas = Area::all();
         $genres = Genre::all();
 
-        //選択されたエリアのIDを取得し、セッションに保存
-        $selectedAreaId = $areaId;
-        session(['selected_area_id' => $selectedAreaId]);
-
         // セッションを削除
+        session()->forget('selected_area_id');
         session()->forget('selected_genre_id');
         session()->forget('selected_keyword');
 
         return view('index',compact('shops','areas','genres'));
     }
 
-    public function searchGenre(Request $request){
+    public function indexDesc(){
 
-        $genreId = $request->genre_id;
-        $shops = Shop::where('genre_id',$genreId)
-                    ->get();
+        // 評価の平均値が高い順にソートしてショップを取得
+        $shops = Shop::with('area', 'genre')
+                 ->withAvg('reviews', 'rating') // reviewsの平均ratingを取得
+                 ->orderByDesc('reviews_avg_rating') // 平均ratingでソート
+                ->get();
         $areas = Area::all();
         $genres = Genre::all();
 
-        //選択されたジャンルのIDを取得し、セッションに保存
-        $selectedGenreId = $genreId;
-        session(['selected_genre_id' => $selectedGenreId]);
-
         // セッションを削除
         session()->forget('selected_area_id');
+        session()->forget('selected_genre_id');
         session()->forget('selected_keyword');
 
         return view('index',compact('shops','areas','genres'));
     }
 
-    public function searchKeyword(Request $request){
+    public function indexAsc(){
 
-        $keyword = $request->keyword;
-        $shops = Shop::where('shop_name','like', '%'.$keyword.'%')
-                    ->get();
+        // 評価の平均値が低い順にソートしてショップを取得し、レビューがないショップを最後に配置
+        $shops = Shop::with('area', 'genre')
+                 ->withAvg('reviews', 'rating') // reviewsの平均ratingを取得
+                 ->orderByRaw('reviews_avg_rating IS NULL') // NULLのものを最後に配置
+                 ->orderBy('reviews_avg_rating') // 平均ratingで昇順ソート
+                ->get();
+
         $areas = Area::all();
         $genres = Genre::all();
-
-        //入力されたキーワードを取得し、セッションに保存
-        $selectedKeyword = $keyword;
-        session(['selected_keyword' => $selectedKeyword]);
 
         // セッションを削除
         session()->forget('selected_area_id');
         session()->forget('selected_genre_id');
+        session()->forget('selected_keyword');
 
         return view('index',compact('shops','areas','genres'));
+    }
+
+
+    public function search(Request $request) {
+        // 各検索条件を取得
+        $areaId = $request->input('area_id');
+        $genreId = $request->input('genre_id');
+        $keyword = $request->input('keyword');
+
+        // ベースのクエリ
+        $query = Shop::query();
+
+        // エリアでのフィルタリング
+        if ($areaId) {
+            $query->where('area_id', $areaId);
+            session(['selected_area_id' => $areaId]);
+        } else {
+            session()->forget('selected_area_id');
+        }
+
+        // ジャンルでのフィルタリング
+        if ($genreId) {
+            $query->where('genre_id', $genreId);
+            session(['selected_genre_id' => $genreId]);
+        } else {
+            session()->forget('selected_genre_id');
+        }
+
+        // キーワードでのフィルタリング
+        if ($keyword) {
+            $query->where('shop_name', 'like', '%' . $keyword . '%');
+            session(['selected_keyword' => $keyword]);
+        } else {
+            session()->forget('selected_keyword');
+        }
+
+        // フィルタリングされた結果を取得
+        $shops = $query->get();
+
+        // 必要なデータをビューに渡す
+        $areas = Area::all();
+        $genres = Genre::all();
+
+        return view('index', compact('shops', 'areas', 'genres'));
     }
 
     public function home(){
@@ -102,70 +145,106 @@ class ShopController extends Controller
         return view('home',compact('shops','areas','genres','favorites'));
     }
 
-    public function searchAreaHome(Request $request){
+    public function searchHome(Request $request){
+        // 各検索条件を取得
+        $areaId = $request->input('area_id');
+        $genreId = $request->input('genre_id');
+        $keyword = $request->input('keyword');
 
-        $areaId = $request->area_id;
-        $shops = Shop::where('area_id',$areaId)
-                    ->get();
+        // ベースのクエリ
+        $query = Shop::query();
+
+        // エリアでのフィルタリング
+        if ($areaId) {
+            $query->where('area_id', $areaId);
+            session(['selected_area_id' => $areaId]);
+        } else {
+            session()->forget('selected_area_id');
+        }
+
+        // ジャンルでのフィルタリング
+        if ($genreId) {
+            $query->where('genre_id', $genreId);
+            session(['selected_genre_id' => $genreId]);
+        } else {
+            session()->forget('selected_genre_id');
+        }
+
+        // キーワードでのフィルタリング
+        if ($keyword) {
+            $query->where('shop_name', 'like', '%' . $keyword . '%');
+            session(['selected_keyword' => $keyword]);
+        } else {
+            session()->forget('selected_keyword');
+        }
+
+        // フィルタリングされた結果を取得
+        $shops = $query->get();
+
+        // 必要なデータをビューに渡す
         $areas = Area::all();
         $genres = Genre::all();
 
         $user = Auth::user();
         $favorites = $user->favorites->pluck('shop_id')->toArray();
-
-        //選択されたエリアのIDを取得し、セッションに保存
-        $selectedAreaId = $areaId;
-        session(['selected_area_id' => $selectedAreaId]);
-
-        // セッションを削除
-        session()->forget('selected_genre_id');
-        session()->forget('selected_keyword');
 
         return view('home',compact('shops','areas','genres','favorites'));
     }
 
-    public function searchGenreHome(Request $request){
+    public function homeShuffle(){
 
-        $genreId = $request->genre_id;
-        $shops = Shop::where('genre_id',$genreId)
-                    ->get();
+        $shops = Shop::with('area')->with('genre')->get();
+
+        // 並び順をランダムにする
+        $shops = $shops->shuffle();
+
         $areas = Area::all();
         $genres = Genre::all();
-
-        $user = Auth::user();
-        $favorites = $user->favorites->pluck('shop_id')->toArray();
-
-        //選択されたジャンルのIDを取得し、セッションに保存
-        $selectedGenreId = $genreId;
-        session(['selected_genre_id' => $selectedGenreId]);
-
-        // セッションを削除
-        session()->forget('selected_area_id');
-        session()->forget('selected_keyword');
-
-        return view('home',compact('shops','areas','genres','favorites'));
-    }
-
-    public function searchKeywordHome(Request $request){
-
-        $keyword = $request->keyword;
-        $shops = Shop::where('shop_name','like', '%'.$keyword.'%')
-                    ->get();
-        $areas = Area::all();
-        $genres = Genre::all();
-
-        $user = Auth::user();
-        $favorites = $user->favorites->pluck('shop_id')->toArray();
-
-        //入力されたキーワードを取得し、セッションに保存
-        $selectedKeyword = $keyword;
-        session(['selected_keyword' => $selectedKeyword]);
 
         // セッションを削除
         session()->forget('selected_area_id');
         session()->forget('selected_genre_id');
+        session()->forget('selected_keyword');
 
-        return view('home',compact('shops','areas','genres','favorites'));
+        return view('index',compact('shops','areas','genres'));
+    }
+
+    public function homeDesc(){
+
+        // 評価の平均値が高い順にソートしてショップを取得
+        $shops = Shop::with('area', 'genre')
+                 ->withAvg('reviews', 'rating') // reviewsの平均ratingを取得
+                 ->orderByDesc('reviews_avg_rating') // 平均ratingでソート
+                ->get();
+        $areas = Area::all();
+        $genres = Genre::all();
+
+        // セッションを削除
+        session()->forget('selected_area_id');
+        session()->forget('selected_genre_id');
+        session()->forget('selected_keyword');
+
+        return view('index',compact('shops','areas','genres'));
+    }
+
+    public function homeAsc(){
+
+        // 評価の平均値が低い順にソートしてショップを取得し、レビューがないショップを最後に配置
+        $shops = Shop::with('area', 'genre')
+                 ->withAvg('reviews', 'rating') // reviewsの平均ratingを取得
+                 ->orderByRaw('reviews_avg_rating IS NULL') // NULLのものを最後に配置
+                 ->orderBy('reviews_avg_rating') // 平均ratingで昇順ソート
+                ->get();
+
+        $areas = Area::all();
+        $genres = Genre::all();
+
+        // セッションを削除
+        session()->forget('selected_area_id');
+        session()->forget('selected_genre_id');
+        session()->forget('selected_keyword');
+
+        return view('index',compact('shops','areas','genres'));
     }
 
     public function detail(Request $request){
@@ -176,6 +255,16 @@ class ShopController extends Controller
         $today = Carbon::today();
 
         return view('detail',compact('shops','today'));
+    }
+
+    public function detailIndex(Request $request){
+
+        $shop_id = $request->shop_id;
+        $shops = Shop::where('id',$shop_id)
+                ->get();
+        $today = Carbon::today();
+
+        return view('detail_index',compact('shops','today'));
     }
 
     public function mypage(Request $request){
@@ -196,4 +285,5 @@ class ShopController extends Controller
 
         return view('mypage', compact('reservations','favorites'));
     }
+
 }

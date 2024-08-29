@@ -1,0 +1,378 @@
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
+    /* content */
+    .content__outer {
+        width: 100%;
+        margin: 5px auto 50px;
+    }
+
+    .title__outer {
+        width: 100%;
+        height: 100px;
+        margin: 50px auto 10px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .message {
+        text-align: center;
+        height: 25px;
+        margin-bottom: 30px;
+        color: red;
+        font-size: 20px;
+    }
+
+    .table__outer {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .table {
+        width: 100%;
+        margin: 10px auto;
+        border: solid 1px black;
+    }
+
+    .title__row {
+        width: 100%;
+        height: 100px;
+        font-size: 18px;
+    }
+
+    .id,
+    .rating,
+    .delete {
+        width: 10%;
+    }
+
+    .user__name,
+    .shop__name,
+    .review__img {
+        width: 10%;
+    }
+
+    .comment {
+        width: 40%;
+        word-break: break-all;
+    }
+
+    .each__row {
+        height: 90px;
+        border-top: solid 1px black;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .img {
+        width: 120px;
+    }
+
+    .delete__button {
+        background: red;
+        color: white;
+        border: 0;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .admin__button-outer {
+        width: 100%;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .admin__button {
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .to-admin__outer {
+        margin: 50px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .to-admin__menu {
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        padding: 10px 20px;
+        font-size: 15px;
+        color: black;
+        cursor: pointer;
+    }
+}
+
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    /* content */
+    .content__outer {
+        width: 100%;
+        margin: 5px auto 50px;
+    }
+
+    .title__outer {
+        width: 100%;
+        height: 100px;
+        margin: 50px auto 10px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .message {
+        text-align: center;
+        height: 25px;
+        margin-bottom: 30px;
+        color: red;
+        font-size: 20px;
+    }
+
+    .table__outer {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .table {
+        width: 100%;
+        margin: 10px auto;
+        border: solid 1px black;
+    }
+
+    .title__row {
+        width: 100%;
+        height: 100px;
+        font-size: 18px;
+    }
+
+    .id,
+    .rating,
+    .delete {
+        width: 10%;
+    }
+
+    .user__name,
+    .shop__name,
+    .review__img {
+        width: 10%;
+    }
+
+    .comment {
+        width: 40%;
+        word-break: break-all;
+    }
+
+    .each__row {
+        height: 90px;
+        border-top: solid 1px black;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .img {
+        width: 70px;
+    }
+
+    .delete__button {
+        background: red;
+        color: white;
+        border: 0;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .admin__button-outer {
+        width: 100%;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .admin__button {
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .to-admin__outer {
+        margin: 50px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .to-admin__menu {
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        padding: 10px 20px;
+        font-size: 15px;
+        color: black;
+        cursor: pointer;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .title__outer {
+        width: 100%;
+        height: 50px;
+        margin: 25px auto 5px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .message {
+        text-align: center;
+        height: 13px;
+        margin-bottom: 5px;
+        color: red;
+        font-size: 10px;
+    }
+
+    .table__outer {
+        width: 95%;
+        margin: 5px auto;
+    }
+
+    .table {
+        width: 100%;
+        margin: 5px auto;
+        border: solid 1px black;
+    }
+
+    .title__row {
+        width: 100%;
+        height: 50px;
+        font-size: 7px;
+    }
+
+    .each__row {
+        height: 45px;
+        border-top: solid 1px black;
+        text-align: center;
+        font-size: 7px;
+    }
+
+    .img {
+        width: 50px;
+    }
+
+    .delete__button {
+        background: red;
+        color: white;
+        border: 0;
+        font-size: 5px;
+        cursor: pointer;
+    }
+
+    .admin__button-outer {
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .admin__button {
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .to-admin__outer {
+        margin: 40px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .to-admin__menu {
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        padding: 8px 16px;
+        font-size: 12px;
+        color: black;
+        cursor: pointer;
+    }
+}
+
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    .title__outer {
+        width: 100%;
+        height: 50px;
+        margin: 25px auto 5px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .message {
+        text-align: center;
+        height: 13px;
+        margin-bottom: 5px;
+        color: red;
+        font-size: 10px;
+    }
+
+    .table__outer {
+        width: 95%;
+        margin: 5px auto;
+    }
+
+    .table {
+        width: 100%;
+        margin: 5px auto;
+        border: solid 1px black;
+    }
+
+    .id,
+    .rating,
+    .delete {
+        width: 15%;
+    }
+
+    .user__name,
+    .shop__name,
+    .review__img {
+        width: 10%;
+    }
+
+    .comment {
+        width: 35%;
+        word-break: break-all;
+    }
+    .title__row {
+        width: 100%;
+        height: 50px;
+        font-size: 5px;
+    }
+
+    .each__row {
+        height: 45px;
+        border-top: solid 1px black;
+        text-align: center;
+        font-size: 5px;
+    }
+
+    .img{
+        width: 30px;
+    }
+
+    .delete__button {
+        background: red;
+        color: white;
+        border: 0;
+        font-size: 5px;
+        cursor: pointer;
+    }
+
+    .to-admin__outer {
+        margin: 40px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .to-admin__menu {
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        padding: 8px 16px;
+        font-size: 7px;
+        color: black;
+        cursor: pointer;
+    }
+}

@@ -11,7 +11,6 @@ use App\Models\Reservation;
 use App\Http\Requests\ShopRequest;
 use App\Http\Requests\UpdateRequest;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
 class ManagerController extends Controller
 {
@@ -193,7 +192,6 @@ class ManagerController extends Controller
             }
         }
 
-
         //店舗名を更新
         if($match == null){
 
@@ -235,7 +233,6 @@ class ManagerController extends Controller
 
             }
         }
-
         return view('manager.updatedShop');
     }
 

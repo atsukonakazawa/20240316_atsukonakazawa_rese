@@ -1,0 +1,805 @@
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
+    .content-outer {
+        width: 100%
+    }
+
+    .content {
+        margin: 5px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .left-box {
+        margin: 50px auto;
+        padding-right: 100px;
+        padding-left: 40px;
+        width: 40%;
+        border-right: solid 1px gainsboro;
+    }
+
+    .review-title {
+        margin: 50px auto;
+        width: 100%;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .shop-box {
+        margin: 30px auto;
+        width: 90%;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+
+    .shop-img {
+        width: 100%;
+    }
+
+    .shop-img img {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .shop-content {
+        width: 100%;
+    }
+
+    .shop-name {
+        margin: 10px auto;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .area-genre__row {
+        margin: 5px auto;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .shop-area {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .shop-genre {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .button-outer {
+        margin: 5px auto;
+        width: 90%;
+        height: 70px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        margin: 5px 5px auto 5px;
+        padding: 0 15px;
+        border-radius: 5px;
+        height: 35px;
+        color: #fefefe;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .right-box {
+        margin: 30px auto;
+        width: 50%;
+    }
+
+    .rating-outer {
+        margin: 50px auto;
+        width: 80%;
+    }
+
+    .rating-p {
+        font-size: 20px;
+    }
+
+    .stars {
+        width: 50%;
+        border: solid 1px black;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    .comment-outer {
+        margin: 30px auto;
+        width: 80%;
+    }
+
+    .comment-p {
+        font-size: 20px;
+    }
+
+    .comment {
+        width: 80%;
+        border: solid 1px gray;
+        font-size: 15px;
+    }
+
+    ::placeholder {
+        font-size: 15px;
+        color: gray;
+    }
+
+    .count {
+        width: 80%;
+        text-align: right;
+        font-size: 10px;
+    }
+
+    .review-img__outer {
+        margin: 30px auto;
+        width: 80%;
+    }
+
+    .review-img__p {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .review-img {
+        margin: 5px auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        text-align: center;
+        border: solid 1px gray;
+        border-radius: 5px;
+    }
+
+    .upload-area {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .input__img {
+        display: none;
+        margin-bottom: 0;
+    }
+
+    .or {
+        font-size: 10px;
+    }
+
+    .form__error {
+        width: 80%;
+        text-align: left;
+        font-size: 20px;
+        color: red;
+    }
+
+    .review-button__outer {
+        margin: 30px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .review-button {
+        margin: 5px auto;
+        padding: 15px 200px;
+        border: solid 1px black;
+        border-radius: 50px;
+        font-size: 20px;
+        display: inline-block;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    .content-outer {
+        width: 100%
+    }
+
+    .content {
+        margin: 5px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .left-box {
+        margin: 50px auto;
+        padding-right: 100px;
+        padding-left: 40px;
+        width: 40%;
+        border-right: solid 1px gainsboro;
+    }
+
+    .review-title {
+        margin: 50px auto;
+        width: 100%;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .shop-box {
+        margin: 30px auto;
+        width: 90%;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+
+    .shop-img {
+        width: 100%;
+    }
+
+    .shop-img img {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .shop-content {
+        width: 100%;
+    }
+
+    .shop-name {
+        margin: 10px auto;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .area-genre__row {
+        margin: 5px auto;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .shop-area {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .shop-genre {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .button-outer {
+        margin: 5px auto;
+        width: 90%;
+        height: 70px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        margin: 5px 5px auto 5px;
+        padding: 0 15px;
+        border-radius: 5px;
+        height: 35px;
+        color: #fefefe;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .right-box {
+        margin: 30px auto;
+        width: 50%;
+    }
+
+    .rating-outer {
+        margin: 50px auto;
+        width: 80%;
+    }
+
+    .rating-p {
+        font-size: 20px;
+    }
+
+    .stars {
+        width: 50%;
+        border: solid 1px black;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    .comment-outer {
+        margin: 30px auto;
+        width: 80%;
+    }
+
+    .comment-p {
+        font-size: 20px;
+    }
+
+    .comment {
+        width: 80%;
+        border: solid 1px gray;
+        font-size: 15px;
+    }
+
+    ::placeholder {
+        font-size: 15px;
+        color: gray;
+    }
+
+    .count {
+        width: 80%;
+        text-align: right;
+        font-size: 10px;
+    }
+
+    .review-img__outer {
+        margin: 30px auto;
+        width: 80%;
+    }
+
+    .review-img__p {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .review-img {
+        margin: 5px auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        text-align: center;
+        border: solid 1px gray;
+        border-radius: 5px;
+    }
+
+    .upload-area {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .input__img {
+        display: none;
+        margin-bottom: 0;
+    }
+
+    .or {
+        font-size: 10px;
+    }
+
+    .form__error {
+        width: 80%;
+        text-align: left;
+        font-size: 20px;
+        color: red;
+    }
+
+    .review-button__outer {
+        margin: 30px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .review-button {
+        margin: 5px auto;
+        padding: 15px 200px;
+        border: solid 1px black;
+        border-radius: 50px;
+        font-size: 20px;
+        display: inline-block;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .content {
+        margin: 5px auto;
+        width: 768px;
+        display: block;
+    }
+
+    .left-box {
+        margin: 30px auto;
+        width: 90%;
+    }
+
+    .review-title {
+        margin: 40px auto;
+        width: 90%;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .shop-box {
+        margin: 30px auto;
+        width: 70%;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+
+    .shop-img {
+        width: 100%;
+    }
+
+    .shop-img img {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .shop-content {
+        width: 100%;
+    }
+
+    .shop-name {
+        margin: 20px auto;
+        width: 90%;
+        font-size: 17px;
+    }
+
+    .area-genre__row {
+        margin: 10px auto;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .shop-area {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 250;
+        font-style: normal;
+    }
+
+    .shop-genre {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 250;
+        font-style: normal;
+    }
+
+    .button-outer {
+        margin: 20px auto 50px 20px;
+        width: 90%;
+        height: 45px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        padding: 0 10px;
+        border-radius: 5px;
+        height: 35px;
+        color: #fefefe;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .right-box {
+        margin: 30px auto;
+        width: 768px;
+    }
+
+    .rating-outer {
+        margin: 50px auto;
+        width: 70%;
+    }
+
+    .rating-p {
+        font-size: 30px;
+    }
+
+    .stars {
+        width: 50%;
+        border: solid 1px black;
+        border-radius: 5px;
+        font-size: 25px;
+    }
+
+    .comment-outer {
+        margin: 30px auto;
+        width: 70%;
+    }
+
+    .comment-p {
+        font-size: 30px;
+    }
+
+    .comment {
+        width: 70%;
+        border: solid 1px gray;
+        font-size: 20px;
+    }
+
+    ::placeholder {
+        font-size: 20px;
+        color: gray;
+    }
+
+    .count {
+        width: 70%;
+        text-align: right;
+        font-size: 10px;
+    }
+
+    .review-img__outer {
+        margin: 30px auto;
+        width: 70%;
+    }
+
+    .review-img__p {
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .review-img {
+        margin: 5px auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        text-align: center;
+        border: solid 1px gray;
+        border-radius: 5px;
+    }
+
+    .upload-area {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .input__img {
+        display: none;
+        margin-bottom: 0;
+    }
+
+    .or {
+        font-size: 10px;
+    }
+
+    .form__error {
+        width: 70%;
+        text-align: left;
+        font-size: 25px;
+        color: red;
+    }
+
+    .review-button__outer {
+        margin: 30px auto;
+        width: 768px;
+        text-align: center;
+    }
+
+    .review-button {
+        margin: 5px auto;
+        padding: 15px 50px;
+        border: solid 1px black;
+        border-radius: 50px;
+        font-size: 30px;
+        display: inline-block;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    .content {
+        margin: 5px auto;
+        width: 425px;
+        display: block;
+    }
+
+    .left-box {
+        margin: 30px auto;
+        width: 90%;
+    }
+
+    .review-title {
+        margin: 40px auto;
+        width: 90%;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .shop-box {
+        margin: 30px auto;
+        width: 70%;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px gainsboro;
+    }
+
+    .shop-img {
+        width: 100%;
+    }
+
+    .shop-img img {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .shop-content {
+        width: 100%;
+    }
+
+    .shop-name {
+        margin: 20px auto;
+        width: 90%;
+        font-size: 17px;
+    }
+
+    .area-genre__row {
+        margin: 10px auto;
+        width: 90%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .shop-area {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 250;
+        font-style: normal;
+    }
+
+    .shop-genre {
+        font-size: 15px;
+        font-family: "Zen Old Mincho", serif;
+        font-weight: 250;
+        font-style: normal;
+    }
+
+    .button-outer {
+        margin: 20px auto 50px 20px;
+        width: 90%;
+        height: 45px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .detail-button {
+        background-color: #305DFF;
+        border: 0;
+        padding: 0 10px;
+        border-radius: 5px;
+        height: 35px;
+        color: #fefefe;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .right-box {
+        margin: 30px auto;
+        width: 425px;
+    }
+
+    .rating-outer {
+        margin: 50px auto;
+        width: 70%;
+    }
+
+    .rating-p {
+        font-size: 25px;
+    }
+
+    .stars {
+        width: 60%;
+        border: solid 1px black;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    .comment-outer {
+        margin: 30px auto;
+        width: 70%;
+    }
+
+    .comment-p {
+        font-size: 20px;
+    }
+
+    .comment {
+        width: 70%;
+        border: solid 1px gray;
+        font-size: 20px;
+    }
+
+    ::placeholder {
+        font-size: 20px;
+        color: gray;
+    }
+
+    .count {
+        width: 70%;
+        text-align: right;
+        font-size: 10px;
+    }
+
+    .review-img__outer {
+        margin: 30px auto;
+        width: 70%;
+    }
+
+    .review-img__p {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .review-img {
+        margin: 5px auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        text-align: center;
+        border: solid 1px gray;
+        border-radius: 5px;
+    }
+
+    .upload-area {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .input__img {
+        display: none;
+        margin-bottom: 0;
+    }
+
+    .or {
+        font-size: 10px;
+    }
+
+    .form__error {
+        width: 70%;
+        text-align: left;
+        font-size: 20px;
+        color: red;
+    }
+
+    .review-button__outer {
+        margin: 30px auto;
+        width: 425px;
+        text-align: center;
+    }
+
+    .review-button {
+        margin: 5px auto;
+        padding: 15px 50px;
+        border: solid 1px black;
+        border-radius: 50px;
+        font-size: 20px;
+        display: inline-block;
+        background-color: white;
+        cursor: pointer;
+    }
+}

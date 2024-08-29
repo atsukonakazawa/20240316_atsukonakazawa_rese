@@ -1,17 +1,66 @@
+@media screen and (min-width:769px) {
 .content-outer {
-    width: 100%
-}
-
-@media screen and (max-width:768px) {
-    .content-outer {
-        width: 768px;
+        width: 100%
     }
-}
 
-.content {
-    margin: 5px;
-    padding: 0 50px;
-    text-align: center;
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .title-outer{
+        width: 100%;
+    }
+
+    .title{
+        border: double 5px gold;
+        border-radius: 5px;
+        background-color: orangered;
+        margin: 5px 5px 5px auto;
+        padding: 30px;
+        width: 400px;
+        color: white;
+        font-size: 30px;
+    }
+
+    .links-outer{
+        margin: 50px auto;
+        width: 100%;
+    }
+
+    .links-outer div{
+        border: solid 1px #305DFF;
+        box-shadow: 3px 3px 3px gainsboro;
+        border-radius: 5px;
+        background-color: white;
+        margin: 20px auto;
+        padding: 27px;
+        width: 600px;
+        height: 100px;
+    }
+
+    .links-outer div a{
+        text-decoration: none;
+        color: #305DFF;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .logout-outer{
+        margin: 50px auto;
+        width: 100%;
+    }
+
+    .logout-button{
+        border: 0;
+        border-radius: 5px;
+        background-color: gainsboro;
+        padding: 10px 20px;
+        font-size: 15px;
+        color: black;
+        cursor: pointer;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -20,30 +69,11 @@
         padding: 0 25px;
         display: block;
     }
-}
 
-.title-outer{
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
     .title-outer {
         width: 750px;
     }
-}
 
-.title{
-    border: double 5px gold;
-    border-radius: 5px;
-    background-color: orangered;
-    margin: 5px 5px 5px auto;
-    padding: 30px;
-    width: 400px;
-    color: white;
-    font-size: 30px;
-}
-
-@media screen and (max-width:768px) {
     .title {
         border: double 5px gold;
         border-radius: 5px;
@@ -54,32 +84,12 @@
         color: white;
         font-size: 24px;
     }
-}
 
-.links-outer{
-    margin: 50px auto;
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
     .links-outer {
         margin: 40px auto;
         width: 750px;
     }
-}
 
-.links-outer div{
-    border: solid 1px #305DFF;
-    box-shadow: 3px 3px 3px gainsboro;
-    border-radius: 5px;
-    background-color: white;
-    margin: 20px auto;
-    padding: 27px;
-    width: 600px;
-    height: 100px;
-}
-
-@media screen and (max-width:768px) {
     .links-outer div {
         border: solid 1px #305DFF;
         box-shadow: 3px 3px 3px gainsboro;
@@ -90,47 +100,19 @@
         width: 480px;
         height: 80px;
     }
-}
 
-.links-outer div a{
-    text-decoration: none;
-    color: #305DFF;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-@media screen and (max-width:768px) {
     .links-outer div a {
         text-decoration: none;
         color: #305DFF;
         font-size: 24px;
         cursor: pointer;
     }
-}
 
-.logout-outer{
-    margin: 50px auto;
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
     .logout-outer {
         margin: 40px auto;
         width: 750px;
     }
-}
 
-.logout-button{
-    border: 0;
-    border-radius: 5px;
-    background-color: gainsboro;
-    padding: 10px 20px;
-    font-size: 15px;
-    color: black;
-    cursor: pointer;
-}
-
-@media screen and (max-width:768px) {
     .logout-button {
         border: 0;
         border-radius: 5px;

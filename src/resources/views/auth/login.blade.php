@@ -41,6 +41,9 @@
                 </div>
             </div>
         </form>
+        <a class="register-a" href="/register">
+            会員登録はこちら
+        </a>
     </div>
 </div>
 @endsection

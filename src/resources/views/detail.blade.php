@@ -17,7 +17,9 @@
                     {{ $shop->shop_name }}
                 </h2>
             </div>
-            <img class="shop-img" src="{{ $shop->shop_img }}" alt="shop_img">
+            <div class="shop-img__outer">
+                <img class="shop-img" src="{{ $shop->shop_img }}" alt="shop_img">
+            </div>
             <div class="area-genre__row">
                 <div>
                     #{{ $shop->area->area_name }}
@@ -37,7 +39,11 @@
             <h2 class="reservation-title">
                 予約
             </h2>
-            <input class="date" name="date" type="date" id="date"  min="{{ \Carbon\Carbon::now()->format('Y-m-d') }}"><br>
+            <p class="reservation-p">
+                翌日以降のご予約のみ選択可能です。<br>
+                当日につきましては直接お問い合わせください。
+            </p>
+            <input class="date" name="date" type="date" id="date"  min="{{ \Carbon\Carbon::now()->addDay()->format('Y-m-d') }}"><br>
             <select class="time" name="time" id="time"><br>
                 <option disabled selected value="">時間を選択してください</option>
                 <option value="11:00">11:00</option>
@@ -121,10 +127,10 @@
                     </ul>
                     @endif
                 </div>
-                <button class="reservation-button" type="submit">
-                    予約する
-                </button>
             </div>
+            <button class="reservation-button" type="submit">
+                予約する
+            </button>
         </form>
         </div>
     </div>

@@ -25,12 +25,8 @@ function showModal() {
 
 // 閉じるボタンがクリックされた時の処理
 closeBtn.onclick = function() {
-    //modal.style.display = "none";
-    //window.location.href = "http://localhost/";
-    var baseUrl = window.location.href.split("?")[0];
-    // クエリパラメータを取り除く
-    window.location.href = baseUrl;
-    //container.removeClass('active');
+    hideModal(); // モーダルを非表示
+    // ページをリロードせずにモーダルを閉じるだけにする
 }
 
 // モーダルの外側（背景）がクリックされた時の処理

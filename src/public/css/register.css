@@ -1,48 +1,252 @@
-.content-outer {
-    width: 100%
-}
-
-@media screen and (max-width:768px) {
+/* デスクトップ向け */
+@media screen and (min-width:1025px) {
     .content-outer {
-        width:768px;
+        width: 100%;
+    }
+
+    .content {
+        margin: 5px auto;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .register-box {
+        box-shadow: 3px 3px 3px gainsboro;
+        border-radius: 5px;
+        margin: 50px auto;
+        padding-bottom: 30px;
+        width: 600px;
+    }
+
+    .title {
+        background-color: #305DFF;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        color: white;
+        text-align: left;
+        padding: 20px;
+        font-weight: lighter;
+    }
+
+    .form__error{
+        height: 30px;
+        padding-left: 80px;
+        text-align: left;
+        color: red;
+    }
+
+    .name-row {
+        width: 100%;
+    }
+
+    .name-row img {
+        width: 60px;
+        height: 45px;
+    }
+
+    .name-row input {
+        border: 0;
+        border-bottom: solid 1px black;
+        padding-top: 10px;
+        width: 70%;
+        height: 45px;
+        font-size: 17px;
+    }
+
+    .email-row {
+        width: 100%;
+    }
+
+    .email-row img {
+        width: 60px;
+        height: 45px;
+    }
+
+    .email-row input {
+        border: 0;
+        border-bottom: solid 1px black;
+        padding-top: 10px;
+        width: 70%;
+        height: 45px;
+        font-size: 17px;
+    }
+
+    .password-row {
+        width: 100%;
+    }
+
+    .password-row img {
+        width: 60px;
+        height: 45px;
+    }
+
+    .password-row input {
+        border: 0;
+        border-bottom: solid 1px black;
+        padding-top: 10px;
+        width: 70%;
+        height: 45px;
+        font-size: 17px;
+    }
+
+    .register-button__outer {
+        width: 100%;
+        height: 50px;
+        text-align: right;
+    }
+
+    .register-button {
+        border: 0;
+        border-radius: 5px;
+        background-color: #305DFF;
+        color: white;
+        margin: 15px 50px 5px auto;
+        padding: 5px 20px;
+        cursor: pointer;
+    }
+
+    .login-a{
+        text-decoration: underline;
+        border: 0;
+        cursor: pointer;
     }
 }
 
-.content {
-    margin: 5px;
-    padding: 0 50px;
-    text-align: center;
+/* ノートPC向け */
+@media (min-width: 769px) and (max-width:1024px) {
+    .content-outer {
+        width: 100%
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .register-box {
+        box-shadow: 3px 3px 3px gainsboro;
+        border-radius: 5px;
+        margin: 50px auto;
+        padding-bottom: 30px;
+        width: 500px;
+    }
+
+    .title {
+        background-color: #305DFF;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        color: white;
+        text-align: left;
+        padding: 20px;
+        font-weight: lighter;
+    }
+
+    .form__error{
+        height: 30px;
+        padding-left: 80px;
+        text-align: left;
+        color: red;
+    }
+
+    .name-row {
+        width: 100%;
+    }
+
+    .name-row img {
+        width: 60px;
+        height: 45px;
+    }
+
+    .name-row input {
+        border: 0;
+        border-bottom: solid 1px black;
+        padding-top: 10px;
+        width: 70%;
+        height: 45px;
+        font-size: 17px;
+    }
+
+    .email-row {
+        width: 100%;
+    }
+
+    .email-row img {
+        width: 60px;
+        height: 45px;
+    }
+
+    .email-row input {
+        border: 0;
+        border-bottom: solid 1px black;
+        padding-top: 10px;
+        width: 70%;
+        height: 45px;
+        font-size: 17px;
+    }
+
+    .password-row {
+        width: 100%;
+    }
+
+    .password-row img {
+        width: 60px;
+        height: 45px;
+    }
+
+    .password-row input {
+        border: 0;
+        border-bottom: solid 1px black;
+        padding-top: 10px;
+        width: 70%;
+        height: 45px;
+        font-size: 17px;
+    }
+
+    .register-button__outer {
+        width: 100%;
+        height: 50px;
+        text-align: right;
+    }
+
+    .register-button {
+        border: 0;
+        border-radius: 5px;
+        background-color: #305DFF;
+        color: white;
+        margin: 15px 50px 5px auto;
+        padding: 5px 20px;
+        cursor: pointer;
+    }
+
+    .login-a{
+        text-decoration: underline;
+        border: 0;
+        cursor: pointer;
+    }
 }
 
-.register-box{
-    box-shadow: 3px 3px 3px gainsboro;
-    border-radius: 5px;
-    margin: 50px auto;
-    padding-bottom: 30px;
-    width: 500px;
-}
 
-@media screen and (max-width:768px) {
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .content-outer {
+        width: 100%
+    }
+
+    .content {
+        margin: 5px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
     .register-box{
         box-shadow: 3px 3px 3px gainsboro;
         border-radius: 5px;
         margin: 50px auto;
         padding-bottom: 30px;
-        width: 400px;
+        width: 380px;
     }
-}
 
-.title{
-    background-color: #305DFF;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    color: white;
-    text-align: left;
-    padding: 20px;
-    font-weight: lighter;
-}
-
-@media screen and (max-width:768px) {
     .title{
         background-color: #305DFF;
         border-top-left-radius: 5px;
@@ -52,16 +256,7 @@
         padding: 16px;
         font-weight: lighter;
     }
-}
 
-.form__error{
-    height: 30px;
-    padding-left: 80px;
-    text-align: left;
-    color: red;
-}
-
-@media screen and (max-width:768px) {
     .form__error{
         height: 25px;
         padding-left: 65px;
@@ -69,154 +264,199 @@
         color: red;
         font-size: 15px;
     }
-}
 
-.name-row{
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
-    .name-row{
-        width: 400px;
+    .name-row {
+        width: 100%;
     }
-}
 
-.name-row img{
-    width: 60px;
-    height: 45px;
-}
-
-@media screen and (max-width:768px) {
-    .name-row img{
-        width: 48px;
-        height: 36px;
+    .name-row img {
+        width: 40px;
+        height: 30px;
     }
-}
 
-.name-row input{
-    border: 0;
-    border-bottom: solid 1px black;
-    padding-top: 10px;
-    width: 400px;
-    height: 45px;
-    font-size: 17px;
-}
-
-@media screen and (max-width:768px) {
-    .name-row input{
+    .name-row input {
         border: 0;
         border-bottom: solid 1px black;
         padding-top: 10px;
-        width: 320px;
+        width: 70%;
         height: 36px;
         font-size: 14px;
     }
-}
 
-.email-row {
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
     .email-row {
-        width: 400px;
+        width: 100%;
     }
-}
 
-.email-row img {
-    width: 60px;
-    height: 45px;
-}
-
-@media screen and (max-width:768px) {
     .email-row img {
-        width: 48px;
-        height: 36px;
+        width: 40px;
+        height: 30px;
     }
-}
 
-.email-row input {
-    border: 0;
-    border-bottom: solid 1px black;
-    padding-top: 10px;
-    width: 400px;
-    height: 45px;
-    font-size: 17px;
-}
-
-@media screen and (max-width:768px) {
     .email-row input {
         border: 0;
         border-bottom: solid 1px black;
         padding-top: 10px;
-        width: 320px;
+        width: 70%;
         height: 36px;
         font-size: 14px;
     }
-}
 
-.password-row {
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
     .password-row {
-        width: 400px;
+        width: 100%;
     }
-}
 
-.password-row img {
-    width: 60px;
-    height: 45px;
-}
-
-@media screen and (max-width:768px) {
     .password-row img {
-        width: 48px;
-        height: 36px;
+        width: 40px;
+        height: 30px;
     }
-}
 
-.password-row input {
-    border: 0;
-    border-bottom: solid 1px black;
-    padding-top: 10px;
-    width: 400px;
-    height: 45px;
-    font-size: 17px;
-}
-
-@media screen and (max-width:768px) {
     .password-row input {
         border: 0;
         border-bottom: solid 1px black;
         padding-top: 10px;
-        width: 320px;
+        width: 70%;
         height: 36px;
         font-size: 14px;
     }
-}
 
-.register-button__outer{
-    width: 100%;
-    height: 50px;
-    text-align: right;
-}
-
-@media screen and (max-width:768px) {
     .register-button__outer {
-        width: 400px;
+        width: 100%;
         height: 40px;
         text-align: right;
     }
+
+    .register-button {
+        border: 0;
+        border-radius: 5px;
+        background-color: #305DFF;
+        color: white;
+        margin: 15px 50px 5px auto;
+        padding: 5px 20px;
+        cursor: pointer;
+    }
+
+    .login-a{
+        text-decoration: underline;
+        border: 0;
+        cursor: pointer;
+    }
 }
 
-.register-button{
-    border: 0;
-    border-radius: 5px;
-    background-color: #305DFF;
-    color: white;
-    margin: 15px 50px 5px auto;
-    padding: 5px 20px;
-    cursor: pointer;
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    .content-outer {
+        width: 100%;
+        min-width: 425px;
+    }
+
+    .content {
+        margin: 5px auto;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .register-box{
+        box-shadow: 3px 3px 3px gainsboro;
+        border-radius: 5px;
+        margin: 50px auto;
+        padding-bottom: 30px;
+        width: 80%;
+    }
+
+    .title{
+        background-color: #305DFF;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        color: white;
+        text-align: left;
+        padding: 16px;
+        font-weight: lighter;
+    }
+
+    .form__error{
+        height: 25px;
+        padding-left: 65px;
+        text-align: left;
+        color: red;
+        font-size: 15px;
+    }
+
+    .name-row {
+        width: 100%;
+    }
+
+    .name-row img {
+        width: 30px;
+        height: 25px;
+    }
+
+    .name-row input {
+        border: 0;
+        border-bottom: solid 1px black;
+        padding-top: 10px;
+        width: 70%;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .email-row {
+        width: 100%;
+    }
+
+    .email-row img {
+        width: 30px;
+        height: 25px;
+    }
+
+    .email-row input {
+        border: 0;
+        border-bottom: solid 1px black;
+        padding-top: 10px;
+        width: 70%;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .password-row {
+        width: 100%;
+    }
+
+    .password-row img {
+        width: 30px;
+        height: 25px;
+    }
+
+    .password-row input {
+        border: 0;
+        border-bottom: solid 1px black;
+        padding-top: 10px;
+        width: 70%;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .register-button__outer {
+        width: 100%;
+        height: 40px;
+        text-align: right;
+    }
+
+    .register-button {
+        border: 0;
+        border-radius: 5px;
+        background-color: #305DFF;
+        color: white;
+        margin: 15px 50px 5px auto;
+        padding: 5px 20px;
+        cursor: pointer;
+    }
+
+    .login-a{
+        width: 100%;
+        min-width: 425px;
+        text-decoration: underline;
+        border: 0;
+        cursor: pointer;
+    }
+
 }

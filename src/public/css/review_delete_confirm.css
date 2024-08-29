@@ -1,0 +1,191 @@
+/* デスクトップ、ノートPC向け */
+@media screen and (min-width:769px) {
+    /* content */
+    .content__outer {
+        width: 100%;
+        margin: 5px auto 50px;
+        text-align: center;
+    }
+
+    .title__outer {
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .title__outer-p {
+        color: red;
+        font-size: 20px;
+    }
+
+    .button__outer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .remove__button {
+        margin: 5px 50px 100px 50px;
+        padding: 10px 30px;
+        border: 0;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .visited {
+        margin: 5px 50px 100px 50px;
+        padding: 10px 30px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .content__outer {
+        width: 95%;
+        min-width: 768;
+        margin: 5px auto 50px;
+        text-align: center;
+    }
+
+    .title__outer {
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .title__outer-p {
+        color: red;
+        font-size: 10px;
+    }
+
+    .button__outer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .remove__button {
+        margin: 5px 25px 50px 25px;
+        padding: 5px 15px;
+        border: 0;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .visited {
+        margin: 5px 25px 50px 25px;
+        padding: 5px 15px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+}
+
+/* タブレット向け */
+@media (min-width: 426px) and (max-width:768px) {
+    .content__outer {
+        width: 95%;
+        min-width: 768px;
+        margin: 5px auto 50px;
+        text-align: center;
+    }
+
+    .title__outer {
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .title__outer-p {
+        color: red;
+        font-size: 10px;
+    }
+
+    .button__outer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .remove__button {
+        margin: 5px 25px 50px 25px;
+        padding: 5px 15px;
+        border: 0;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .visited {
+        margin: 5px 25px 50px 25px;
+        padding: 5px 15px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+}
+
+/* スマートフォン向け */
+@media screen and (max-width:425px) {
+    .content__outer {
+        width: 95%;
+        min-width: 425px;
+        margin: 5px auto 50px;
+        text-align: center;
+    }
+
+    .title__outer {
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .title__outer-p {
+        color: red;
+        font-size: 10px;
+    }
+
+    .button__outer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .remove__button {
+        margin: 5px 25px 50px 25px;
+        padding: 5px 15px;
+        border: 0;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .visited {
+        margin: 5px 25px 50px 25px;
+        padding: 5px 15px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+}

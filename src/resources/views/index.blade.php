@@ -9,35 +9,29 @@
 <div class="search-outer">
     <div class="search-box">
         <div class="search-area" >
-            <form id="area-form" action="/index/area" method="get">
-            @csrf
+            <form id="search-form" action="/index/search" method="get">
+                @csrf
                 <select class="search-area__inner" name="area_id" onchange="this.form.submit()">
-                    <option disabled selected value="">All area</option>
+                    <option disabled selected value="">Area</option>
                     @foreach($areas as $area)
                     <option value="{{ $area['id'] }}" {{ session('selected_area_id') == $area['id'] ? 'selected' : '' }}>
                         {{ $area['area_name'] }}
                     </option>
                     @endforeach
                 </select>
-            </form>
         </div>
-        <div class="search-genre" >
-            <form id="genre-form" action="/index/genre" method="get">
-                @csrf
+        <div class="search-genre">
                 <select class="search-genre__inner" name="genre_id" onchange="this.form.submit()">
-                    <option disabled selected value="">All genre</option>
+                    <option disabled selected value="">Genre</option>
                     @foreach($genres as $genre)
                     <option value="{{ $genre['id'] }}" {{ session('selected_genre_id') == $genre['id'] ? 'selected' : '' }}>
                         {{ $genre['genre_name'] }}
                     </option>
                     @endforeach
                 </select>
-            </form>
         </div>
-        <div class="search-keyword" >
-            <form id="keyword-form" action="/index/keyword" method="get">
-            @csrf
-                <input class="search-keyword__inner" type="text" name="keyword" onchange="this.form.submit()" placeholder="🔍Search with Shop name..." value="{{ session('selected_keyword') }}">
+        <div class="search-keyword">
+                <input class="search-keyword__inner" type="text" name="keyword" onchange="this.form.submit()" placeholder="🔍Search" value="{{ session('selected_keyword') }}">
             </form>
         </div>
     </div>
@@ -47,6 +41,29 @@
 @section('main')
 <!--店舗一覧-->
 <div class="content-outer">
+    <div class="sort-row">
+        <div class="shuffle-button__outer" type="submit">
+            <form action="/index/shuffle">
+                <button class="shuffle-button">
+                    ランダムに表示
+                </button>
+            </form>
+        </div>
+        <div class="desc-button__outer" type="submit">
+            <form action="/index/desc">
+                <button class="desc-button">
+                    評価が高い順に表示
+                </button>
+            </form>
+        </div>
+        <div class="asc-button__outer" type="submit">
+            <form action="/index/asc">
+                <button class="asc-button">
+                    評価が低い順に表示
+                </button>
+            </form>
+        </div>
+    </div>
     <div class="shops-content">
         <!--各店舗-->
         @foreach($shops as $shop)
@@ -67,9 +84,13 @@
                     </div>
                 </div>
                 <div class="button-outer">
-                    <button class="detail-button open-modal">
-                        詳しくみる
+                    <form action="/detail/index" method="get">
+                    @csrf
+                    <input type="hidden" name="shop_id" value="{{ $shop->id }}">
+                    <button type="submit" class="detail-button">
+                        詳しく見る
                     </button>
+                    </form>
 
                     <!--ここからモーダルウィンドウ-->
                     <div id="modal" class="modal">
@@ -81,6 +102,9 @@
                                 </button>
                             </div>
                             <div class="choices">
+                                <p>
+                                    お気に入り機能・ご予約はログイン後にご利用いただけます
+                                </p>
                                 <a href="/">
                                     Home
                                 </a><br>
