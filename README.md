@@ -4,6 +4,25 @@
 
 
 
+ 　　　　【Pro入会テストについてお伝えすること】　　
+    ・口コミ機能について　　
+    　レビューのダミーデータはご用意がないためご自身でいずれかのユーザーにログイン後に投稿をお願いいたします。  
+    　管理者は管理者専用のメニュー画面より全ユーザーの口コミを閲覧・削除できます。　　
+    ・CSVインポートについて  
+     管理者専用のメニュー画面よりCSVファイルのインポートが可能となっております。  
+     ただし、上記に記載の通り数ヶ月前にAWSのS3をすでに削除済みのため、  
+     coachtechからあらかじめ提供された他の店舗の画像はcoachtechのS3のURLに保存されていて、  
+     CSVインポートで新規に追加した店舗の画像はStorageに保存される形となっております。  
+     viewに画像を表示する際には、coachtechからあらかじめ提供された他の店舗の画像の表示に合わせているため、  
+     新規に追加した店舗に関しては画像がうまく表示されない状態となっております。  
+
+    扱いにくい部分があり申し訳ございませんが、採点をよろしくお願いいたします。
+
+
+
+   
+
+
  
 ##作成した目的  
 概要説明：外部の飲食店予約サービスでは手数料がかかるため自社の予約サービスを持ちたい。  
@@ -163,7 +182,7 @@ AWS_BUCKET=rese
 
      4.php artisan key:generate  
      5.php artisan migrate  
-     6.php artisan db:seed  
+     6.php artisan db:seed（DatabaseSeeder.phpの内容に沿って３回に分けてシード）  
      7.composer require laravel/fortify  
      8.(resources/lang/en/validation.phpがない場合）php artisan lang:publish  
         およびresources/lang/en/validation.phpファイルをjaディレクトリに複製後、該当箇所を日本語に変更  
@@ -186,83 +205,25 @@ AWS_BUCKET=rese
      18..envのAWS部分を編集  
      19.php artisan make:command MigrateShopImagesToS3  
      20.php artisan migrate:shops-images-s3  
-     21.php artisan storage:link
-
-
-
-      
- ##デプロイ環境
-    デプロイ先: AWS EC2  
-    DB: RDS  
-    ストレージ:S3  
-    サーバー: nginx  
-     
-   ##AWSへのデプロイ  
-   1.sudo yum -y install nginx  
-   2.sudo systemctl enable nginx  
-   3.sudo yum update -y  
-   4.sudo yum -y install mysql git httpd curl  
-   5.git config --global user.name　"atsukonakazawa"  
-   6.git config --global user.email tsqe8qm1bmqztbxbjre9@docomo.ne.jp  
-   7.sudo amazon-linux-extras install -y php8.2  
-   8.curl -sS https://getcomposer.org/installer | php  
-   9.sudo mv composer.phar /usr/local/bin/composer  
-   10.sudo chown ec2-user:ec2-user /var/www  
-   11.git clone https://github.com/atsukonakazawa/20240316_atsukonakazawa_rese.git  
-   12.sudo yum install -y php-xml  
-   13.composer update  
-   14.composer install  
-   15.sudo systemctl start php-fpm.service  
-   16.sudo systemctl enable php-fpm.service  
-   17.sudo yum install -y php-fpm  
-   18.sudo yum install -y php-opcache
-   19.php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"  
-   20.sudo mv composer.phar /usr/local/bin/composer  
-   21.composer  
-   22.sudo su -
-   23.cd /etc/php-fpm.d/  
-   24.sudo cp www.conf www.conf_bk_yyyyMMdd  
-   25.sudo vim www.conf(listen owner、listen group、listen modeを変更）  
-   26.vim /etc/nginx/nginx.conf(serverのrootを変更)  
-   27.sudo systemctl start nginx.service  
-   28.cp .env.example .env
-   29.php artisan key:generate  
-   30..envのDB部分をRDSの内容に合わせて変更  
-   31.php artisan migrate:fresh　  
-   32.php artisan db:seed  
-   33.wget https://github.com/mailhog/MailHog/releases/download/v1.0.0/MailHog_linux_amd64  
-   34.chmod +x MailHog_linux_amd64  
-   35.sudo mv MailHog_linux_amd64 /usr/local/bin/mailhog  
-   36.mailhog(mailhogを使用する際には別ターミナルで起動しておく)  
-   37.composer require stripe/stripe-php  
-   38.sudo yum install php-mbstring  
-   39.sudo yum install php-gd  
-   40.sudo yum install php-xml  
-   41.sudo systemctl restart php-fpm  
-   42.sudo systemctl restart httpd  
-   43.composer install  
-   44.composer update  
-   45..envファイルのmail部分、STRIPE部分を変更  
-   46.sudo systemctl nginx restart  
- 
-
-  ##Reseテストユーザー  
-  ⚫︎利用者（ブラウザにて会員登録済み）  
-  名前:a  
+     21.php artisan storage:link　　
+　
+##Reseテストユーザー  
+  ⚫︎管理者 
+  名前:a-admin  
   メールアドレス:a@docomo.com  
   パスワード:aaaaaaaa(aが８個)  
-  ⚫︎店舗管理者（ブラウザにて管理者専用の管理画面より作成済み）  
+  ⚫︎店舗管理者  
   名前:b-manager  
   メールアドレス:b@docomo.com  
   パスワード:bbbbbbbb(bが8個)  
-  ⚫︎管理者（ブラウザにて会員登録後、EC2インスタンスのコマンドラインからMySQLでroleカラムのadminを追加）  
-  名前：c-admin  
+  ⚫︎一般ユーザー 
+  名前：c  
   メールアドレス:c@docomo.com  
   パスワード:cccccccc(cが8個)  
+  　
 
+
+ 
   
  
     
