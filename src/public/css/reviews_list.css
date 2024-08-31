@@ -2,7 +2,6 @@
 @media screen and (min-width:1025px) {
     .content-outer {
         width: 100%;
-        min-width: 2400px;
     }
 
     .content {
@@ -13,9 +12,9 @@
     }
 
     .detail-box {
-        margin-left: 100px;
+        margin-left: 70px;
         padding-bottom: 20px;
-        width: 1000px;
+        width: 40%;
         position: relative;
         border: solid 1px black;
         border-radius: 10px;
@@ -50,7 +49,6 @@
 
     .shop-img {
         width: 80%;
-        height: 400px;
     }
 
     .area-genre__row {
@@ -94,15 +92,14 @@
     }
 
     .edit-delete{
-        margin: 5px auto;
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: flex-end;
     }
 
     .to-edit__outer,
     .to-delete__outer{
-        margin: 5px 0px 5px 20px;
+        margin: 5px 0px 5px 10px;
     }
 
     .to-edit,
@@ -111,7 +108,7 @@
         color: black;
         border: 0;
         text-decoration: underline;
-        font-size: 15px;
+        font-size: 10px;
         cursor: pointer;
     }
 
@@ -125,9 +122,12 @@
     .rating{
         margin: 5px auto;
         width: 80%;
-        font-size: 30px;
-        color: blue;
         text-align: left;
+    }
+
+    .star{
+        width: 40px;
+        height: 40px;
     }
 
     .comment-content{
@@ -152,12 +152,12 @@
     .reservation-box {
         position: absolute;
         top: 105px;
-        left: 1300px;
+        left: 52%;
         background-color: #305DFF;
         border-radius: 10px;
         box-shadow: 3px 3px 3px gray;
         margin-right: 10px auto;
-        width: 1000px;
+        width: 40%;
         color: white;
         text-align: left;
     }
@@ -173,7 +173,7 @@
         margin-left: 40px;
         border: 0;
         border-radius: 5px;
-        width: 200px;
+        width: 50%;
         height: 35px;
         cursor: pointer;
     }
@@ -183,7 +183,7 @@
         margin-left: 40px;
         border: 0;
         border-radius: 5px;
-        width: 550px;
+        width: 80%;
         height: 35px;
         cursor: pointer;
     }
@@ -193,7 +193,7 @@
         margin-left: 40px;
         border: 0;
         border-radius: 5px;
-        width: 550px;
+        width: 80%;
         height: 35px;
         cursor: pointer;
     }
@@ -207,23 +207,23 @@
         border-radius: 7px;
         margin-top: 30px;
         margin-left: 40px;
-        width: 530px;
+        width: 80%;
         height: 200px;
     }
 
 
     .confirm-table th {
         padding: 0 0 0 30px;
-        width: 120px;
+        width: 30%;
         height: 20px;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: lighter;
     }
 
     .confirm-table td {
-        width: 300px;
+        width: 65%;
         height: 20px;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: lighter;
     }
 
@@ -257,7 +257,6 @@
 @media (min-width: 769px) and (max-width:1024px) {
     .content-outer {
         width: 100%;
-        min-width: 1024px;
     }
 
     .content {
@@ -297,13 +296,12 @@
     .shop-name {
         margin: 5px;
         padding: auto 5px;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: bold;
     }
 
     .shop-img {
         width: 80%;
-        height: 400px;
     }
 
     .area-genre__row {
@@ -349,7 +347,7 @@
 
     .edit-delete {
         margin: 5px auto;
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: flex-end;
     }
@@ -365,7 +363,7 @@
         color: black;
         border: 0;
         text-decoration: underline;
-        font-size: 15px;
+        font-size: 8px;
         cursor: pointer;
     }
 
@@ -382,6 +380,11 @@
         font-size: 30px;
         color: blue;
         text-align: left;
+    }
+
+    .star {
+        width: 30px;
+        height: 30px;
     }
 
     .comment-content {
@@ -406,12 +409,12 @@
     .reservation-box {
         position: absolute;
         top: 105px;
-        left: 70%;
+        left: 52%;
         background-color: #305DFF;
         border-radius: 10px;
         box-shadow: 3px 3px 3px gray;
         margin-right: 10px auto;
-        width: 450px;
+        width: 40%;
         color: white;
         text-align: left;
     }
@@ -427,7 +430,7 @@
         margin-left: 20px;
         border: 0;
         border-radius: 5px;
-        width: 200px;
+        width: 50%;
         height: 35px;
         cursor: pointer;
     }
@@ -437,7 +440,7 @@
         margin-left: 20px;
         border: 0;
         border-radius: 5px;
-        width: 400px;
+        width: 80%;
         height: 35px;
         cursor: pointer;
     }
@@ -447,7 +450,7 @@
         margin-left: 20px;
         border: 0;
         border-radius: 5px;
-        width: 400px;
+        width: 80%;
         height: 35px;
         cursor: pointer;
     }
@@ -461,22 +464,22 @@
         border-radius: 7px;
         margin-top: 30px;
         margin-left: 20px;
-        width: 400px;
+        width: 80%;
         height: 200px;
     }
 
     .confirm-table th {
         padding: 0 0 0 30px;
-        width: 120px;
+        width: 35%;
         height: 20px;
-        font-size: 20px;
+        font-size: 13px;
         font-weight: lighter;
     }
 
     .confirm-table td {
-        width: 300px;
+        width: 60%;
         height: 20px;
-        font-size: 20px;
+        font-size: 13px;
         font-weight: lighter;
     }
 
@@ -632,6 +635,11 @@
         font-size: 30px;
         color: blue;
         text-align: left;
+    }
+
+    .star {
+        width: 35px;
+        height: 35px;
     }
 
     .comment-content {
@@ -882,6 +890,11 @@
         font-size: 30px;
         color: blue;
         text-align: left;
+    }
+
+    .star {
+        width: 35px;
+        height: 35px;
     }
 
     .comment-content {

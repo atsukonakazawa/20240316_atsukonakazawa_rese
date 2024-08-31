@@ -4,6 +4,48 @@
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
 
+@section('header-logo')
+<div class="header-logo__outer open-modal" >
+    <a class="header-logo" href="">
+        <img class="logo-icon" src="{{ asset('icon/Rese icon.png') }}" alt="Rese" >
+        Rese
+    </a>
+</div>
+
+<!--ここからモーダルウィンドウ-->
+<div id="modal" class="modal">
+    <!-- ここからモーダルコンテンツ -->
+    <div class="modal-content">
+        <div class="close-button__outer">
+            <button class="close">
+                &times;
+            </button>
+        </div>
+        <div class="choices">
+            <a href="/home">
+                Home
+            </a><br>
+            <form action="/mypage" method="get">
+            @csrf
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                    <button class="mypage-button" type="submit">
+                        マイページ
+                    </button>
+            </form><br>
+            <form action="/logout" method="post">
+            @csrf
+                <button class="logout-button">
+                    ログアウト
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--ここまでモーダルウィンドウ-->
+<script src="{{ asset('js/index.js') }}"></script>
+@endsection
+
+
 @section('search')
 <!--search-->
 <div class="search-outer">
@@ -60,23 +102,26 @@
         </form>
     </div>
     <div class="sort-row">
-        <div class="shuffle-button__outer" type="submit">
+        <div class="shuffle-button__outer">
             <form action="/home/shuffle">
-                <button class="shuffle-button">
+            @csrf
+                <button class="shuffle-button" type="submit">
                     ランダムに表示
                 </button>
             </form>
         </div>
-        <div class="desc-button__outer" type="submit">
+        <div class="desc-button__outer">
             <form action="/home/desc">
-                <button class="desc-button">
+            @csrf
+                <button class="desc-button" type="submit">
                     評価が高い順に表示
                 </button>
             </form>
         </div>
-        <div class="asc-button__outer" type="submit">
+        <div class="asc-button__outer">
             <form action="/home/asc">
-                <button class="asc-button">
+            @csrf
+                <button class="asc-button" type="submit">
                     評価が低い順に表示
                 </button>
             </form>
@@ -87,7 +132,7 @@
         @foreach($shops as $shop)
         <div class="shop-box">
             <div class="shop-img">
-                <img src="{{ $shop->shop_img }}" alt="shop_img">
+                <img src="{{ asset('storage/images/' . $shop->shop_img) }}" alt="shop_img">
             </div>
             <div class="shop-content">
                 <h2 class="shop-name">

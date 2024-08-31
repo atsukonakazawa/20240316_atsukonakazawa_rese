@@ -201,12 +201,15 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
+        $user = Auth::user();
+        $favorites = $user->favorites->pluck('shop_id')->toArray();
+
         // セッションを削除
         session()->forget('selected_area_id');
         session()->forget('selected_genre_id');
         session()->forget('selected_keyword');
 
-        return view('index',compact('shops','areas','genres'));
+        return view('home',compact('shops','areas','genres','favorites'));
     }
 
     public function homeDesc(){
@@ -219,12 +222,15 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
+        $user = Auth::user();
+        $favorites = $user->favorites->pluck('shop_id')->toArray();
+
         // セッションを削除
         session()->forget('selected_area_id');
         session()->forget('selected_genre_id');
         session()->forget('selected_keyword');
 
-        return view('index',compact('shops','areas','genres'));
+        return view('home',compact('shops','areas','genres','favorites'));
     }
 
     public function homeAsc(){
@@ -239,12 +245,15 @@ class ShopController extends Controller
         $areas = Area::all();
         $genres = Genre::all();
 
+        $user = Auth::user();
+        $favorites = $user->favorites->pluck('shop_id')->toArray();
+
         // セッションを削除
         session()->forget('selected_area_id');
         session()->forget('selected_genre_id');
         session()->forget('selected_keyword');
 
-        return view('index',compact('shops','areas','genres'));
+        return view('home',compact('shops','areas','genres','favorites'));
     }
 
     public function detail(Request $request){

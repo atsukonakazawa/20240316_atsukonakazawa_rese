@@ -109,11 +109,10 @@
         font-size: 20px;
     }
 
-    .stars {
-        width: 50%;
-        border: solid 1px black;
-        border-radius: 5px;
-        font-size: 20px;
+    .star {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
     }
 
     .comment-outer {
@@ -315,11 +314,10 @@
         font-size: 20px;
     }
 
-    .stars {
-        width: 50%;
-        border: solid 1px black;
-        border-radius: 5px;
-        font-size: 20px;
+    .star {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
     }
 
     .comment-outer {
@@ -512,11 +510,10 @@
         font-size: 30px;
     }
 
-    .stars {
-        width: 50%;
-        border: solid 1px black;
-        border-radius: 5px;
-        font-size: 25px;
+    .star {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
     }
 
     .comment-outer {
@@ -709,11 +706,10 @@
         font-size: 25px;
     }
 
-    .stars {
-        width: 60%;
-        border: solid 1px black;
-        border-radius: 5px;
-        font-size: 20px;
+    .star {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
     }
 
     .comment-outer {

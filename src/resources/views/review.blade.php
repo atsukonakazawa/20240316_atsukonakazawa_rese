@@ -4,6 +4,48 @@
 <link rel="stylesheet" href="{{ asset('css/review.css') }}">
 @endsection
 
+@section('header-logo')
+<div class="header-logo__outer open-modal" >
+    <a class="header-logo" href="">
+        <img class="logo-icon" src="{{ asset('icon/Rese icon.png') }}" alt="Rese" >
+        Rese
+    </a>
+</div>
+
+<!--ここからモーダルウィンドウ-->
+<div id="modal" class="modal">
+    <!-- ここからモーダルコンテンツ -->
+    <div class="modal-content">
+        <div class="close-button__outer">
+            <button class="close">
+                &times;
+            </button>
+        </div>
+        <div class="choices">
+            <a href="/home">
+                Home
+            </a><br>
+            <form action="/mypage" method="get">
+            @csrf
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                    <button class="mypage-button" type="submit">
+                        マイページ
+                    </button>
+            </form><br>
+            <form action="/logout" method="post">
+            @csrf
+                <button class="logout-button">
+                    ログアウト
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--ここまでモーダルウィンドウ-->
+<script src="{{ asset('js/index.js') }}"></script>
+@endsection
+
+
 @section('main')
 <div class="content-outer">
     <div class="content">
@@ -13,7 +55,7 @@
             </h2>
             <div class="shop-box">
                 <div class="shop-img">
-                    <img src="{{ $shop->shop_img }}" alt="shop_img">
+                    <img src="{{ asset('storage/images/' . $shop->shop_img) }}" alt="shop_img">
                 </div>
                 <div class="shop-content">
                     <h2 class="shop-name">
@@ -44,23 +86,23 @@
         <form action="/reviewed" method="post" enctype="multipart/form-data">
         @csrf
             <div class="rating-outer">
-                <p class="rating-p">
-                    体験を評価してください
-                </p>
-                <select class="stars" name="rating" value="{{ old('rating') }}">
-                    <option selected disabled>選択してください</option>
-                    <option value="1">⭐️</option>
-                    <option value="2">⭐️⭐️</option>
-                    <option value="3">⭐️⭐️⭐️</option>
-                    <option value="4">⭐️⭐️⭐️⭐️</option>
-                    <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
-                </select>
-                <div class="form__error">
+            <p class="rating-p">
+                体験を評価してください
+            </p>
+            <div class="stars">
+                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="1">
+                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="2">
+                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="3">
+                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="4">
+                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="5">
+            </div>
+            <input type="hidden" name="rating" id="rating" value="{{ old('rating') }}">
+            <div class="form__error">
                 @error('rating')
                     {{ $message }}
                 @enderror
-                </div>
             </div>
+        </div>
 
             <div class="comment-outer">
                 <p class="comment-p">
@@ -179,4 +221,34 @@
     </div>
         </form>
 </div>
+<script>
+    $(document).ready(function() {
+        // 星がクリックされたときの処理
+        $('.star').on('click', function() {
+            const ratingValue = $(this).data('value');  // クリックされた星のdata-value属性を取得
+
+            // クリックされた星までblue-star.pngに変更
+            $('.star').each(function(index) {
+                if (index < ratingValue) {
+                    $(this).attr('src', '{{ asset("storage/blue-star.png") }}');
+                } else {
+                    $(this).attr('src', '{{ asset("storage/gray-star.png") }}');
+                }
+            });
+
+            // hidden inputに評価値を設定
+            $('#rating').val(ratingValue);
+        });
+
+        // 初期化（過去に選択した値を保持する場合）
+        const initialRating = $('#rating').val();
+        if (initialRating) {
+            $('.star').each(function(index) {
+                if (index < initialRating) {
+                    $(this).attr('src', '{{ asset("storage/blue-star.png") }}');
+                }
+            });
+        }
+    });
+</script>
 @endsection

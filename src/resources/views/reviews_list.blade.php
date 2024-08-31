@@ -4,6 +4,48 @@
 <link rel="stylesheet" href="{{ asset('css/reviews_list.css') }}">
 @endsection
 
+@section('header-logo')
+<div class="header-logo__outer open-modal" >
+    <a class="header-logo" href="">
+        <img class="logo-icon" src="{{ asset('icon/Rese icon.png') }}" alt="Rese" >
+        Rese
+    </a>
+</div>
+
+<!--ここからモーダルウィンドウ-->
+<div id="modal" class="modal">
+    <!-- ここからモーダルコンテンツ -->
+    <div class="modal-content">
+        <div class="close-button__outer">
+            <button class="close">
+                &times;
+            </button>
+        </div>
+        <div class="choices">
+            <a href="/home">
+                Home
+            </a><br>
+            <form action="/mypage" method="get">
+            @csrf
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                    <button class="mypage-button" type="submit">
+                        マイページ
+                    </button>
+            </form><br>
+            <form action="/logout" method="post">
+            @csrf
+                <button class="logout-button">
+                    ログアウト
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--ここまでモーダルウィンドウ-->
+<script src="{{ asset('js/index.js') }}"></script>
+@endsection
+
+
 @section('main')
 <div class="content-outer">
     <div class="content">
@@ -16,7 +58,7 @@
                     {{ $shop->shop_name }}
                 </h2>
             </div>
-            <img class="shop-img" src="{{ $shop->shop_img }}" alt="shop_img">
+            <img class="shop-img" src="{{ asset('storage/images/' . $shop->shop_img) }}" alt="shop_img">
             <div class="area-genre__row">
                 <div>
                     #{{ $shop->area->area_name }}
@@ -69,16 +111,20 @@
                         {{ $review->user->name }}さん
                     </div>
                     <div class="rating__outer">
-                        <div class="rating">
-                            {{-- レビューが存在し、評価があるか確認 --}}
-                            @if($review && $review->rating)
-                                {{-- 評価に基づいて星を表示 --}}
-                                {{ str_repeat('★ ', $review->rating) }}
-                                {{-- 残りの星を空の星で表示 --}}
-                                {{ str_repeat('☆ ', 5 - $review->rating) }}
-                            @endif
-                        </div>
+                    <div class="rating">
+                        {{-- レビューが存在し、評価があるか確認 --}}
+                        @if($review && $review->rating)
+                            {{-- blue-star.pngを評価に基づいて表示 --}}
+                            @for ($i = 1; $i <= $review->rating; $i++)
+                                <img src="{{ asset('storage/blue-star.png') }}" class="star">
+                            @endfor
+                            {{-- 残りの星をgray-star.pngで表示 --}}
+                            @for ($i = $review->rating + 1; $i <= 5; $i++)
+                                <img src="{{ asset('storage/gray-star.png') }}" class="star">
+                            @endfor
+                        @endif
                     </div>
+                </div>
                 </div>
                 <div class="comment-content__outer">
                     <div class="comment-content">

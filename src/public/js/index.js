@@ -4,9 +4,6 @@ var modalTriggers = document.querySelectorAll('.open-modal');
 // モーダルウィンドウを取得
 var modal = document.getElementById('modal');
 
-// ハートアイコンを取得
-var heartIcon = document.querySelector('.heart-icon');
-
 // 閉じるボタンを取得
 var closeBtn = document.getElementsByClassName('close')[0];
 
@@ -39,5 +36,4 @@ window.onclick = function(event) {
 //モーダルウィンドウを非表示にする関数
 function hideModal() {
     modal.style.display = 'none'; // モーダルを非表示
-    //heartIcon.style.display = 'block'; // ハートアイコンを表示
 }
