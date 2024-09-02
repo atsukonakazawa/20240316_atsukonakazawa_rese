@@ -86,23 +86,23 @@
         <form action="/reviewed" method="post" enctype="multipart/form-data">
         @csrf
             <div class="rating-outer">
-            <p class="rating-p">
-                体験を評価してください
-            </p>
-            <div class="stars">
-                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="1">
-                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="2">
-                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="3">
-                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="4">
-                <img src="{{ asset('storage/gray-star.png') }}" class="star" data-value="5">
+                <p class="rating-p">
+                    体験を評価してください
+                </p>
+                <div class="stars">
+                    <img src="{{ asset('gray-star.png') }}" class="star" data-value="1">
+                    <img src="{{ asset('gray-star.png') }}" class="star" data-value="2">
+                    <img src="{{ asset('gray-star.png') }}" class="star" data-value="3">
+                    <img src="{{ asset('gray-star.png') }}" class="star" data-value="4">
+                    <img src="{{ asset('gray-star.png') }}" class="star" data-value="5">
+                </div>
+                <input type="hidden" name="rating" id="rating" value="{{ old('rating') }}">
+                <div class="form__error">
+                    @error('rating')
+                        {{ $message }}
+                    @enderror
+                </div>
             </div>
-            <input type="hidden" name="rating" id="rating" value="{{ old('rating') }}">
-            <div class="form__error">
-                @error('rating')
-                    {{ $message }}
-                @enderror
-            </div>
-        </div>
 
             <div class="comment-outer">
                 <p class="comment-p">

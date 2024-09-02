@@ -111,20 +111,20 @@
                         {{ $review->user->name }}さん
                     </div>
                     <div class="rating__outer">
-                    <div class="rating">
-                        {{-- レビューが存在し、評価があるか確認 --}}
-                        @if($review && $review->rating)
-                            {{-- blue-star.pngを評価に基づいて表示 --}}
-                            @for ($i = 1; $i <= $review->rating; $i++)
-                                <img src="{{ asset('storage/blue-star.png') }}" class="star">
-                            @endfor
-                            {{-- 残りの星をgray-star.pngで表示 --}}
-                            @for ($i = $review->rating + 1; $i <= 5; $i++)
-                                <img src="{{ asset('storage/gray-star.png') }}" class="star">
-                            @endfor
-                        @endif
+                        <div class="rating">
+                            {{-- レビューが存在し、評価があるか確認 --}}
+                            @if($review && $review->rating)
+                                {{-- blue-star.pngを評価に基づいて表示 --}}
+                                @for ($i = 1; $i <= $review->rating; $i++)
+                                    <img src="{{ asset('blue-star.png') }}" class="star">
+                                @endfor
+                                {{-- 残りの星をgray-star.pngで表示 --}}
+                                @for ($i = $review->rating + 1; $i <= 5; $i++)
+                                    <img src="{{ asset('gray-star.png') }}" class="star">
+                                @endfor
+                            @endif
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="comment-content__outer">
                     <div class="comment-content">

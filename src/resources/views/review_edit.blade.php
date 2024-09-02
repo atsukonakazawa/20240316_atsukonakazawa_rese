@@ -89,14 +89,15 @@
                 <p class="rating-p">
                     体験を評価してください
                 </p>
-                <select class="stars" name="rating">
-                    <option disabled {{ !$already ? 'selected' : ''}}>選択してください</option>
+                <div class="rating">
                     @for ($i = 1; $i <= 5; $i++)
-                    <option value="{{ $i }}" {{ $already && $already->rating == $i ? 'selected' : '' }}>
-                        {{ str_repeat('⭐️', $i) }}
-                    </option>
-                @endfor
-                </select>
+                        <img src="{{ $i <= $already->rating ? asset('blue-star.png') : asset('gray-star.png') }}" 
+                        class="star" 
+                        data-rating="{{ $i }}"
+                        style="cursor: pointer;">
+                    @endfor
+                </div>
+                <input type="hidden" name="rating" id="rating" value="{{ $already->rating }}">
                 <div class="form__error">
                 @error('rating')
                     {{ $message }}
@@ -230,4 +231,30 @@
     </div>
         </form>
 </div>
+<script>
+    $(document).ready(function() {
+        // 初期状態で選択された評価を取得
+        let selectedRating = {{ $already->rating }};
+
+        // 星がクリックされたときの処理
+        $('.star').on('click', function() {
+            selectedRating = $(this).data('rating'); // クリックされた星の評価値を取得
+            $('#rating').val(selectedRating); // フォームのhiddenフィールドに評価値をセット
+
+            // 星の表示を更新
+            updateStars(selectedRating);
+        });
+
+        // 星の表示を更新する関数
+        function updateStars(rating) {
+            $('.star').each(function(index) {
+                if (index < rating) {
+                    $(this).attr('src', '{{ asset('blue-star.png') }}');
+                } else {
+                    $(this).attr('src', '{{ asset('gray-star.png') }}');
+                }
+            });
+        }
+    });
+</script>
 @endsection

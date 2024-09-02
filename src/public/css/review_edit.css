@@ -109,11 +109,9 @@
         font-size: 20px;
     }
 
-    .stars {
-        width: 50%;
-        border: solid 1px black;
-        border-radius: 5px;
-        font-size: 20px;
+    .star {
+        width: 40px;
+        height: 40px;
     }
 
     .comment-outer {
