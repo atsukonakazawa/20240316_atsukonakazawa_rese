@@ -167,4 +167,5 @@
     </div>
 </div>
 <script src="{{ asset('js/index.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
 @endsection

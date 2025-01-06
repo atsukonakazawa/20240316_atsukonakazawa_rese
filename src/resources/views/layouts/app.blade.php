@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/dayjs"></script>
+    <script src="https://unpkg.com/dayjs@1.7.7/locale/ja.js"></script>
     @yield('css')
 </head>
 <body>
